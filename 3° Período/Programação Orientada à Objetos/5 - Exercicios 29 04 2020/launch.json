@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercicio1<5 - Exercicios 29 04 2020_e65737ab>",
+            "request": "launch",
+            "mainClass": "Exercicio1",
+            "projectName": "5 - Exercicios 29 04 2020_e65737ab"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercicio2<5 - Exercicios 29 04 2020_e65737ab>",
+            "request": "launch",
+            "mainClass": "Exercicio2",
+            "projectName": "5 - Exercicios 29 04 2020_e65737ab"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercicio3<5 - Exercicios 29 04 2020_e65737ab>",
+            "request": "launch",
+            "mainClass": "Exercicio3",
+            "projectName": "5 - Exercicios 29 04 2020_e65737ab",
+            "args": "10 7 8"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercicio4<5 - Exercicios 29 04 2020_e65737ab>",
+            "request": "launch",
+            "mainClass": "Exercicio4",
+            "projectName": "5 - Exercicios 29 04 2020_e65737ab"
+        }
+    ]
+}

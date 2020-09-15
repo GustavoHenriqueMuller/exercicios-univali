@@ -1,0 +1,36 @@
+=========================================================================================================================================
+1 11100000 11000..000
+
+(-1)^1 * (1 + 0.11)(base 2) * 2^(224-127)
+-1 * (1.11)(base 2) * 2^(97)
+-(1.11)(base 2) * 2^(97)
+
+Como o expoente é enorme, é inviável fazer 97 deslocações de bit. Acabei usando uma calculadora online para obter o resultado.
+
+Resultado: -277298568799925181577403826176
+
+=========================================================================================================================================
+-234.625
+
+Número negativo: Primeiro bit (sinal) é 1.
+
+Número tem 6 digitos: 6 + 1 (para ficar puramente decimal) = 7 deslocações binárias = 2^7.
+O número subtraído de 127 (peso) que é igual à 7 é 134, logo, o exponte é 134 (10000110).
+
+1 10000110 ??????????
+
+Sabemos que a parte decimal é 625, então, após fazer os 7 deslocamentos, ela deve ficar depois da vírgula.
+Logo, os primeiros 7 dígitos da mantissa serão a parte não-fracionária do ponto flutuante, enquanto os outros 3
+dígitos restantes representarão o número 625.
+Para representar 0.625, teríamos: 0.5 + 0.125. Isso é 101 após a vírgula. Logo...
+
+1 10000110 ???????101
+
+Finalmente, só precisamos descobrir os primeiros 7 dígitos da mantissa, que, juntos com um bit igual à 1 na esquerda, serão iguais à 234.
+O número binário que representa 234 é 11101010. Como o primeiro dígito binário já será o 1 que estará ali desde o início do deslocamento,
+vamos tirar o primeiro bit desse número, resultando em 1101010.
+
+Agora só falta concatenar a parte não-fracionária (1101010) e fracionária (101) na mantissa.
+
+Resultado: 1 10000110 1101010101
+=========================================================================================================================================

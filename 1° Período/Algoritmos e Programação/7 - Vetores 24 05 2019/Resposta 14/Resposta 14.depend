@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1558982622 source:c:\users\user\desktop\coisas gustavo\questoes algoritmos\resposta 14\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1557689488 source:d:\exercicios & projetos\1° período\algoritmos e programação\6 - trabalho t2 03 05 2019 a xx xx xxxx\sokoban-v1.0\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+

@@ -1,0 +1,38 @@
+% Base de conhecimento.
+temPelo(cavalo).
+temPelo(coelho).
+
+poeOvos(besouro).
+poeOvos(salmão).
+poeOvos(cobra).
+poeOvos(tucano).
+poeOvos(borboleta).
+poeOvos(tainha).
+poeOvos(canarinho).
+poeOvos(lagarto).
+
+viveNaAgua(salmao).
+viveNaAgua(tainha).
+
+vertebrado(cavalo).
+vertebrado(salmao).
+vertebrado(coelho).
+vertebrado(cobra).
+vertebrado(tucano).
+vertebrado(tainha).
+vertebrado(canarinho).
+vertebrado(lagarto).
+
+temPenas(tucano).
+temPenas(canarinho).
+
+% Regras para classes.
+classe(X, mamifero) :- temPelo(X).
+classe(X, peixe) :- viveNaAgua(X).
+classe(X, ave) :- temPenas(X).
+classe(X, inseto) :- poeOvos(X), not(viveNaAgua(X)), not(vertebrado(X)), not(temPenas(X)), not(temPelo(X)).
+classe(X, reptil) :- poeOvos(X), vertebrado(X), not(viveNaAgua(X)), not(temPenas(X)), not(temPelo(X)).
+
+% Imprime a classe de cada objeto numa lista.
+classes([H|T], X) :- classe(H, X), T = [].
+classes([H|T], X) :- classe(H, X) ; classes(T, X).

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Exercicio 4</title>
+    </head>
+    
+    <body>
+        <input type="file" id="entrada"><br>
+        <p id="saida"></p>
+
+        <script type="text/javascript">
+            document.getElementById('entrada')
+                .addEventListener('change', function() {
+                
+                var fr = new FileReader();
+                fr.onload = function() {
+                    document.getElementById('saida').textContent = fr.result;
+                }
+                
+                fr.readAsText(this.files[0]);
+            })
+        </script>
+    </body>
+</html>

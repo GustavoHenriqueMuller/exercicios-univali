@@ -1,0 +1,5 @@
+filho(Y, X) :- progenitor(X, Y).
+
+progenitor(rogerio, gustavo).
+
+% rodar na queue: "filho(gustavo, rogerio)"

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Progressao
+comment1.params=
+comment1.target=int\ firstValue()
+comment2.params=
+comment2.target=int\ nextValue()
+comment3.params=n
+comment3.target=void\ printProgression(int)
+numComments=4

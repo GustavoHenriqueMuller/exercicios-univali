@@ -1,0 +1,11 @@
+progenitor(X, Y) :- mae(X,Y) ; pai(X,Y).
+vovozinha(X, Y) :- mae(X, Z), progenitor(Z, Y).
+vovozinho(X, Y) :- pai(X, Z), progenitor(Z, Y).
+ 
+pai(rogerio, gustavo).
+pai(myron, carla).
+
+mae(carla, gustavo). 
+mae(irene, carla).
+ 
+% rodar na queue: "vovozinha(irene, gustavo)" e "vovozinho(myron, gustavo)".

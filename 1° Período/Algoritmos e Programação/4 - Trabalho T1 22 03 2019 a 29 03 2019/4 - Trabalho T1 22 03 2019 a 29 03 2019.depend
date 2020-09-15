@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1553904190 source:d:\exercicios & projetos\1° período\algoritmos e programação\4 - trabalho t1 22 03 2019 a 29 03 2019\main.cpp
+	<iostream>
+	<string>
+	<math.h>
+	<conio.h>
+	<sstream>
+

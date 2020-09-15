@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1562365602 source:d:\sokoban supremo\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+	<stdlib.h>
+
+1561844796 source:h:\sokoban supremo\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+	<stdlib.h>
+

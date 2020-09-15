@@ -1,0 +1,61 @@
+% Rodar na query: blocoif(X) para ver todos os blocos if e if-else possíveis.
+variavel(Z) :- declaracao(X), atribuicao(Y), append(X, Y, Z).
+variavel(Z) :- declaracao(Z).
+
+declaracao(Z) :- tipo(X), nome(Y), append(X, Y, Z).
+atribuicao(Z) :- atribuidor(X), expressao(Y), append(X, Y, Z).
+
+expressao(Z) :- valor(Z).
+expressao(Z) :- valor(X), operacao(Y), append(X, Y, Z).
+
+operacao(Z) :- operacao_simples(Z).
+operacao(Z) :- operacao_simples(X), operacao(Y), append(X, Y, Z).
+operacao_simples(Z) :- operador(X), valor(Y), append(X, Y, Z).
+
+% K é um comando se possuir um nome e uma expressão, for uma declaração/atribuição
+% ou for um conjunto de comandos.
+comando(K) :- declaracao(K).
+comando(K) :- variavel(K).
+comando(K) :- comando(A), comando(B), append(A, B, K).
+
+% K é um condicional se possuir dois valores e um comparador.
+condicional(K) :- valor(X), comparador(Y), valor(Z), append(X, Y, A), append(A, Z, K).
+
+% K é valido para else se K for um comando.
+else(K) :- comando(K).
+
+% Z é um bloco if se possuir um condicional e pelo menos um comando.
+blocoif(K) :- condicional(X), comando(Y), append(X, Y, K).
+
+% K também pode ter um else. Ele por padrão deve ter pelo menos um comando.
+blocoif(K) :- condicional(X), comando(Y), else(Z), append(X, Y, A), append(A, Z, K).
+
+nome([top]).
+nome([legal]).
+nome([x]).
+
+tipo([int]).
+tipo([float]).
+tipo([string]).
+
+operador(["+"]).
+operador(["-"]).
+operador(["*"]).
+operador(["/"]).
+
+atribuidor(["="]).
+atribuidor(["+="]).
+atribuidor(["-="]).
+atribuidor(["*="]).
+atribuidor(["/="]).
+
+comparador(["=="]).
+comparador([">"]).
+comparador([">="]).
+comparador(["<"]).
+comparador(["<="]).
+comparador(["!="]).
+
+valor([5]).
+valor([1.4]).
+valor(["batata"]).

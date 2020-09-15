@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1560184966 source:d:\exercicios & projetos\1° período\algoritmos e programação\8 - matrizes 31 05 2019\resposta 6 (inc)\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

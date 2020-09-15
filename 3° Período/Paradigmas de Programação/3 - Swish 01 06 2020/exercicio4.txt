@@ -1,0 +1,12 @@
+progenitor(X, Y) :- mae(X,Y) ; pai(X,Y).
+pai(roberto, iris).
+pai(roberto, gustavo).
+mae(beatriz, gustavo).
+
+irmao(X, Y) :- pai(Z, X), pai(Z, Y), mae(A, X), mae(A, Y).
+
+irmao(gustavo, iris).
+irmao(foo, iris).
+irmao(bar, iris).
+ 
+% rodar na queue: "irmao(X, iris)" para obter todos os irmãos de iris.

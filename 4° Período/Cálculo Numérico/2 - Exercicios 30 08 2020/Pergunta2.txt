@@ -1,0 +1,13 @@
+Para "x" algarismos significativos, devemos fazer:
+
+1/(10^x) * 100%.
+
+
+
+Exemplo: Se o valor real é 0,123 e eu queira uma aproximação com um algarismo significativo correto (0,1), seria:
+
+1/(10^1) * 100% = 1/10 * 100 = 100/10 = 10%.
+
+
+
+Então para que 0,1 fosse uma aproximação boa o suficiente para 0,123, a tolerância deve maior ou igual à 10%.

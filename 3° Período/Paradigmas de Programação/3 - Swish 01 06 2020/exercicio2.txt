@@ -1,0 +1,7 @@
+progenitor(X, Y) :- mae(X,Y).
+progenitor(X, Y) :- pai(X,Y).
+
+pai(rogerio, gustavo).
+mae(carla, gustavo).
+
+% rodar na queue: "pai(rogerio, gustavo)" e "mae(carla, gustavo)".

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Jt4MSJwaCPXamSECHFad8jytcoaEHx0B0mVtzCRMcbdLngLyo4923Q1A7D7JVfUKqFRp+nfuBiQFxRmwatqJGA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gustavo\\Desktop\\AtividadeCurricular2-2\\AtividadeCurricular2-2\\AtividadeCurricular2-2.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gustavo\\.nuget\\packages\\fsharp.core\\4.7.0\\fsharp.core.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

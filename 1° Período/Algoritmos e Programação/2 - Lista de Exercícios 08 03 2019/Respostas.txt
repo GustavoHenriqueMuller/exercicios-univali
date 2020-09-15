@@ -1,0 +1,24 @@
+1 - Abrir Pasta
+2 - 3,5
+3 - Abrir Pasta
+4 - a) 19
+    b) 4,75
+    c) 107,171875
+    d) 107,171875
+    e) 1
+    f) 0
+5 - Abrir Pasta
+6 - Abrir Pasta
+7 - Abrir Pasta
+8 - Abrir Pasta
+9 - a) 0 e 0
+    b) 1 e 0
+    c) 1 e 2
+    d) 3 e 2
+    e) 3 e 2
+    f) 3 e 11
+    g) 11 e 11
+    h) 0 e 0
+10 - d)
+11 - Abrir Pasta
+12 - Abrir Pasta

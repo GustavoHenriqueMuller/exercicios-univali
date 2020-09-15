@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Gustavo\Desktop\MIPS_restored\simulation\qsim
+vmips_mono
+Z1 I:CYY;=YSE5YH>IaK?02_R2
+Z2 VT_6G@?BF3F42lbgJTITH>3
+Z3 dC:\Users\Gustavo\Desktop\MIPS_restored\simulation\qsim
+Z4 w1594251012
+Z5 8MIPS.vo
+Z6 FMIPS.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|MIPS.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 5=CG5aaPU=QGejT@Bl6eY2
+!s85 0
+Z11 !s108 1594251018.870000
+Z12 !s107 MIPS.vo|
+!s101 -O0
+vmips_mono_vlg_sample_tst
+!i10b 1
+Z13 !s100 =XNVDIHJ05:hPM<z=dDlG3
+Z14 ImgVN^cj`;ZG8DiG1<RHEW3
+Z15 VmFPg[03<jIeISgd6EEY`l0
+R3
+w1594251007
+Z16 8Simulacao.vwf.vt
+Z17 FSimulacao.vwf.vt
+L0 29
+R7
+r1
+!s85 0
+31
+!s108 1594251019.416000
+!s107 Simulacao.vwf.vt|
+Z18 !s90 -work|work|Simulacao.vwf.vt|
+!s101 -O0
+R9

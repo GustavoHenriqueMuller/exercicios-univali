@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ProgressaoGeometrica
+comment1.params=primeiroTermo\ razao
+comment1.target=ProgressaoGeometrica(int,\ int)
+comment2.params=
+comment2.target=int\ nextValue()
+numComments=3

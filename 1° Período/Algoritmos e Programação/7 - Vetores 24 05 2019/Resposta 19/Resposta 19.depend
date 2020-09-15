@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1559911300 source:h:\exercicios & projetos\1° período\algoritmos e programação\7 inc - vetores 24 05 2019\resposta 19\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

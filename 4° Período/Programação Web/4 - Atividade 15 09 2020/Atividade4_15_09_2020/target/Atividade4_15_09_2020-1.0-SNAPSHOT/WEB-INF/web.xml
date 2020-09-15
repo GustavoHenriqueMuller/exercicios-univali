@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>Exercicio1</servlet-name>
+        <servlet-class>com.mycompany.atividade4_15_09_2020.Exercicio1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Exercicio2</servlet-name>
+        <servlet-class>com.mycompany.atividade4_15_09_2020.Exercicio2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Exercicio1</servlet-name>
+        <url-pattern>/Exercicio1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Exercicio2</servlet-name>
+        <url-pattern>/Exercicio2</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
