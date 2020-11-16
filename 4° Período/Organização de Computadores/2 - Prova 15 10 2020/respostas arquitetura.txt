@@ -1,0 +1,39 @@
+1)
+
+a) 6ns
+b) 30ns
+c) 1 instrução/30ns
+d) 1 instrução/6ns
+e) 40ns e 1 instrução/8ns
+
+2)
+
+Tempo por etapa (monociclo) = 40ns
+Tempo por etapa (multiciclo) = 50ns (considerando que todas as instruções executam todas as etapas)
+
+=====================================================================================================
+SE FOR DESCONSIDERADO HAZARDS:
+
+Tempo total (monociclo) = 40ns * 8 = 320ns
+Tempo total (multiciclo) = 50ns * 8 = 400ns
+
+Aceleração mono/multi = 320/400 = 4/5 => O programa em mono demora 80% do tempo que ele demora em multi.
+Aceleração multi/mono = 400/320 = 5/4 => O programa em multi demora 125% do tempo que ele demora em mono.
+=====================================================================================================
+SE FOR CONSIDERADO HAZARDS:
+
+Hazards
+
+RAW na linha 2
+RAW na linha 5
+RAW na linha 6
+
+IF ID EXE MEM WB
+
+Cada RAW implica em 10ns de atraso (uma fase)
+
+Tempo total (monociclo) = 40ns * 8 = 320ns
+Tempo total (multiciclo) = 50ns * 8 = 400ns + 30ns de hazards = 430ns
+
+Aceleração mono/multi = 320/430 = 0.744 => O programa em mono demora 74% do tempo que ele demora em multi.
+Aceleração multi/mono = 430/320 = 1.343 => O programa em multi demora 134% do tempo que ele demora em mono.

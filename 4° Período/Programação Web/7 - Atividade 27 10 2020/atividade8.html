@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Atividade 8</title>
+
+        <style>
+            table, tr, th {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function deletarElemento() {
+                // Pega elemento pai do botão
+                var confirmed = window.confirm("Você realmente deseja deletar essa linha?")
+
+                if(confirmed) {
+                    var tableRow = this.parentElement
+                    tableRow.remove()
+                }
+            }
+
+            function criarLinha() {
+                // Pegando elementos do documento
+                var tabela = document.getElementById("atividade8Tabela")
+                var thead = tabela.getElementsByTagName("thead")[0].getElementsByTagName("tr")[0]
+                var tbody = tabela.getElementsByTagName("tbody")[0]
+               
+                // Adicionando a nova linha e as células
+                var row = tbody.insertRow()
+                for(i = 0; i < thead.children.length; i++) {
+                    var cell = row.insertCell(-1)
+
+                    if(thead.children[i].innerHTML != "Instituição Beneficiada") {
+                        var input = document.createElement("input")                        
+                        cell.appendChild(input)
+                    } else {                        
+                        var select = document.createElement("select")
+                        var options = ["Hospital", "Creche", "Museu"]                        
+
+                        for(j = 0; j < options.length; j++) {
+                            var option = document.createElement("option")
+                            option.text = options[j]
+                            select.add(option)
+                        }
+
+                        cell.appendChild(select)
+                    }
+                }
+
+                // Adicionando o botão de deletar
+                var deleteButton = document.createElement("button")
+                deleteButton.innerHTML = "Deletar"
+                row.appendChild(deleteButton)
+                deleteButton.addEventListener("click", deletarElemento)
+            }
+
+            function enviarDados() {
+                // Pegando as tabelas
+                var tabela = document.getElementById("atividade8Tabela")
+                var thead = tabela.getElementsByTagName("thead")[0].getElementsByTagName("tr")[0]
+                var tbody = tabela.getElementsByTagName("tbody")[0]
+
+                // Percorrendo todas as células e checando aquelas que estão vazias
+                var rows = tabela.rows
+                var emptyInputs = []
+
+                for(i = 1; i < rows.length; i++) {
+                    var row = rows[i]
+
+                    for(j = 0; j < row.cells.length; j++) {
+                        // Pega o valor do input ou select
+                        var element = row.cells[j].children[0]
+                        var tagName = row.cells[j].children[0].tagName
+                        var value = ""
+
+                        if(tagName == "INPUT") {
+                            value = element.value
+                        } else if(tagName == "SELECT") {
+                            value = element.text
+                        }
+
+                        // Se for vazio, adiciona sua posição ao vetor para mostrar os valores vazios
+                        if(value == "") {
+                            emptyInputs.push([i, j+1])
+                        }
+                    }
+                }
+
+                if(emptyInputs.length == 0 && rows.length > 1) {
+                    window.alert("Sucesso!")
+                } else {
+                    if(rows.length > 1){
+                        var message = "Erro: Os seguintes campos estão vazios:\n"
+                        for(i = 0; i < emptyInputs.length; i++) {
+                            message += "\n" + "Linha " + emptyInputs[i][0] + " | Coluna: " + emptyInputs[i][1]
+                        }
+                        
+                        window.alert(message)
+                    } else {
+                        window.alert("Você não pode enviar uma tabela vazia.")
+                    }
+                }
+            }
+        </script>
+
+        <h1>ATIVIDADE 8</h1><hr>
+        <table id="atividade8Tabela">
+            <thead>
+                <tr>
+                    <th>Nome do contribuinte</th>
+                    <th>E-mail</th>
+                    <th>Instituição Beneficiada</th>
+                    <th>Valor Pago</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button onClick="criarLinha()">Nova Linha</button><br>
+        <button onClick="enviarDados()">Enviar Dados</button>
+    </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trabalho M2</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+            function getFormInputs() {
+                // Pega todos os inputs do form
+                var form = document.getElementById("mainForm");
+                var childNodes = form.childNodes;
+                var inputs = [];
+
+                for(i = 0; i < childNodes.length; i++) {
+                    var currInput = childNodes[i].control;
+                    if(currInput != undefined) {
+                        inputs.push(currInput);
+                    }
+                }
+
+                return inputs;
+            }
+
+            function getDetalhamento(inputs) {
+                for(i = 0; i < inputs.length; i++) {
+                    if(inputs[i].id == "detalhamento") {
+                        return inputs[i].value;
+                    }
+                }
+            }
+
+            function deleteRow() {
+                var confirmed = window.confirm("Você realmente deseja deletar essa linha?");
+
+                if(confirmed) {
+                    var tableRow = this.parentElement;
+                    tableRow.remove();
+
+                    // Deleta a tabela se estiver vazia
+                    var table = document.getElementById("listaFinal");
+                    var tbody = table.getElementsByTagName("tbody")[0];
+
+                    if(tbody.children.length == 0) {
+                        table.innerHTML = "";
+                    }
+                }
+            }
+
+            function createValidatedTable(inputs) {
+                // Zera a tabela final após os valores serem validados
+                var table = document.getElementById("listaFinal");
+
+                // Cria "thead", se não existir
+                if(table.getElementsByTagName("thead").length == 0) {
+                    var thead = document.createElement("thead");
+                    var tr = document.createElement("tr");
+                    thead.appendChild(tr);
+                    
+                    for(i = 0; i < inputs.length; i++) {
+                        if(inputs[i].id != "detalhamento") {
+                            var th = document.createElement("th");
+                            var id = inputs[i].id;
+                            th.innerHTML = id.charAt(0).toUpperCase() + id.slice(1);
+
+                            tr.appendChild(th);
+                        }
+                    }
+
+                    table.appendChild(thead);
+                }
+
+                // Cria "tbody", se não existir
+                if(table.getElementsByTagName("tbody").length == 0) {
+                    var tbody = document.createElement("tbody");
+                    table.appendChild(tbody);
+                }
+
+                // Cria a linha
+                var tbody = table.getElementsByTagName("tbody")[0];
+                var newTr = document.createElement("tr");
+                
+                // Cria os valores da linha e o evento de detalhamento
+                for(i = 0; i < inputs.length - 1; i++) {
+                    var newTd = document.createElement("td");
+                    newTd.innerHTML = inputs[i].value;
+                    newTd.addEventListener("click",
+                        function() {
+                            alert(getDetalhamento(inputs));
+                        });
+
+                    newTr.appendChild(newTd);
+                }
+                
+                // Cria o botão de deletar da linha
+                var deleteButton = document.createElement("button");
+                deleteButton.type = "button";
+                deleteButton.innerHTML = "Deletar";
+                newTr.appendChild(deleteButton);
+                deleteButton.addEventListener("click", deleteRow);
+
+                tbody.appendChild(newTr);
+            }
+
+            function clearInvalidList() {
+                var lista = document.getElementById("listaInvalidos");
+                lista.innerHTML = "";
+            }
+
+            function createInvalidList(invalidInputs) {
+                var lista = document.getElementById("listaInvalidos");
+                
+                for(i = 0; i < invalidInputs.length; i++) {
+                    // Adiciona o elemento à lista de valores inválidos
+                    var newLi = document.createElement("li");
+                    var currElement = document.getElementById(invalidInputs[i][0]);
+
+                    newLi.innerHTML = "'" + invalidInputs[i][0] + "'" + " - " + invalidInputs[i][1];
+                    lista.appendChild(newLi);
+
+                    // Muda a borda do elemento para vermelho
+                    currElement.style.borderColor = "red";
+                }
+            }
+
+            function validate() {
+                var inputs = getFormInputs();
+                var invalidInputs = [];
+                clearInvalidList();
+
+                for(i = 0; i < inputs.length; i++) {
+                    var currInput = inputs[i];
+                    var currId = currInput.id;
+                    var currValue = currInput.value;
+
+                    // Limpa o visual de borda vermelha de todos os elementos
+                    currInput.style.borderColor = null;
+
+                    // Checa se todos os elementos estão preenchidos, com exceção
+                    // do detalhamento.
+                    if(currValue == "" && currId != "detalhamento") {
+                        invalidInputs.push([currId, "elemento vazio"]);
+                    }
+
+                    // Nome da obra com 6 caracteres
+                    if(currId == "nome" && currValue.length < 6) {
+                        invalidInputs.push([currId, "não possui 6 caracteres"]);
+                    }
+                        
+                    // Nome do autor com 10 caracteres
+                    if(currId == "autor" && currValue.length < 10) {
+                        invalidInputs.push([currId, "não possui 10 caracteres"]);
+                    }
+
+                    // Ano da obra deve ser um valor válido
+                    if(currId == "ano" && isNaN(parseInt(currValue))) {
+                        invalidInputs.push([currId, "não é um número válido"]);
+                    }
+                }                
+
+                // Cria a tabela final ou cria a tabela que mostra os
+                // valores inválidos.
+                if(invalidInputs.length == 0) {
+                    alert("Sucesso!");
+                    createValidatedTable(inputs);
+                    return true;
+                } else {
+                    createInvalidList(invalidInputs);
+                    return false;
+                }
+            }
+        </script>
+
+        <h1>TRABALHO M2</h1><hr>
+
+        <form id="mainForm" method="POST">
+            <label for="nome">Nome da obra: </label>
+            <input id="nome" name="nome" maxlength="100"/><br>
+
+            <label for="autor">Autor: </label>
+            <input id="autor" name="autor" maxlength="100"/><br>
+
+            <label for="ano">Ano da obra: </label>
+            <input id="ano" name="ano" maxlength="4"/><br>
+
+            <label for="periodo">Período da obra: </label>
+            <select id="periodo" name="periodo">
+                <option></option>
+                <option>d.C.</option>
+                <option>a.C.</option>
+            </select><br>
+
+            <label for="tipo">Tipo da obra: </label>
+            <select id="tipo" name="tipo">
+                <option></option>
+                <option>Quadro</option>
+                <option>Escultura</option>
+                <option>Outro</option>
+            </select><br>
+
+            <label for="detalhamento">Detalhamento: </label>
+            <textarea id="detalhamento" name="detalhamento" maxlength="2000"></textarea><br>
+
+            <button type="button" onclick="validate()">Enviar</button>
+
+            <ul id="listaInvalidos">
+            </ul>
+
+            <table id="listaFinal">
+            </table>
+        </form>
+    </body>
+</html>

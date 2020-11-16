@@ -1,0 +1,10 @@
+Interface do tutorial
+Tela de tutorial, onde o jogador será informado sobre os controles do jogo e grande parte do seu conteúdo, excluindo os tipos de inimigos diferentes.
+
+Interface do jogo
+Possui a quantidade de vidas do jogador, o fator de aquecimento da sua arma (%), a arma sendo utilizada, a quantidade de onda de inimigos que
+o jogador já derrotou e a quantidade de pontos que o jogador acumulou ao longo do jogo.
+
+Sistema de Ranking
+Quando o jogador termina o jogo (morrendo ou voltando para o menu), ele pode opcionalmente cadastrar seu nome e pontuação em um sistema de ranking.
+Os 10 jogadores com maior ranking são mostrados no menu do jogo.

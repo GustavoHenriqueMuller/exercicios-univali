@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function emptyOrNull(value) {
+            if(value == "" || value == null)
+                return true;
+            else        
+                return false;
+        }
+
+        function validar() {
+            var form = document.getElementById("formCriacao");
+            var elementos = form.elements;
+
+            // Checa se existe algum elemento vazio
+            for(i = 0; i < elementos.length; i++) {
+                var elemento = elementos[i];
+
+                if(!elemento.value && (elemento.type == "text" || elemento.type == "password" || elemento.type == "textarea")) {
+                    alert("Campo '" + elemento.name + "' é nulo.");
+                    return false;
+                }
+            }
+
+            if(!elementos["genero"].value) {
+                alert("Preencha o campo de gênero.");
+                return false;
+            }
+
+            if(!elementos["emailFormaDeContato"].checked && !elementos["telefoneFormaDeContato"].checked) {
+                alert("Preencha a forma de contato.");
+                return false;
+            }
+
+            // Checa se a senha/confirmação são iguais
+            if(elementos["senha"].value !== elementos["senhaConfirmada"].value) {
+                alert("Senha não confere com a confirmação.");
+                return false;
+            }
+
+            // Checa se a senha tem no mínimo 8 caracteres
+            if(elementos["senha"].value.length < 8) {
+                alert("A senha deve possuir no mínimo 8 caracteres.");
+                return false;
+            }
+
+            // Checa se o e-mail possui o caractere "@"
+            if(!elementos["email"].value.includes("@")) {
+                alert("E-mail inválido.");
+                return false;
+            }
+            
+            alert("Sucesso!");
+            return true;
+        }
+    </script>
+
+    <head>
+        <title>Atividade 7</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>ATIVIDADE 7</h1><br>
+
+        <form id="formCriacao" method="get">
+            <label for="nome">Nome: </label>
+            <input id="nome" name="nome" type="text"><br>
+
+            <label for="senha">Senha: </label>
+            <input id="senha" name="senha" type="password"><br>
+
+            <label for="senhaConfirmada">Confirmar Senha: </label>
+            <input id="senhaConfirmada" name="senhaConfirmada" type="password"><br>
+
+            <label for="genero">Genero:</label>
+            <span id="genero">
+                <input name="genero" type="radio" id="masculino" value="masculino">Masculino</input>
+                <input name="genero" type="radio" id="feminino" value="feminino">Feminino</input>
+            </span><br>
+
+            <label for="email">E-mail: </label>
+            <input id="email" name="email" type="text"><br>
+
+            <label for="telefone">Telefone: </label>
+            <input id="telefone" name="telefone" type="text"><br>
+
+            <label for="endereco">Endereço: </label>
+            <textarea id="endereco" name="endereco"></textarea><br>
+
+            <label for="enderecoTipo">Tipo de Endereço: </label>
+            <select id="enderecoTipo" name="enderecoTipo">
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+            </select><br>
+
+            <label for="formaDeContato">Forma de Contato:</label>
+            <span id="formaDeContato">
+                <input id="emailFormaDeContato" name="emailFormaDeContato" type="checkbox" value="email">
+                <label for="emailFormaDeContato">E-mail</label>                
+                <input id="telefoneFormaDeContato" name="telefoneFormaDeContato" type="checkbox" value="telefone">
+                <label for="telefoneFormaDeContato">Telefone</label><br>
+            </span><br>
+
+            <button type="button" onClick="validar()">Enviar</button>
+        </form>        
+    </body>
+</html>

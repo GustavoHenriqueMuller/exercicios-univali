@@ -1,0 +1,22 @@
+Leia atentamente o caso abaixo
+
+Uma clínica veterinária deseja informatizar os atendimentos realizados. Um cliente pode agendar com a
+secretária uma consulta para seu animal ou trazê-lo em casos de emergência.
+De qualquer forma, a secretária cadastra o cliente e o animal caso seja a primeira vez,
+bem como o atendimento (consulta). De acordo com o problema, o veterinário é designado para o atendimento.
+Caso o cliente desmarque a consulta, essa informação deve ser registrada e o horário liberado.
+Caso o cliente não compareça no horário agendado, a secretária vai registrar o “no-show”;
+liberar o horário e registrar na ficha do cliente para posterior consulta.
+No atendimento o veterinário registra os sintomas apresentados pelo cliente e faz o exame.
+O atendimento pode resultar numa internação ou na prescrição de medicamentos, se for o caso.
+Todos os dados do atendimento devem ser arquivados para a ficha médica do animal,
+incluindo resultado da consulta, medicamentos prescritos, etc.
+O médico veterinário também pode solicitar exames, que podem ser realizados na clínica.
+Nessa primeira versão do sistema não serão considerados os requisitos para controle de internação,
+apenas se registra se houve a recomendação. Por fim, o cliente realiza o pagamento da consulta.
+
+
+Pede-se:
+
+a) Elabore a narrativa do caso de uso Cadastra Animal.
+b) Poste sua resposta em formato PDF.
