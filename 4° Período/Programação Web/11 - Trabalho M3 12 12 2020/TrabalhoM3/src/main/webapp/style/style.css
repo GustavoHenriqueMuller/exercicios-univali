@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/12/2020, 18:13:20
+    Author     : Gustavo
+*/
+
+* {
+    font-family: Arial, Helvetica, Arial, sans-serif;
+    color: #dbdbdb;
+}
+
+input {
+    font-size: 1.15em;
+}
+
+input, button {
+    background-color: #1c2426;
+}
+
+body {
+    background-color: #3b3c3d;
+}
+
+button {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1, legend {    
+    color: #bac1e6;
+}
+
+fieldset {
+    width: 20%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input:focus {
+    color: #ffffff;
+    background-color: #035987;
+}
+
+button:hover {    
+    color: #ffffff;
+    background-color: #035987;
+}

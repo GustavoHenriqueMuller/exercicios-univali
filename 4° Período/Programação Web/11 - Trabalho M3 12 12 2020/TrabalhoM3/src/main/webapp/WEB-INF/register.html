@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="style/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>Register</h1>
+        
+        <form id="registerForm">
+            <!-- CLIENT INFO -->
+            <fieldset>
+                <legend>Client Info</legend>
+                <label for="name">Name: </label>
+                <input id="name" name="name"><br>
+
+                <label for="CPF">CPF: </label>
+                <input id="CPF" name="CPF"><br>
+
+                <label for="email">E-mail: </label>
+                <input id="email" name="email"><br>
+            </fieldset>
+
+            <!-- ADDRESS INFO -->
+            <fieldset>
+                <legend>Address Info</legend>
+                <label for="CEP">CEP: </label>
+                <input id="CEP" name="CEP"><br>
+
+                <label for="addressNumber">Number: </label>
+                <input id="addressNumber" name="addressNumber"><br>
+
+                <label for="addressComplement">Complement: </label>
+                <input id="addressComplement" name="addressComplement"><br>
+            </fieldset>
+
+            <!-- DEBT INFO -->
+            <fieldset>
+                <legend>Debt Info</legend>
+                <label for="debtValue">Value (US$): </label>
+                <input id="debtValue" name="debtValue"><br>
+
+                <label for="debtObject">Object: </label>
+                <input id="debtObject" name="debtObject"><br>
+
+                <label for="debtSituation">Situation: </label>        
+
+                <input id="debtSituationPending" name="debtSituation" value="pending" type="radio">
+                <label for="debtSituationPending">Pending</label>        
+
+                <input id="debtSituationPaid" name="debtSituation" value="paid" type="radio">
+                <label for="debtSituationPaid">Paid</label>
+            </fieldset>
+
+            <!-- EXTRA INFO -->
+            <fieldset>
+                <legend>Extra Info</legend>
+                <label for="processNumber">Process Number: </label>
+                <input id="processNumber" name="processNumber"><br>
+            </fieldset>
+            
+            <button onclick="sendData()" type="button">Send Data</button><br>
+            <button onclick="logout()" type="button">Logout</button><br>
+        <form><br>              
+        
+        <label id="errorMessage"></label>
+        <ul id="invalidList"></ul>
+        
+        <script>
+            function setErrorMessage(errorMessage = "", color = "") {
+                let errorMessageElement = document.getElementById("errorMessage");
+                errorMessageElement.innerHTML = errorMessage;
+                errorMessageElement.style.color = color;
+            }
+            
+            function createInvalidList(invalidInputs) {
+                let invalidList = document.getElementById("invalidList");
+                
+                for(const [name, message] of Object.entries(invalidInputs)) {                       
+                    let li = document.createElement("li");
+                    li.innerHTML = name + " - " + message;
+                    invalidList.appendChild(li);
+                }
+            }
+            
+            function resetInvalidList() {
+                let invalidList = document.getElementById("invalidList");
+                invalidList.innerHTML = "";
+            }
+            
+            function sendRequest(inputs) {
+                let json = JSON.stringify(inputs);
+                let httpRequest = new XMLHttpRequest;
+                httpRequest.onreadystatechange = function() {
+                    if(this.readyState == 4) {
+                        if(this.status == 200) {
+                            setErrorMessage("Success! ", "green");
+                        } else if(this.status == 406){
+                            setErrorMessage("The server was not able to validate the data sent.", "#ff5e5e");
+                        } else {
+                            setErrorMessage("An error has ocurred in the server.", "#ff5e5e");
+                        }
+                    }
+                };
+
+                httpRequest.open("POST", "RegisterValidate", true);
+                httpRequest.send(json);
+            }
+            
+            function sendData() {
+                setErrorMessage();
+                resetInvalidList();
+                
+                let form = document.getElementById("registerForm");
+                let elements = form.elements;
+                let inputs = {};
+                let invalidInputs = {};
+                
+                for(i = 0; i < elements.length; i++) {
+                    var element = elements[i];
+                    if(element.tagName == "INPUT") {
+                        if(element.type == "radio") {
+                            if(element.checked) {
+                                inputs[element.name] = element.value;
+                            }
+                        } else {
+                            inputs[element.name] = element.value;
+                        }
+                    }
+                }
+                
+                for(const [name, value] of Object.entries(inputs)) {
+                    if(name == "CPF" || name == "CEP" || name == "addressNumber" || name == "debtValue" || name == "processNumber") {
+                        if(isNaN(value)) {
+                            invalidInputs[name] = "Not a number.";
+                        }                        
+                    }
+                    
+                    if(name != "processNumber" && value == "") {
+                        invalidInputs[name] = "Empty.";
+                    }
+                }
+               
+                if(inputs["debtSituation"] === undefined) {
+                    invalidInputs["debtSituation"] = "Debt situation is empty.";
+                }
+                
+                if(Object.keys(invalidInputs).length > 0) {
+                    setErrorMessage("The following inputs are invalid: ", "#ff5e5e");
+                    createInvalidList(invalidInputs);
+                } else {
+                    sendRequest(inputs);
+                }
+            }
+            
+            function logout() {
+                window.localStorage.removeItem("loginJWT");
+                location.reload();
+            }
+        </script>
+    </body>
+</html>

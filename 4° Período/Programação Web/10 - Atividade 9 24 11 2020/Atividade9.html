@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Atividade 9</title>
+    </head>
+    <body onload="criarOpcoesPeriodo()">        
+        <label for="periodo">Período: </label>
+        <select id="periodo" onchange="pegarArquivo()">            
+        </select><br>
+
+        <label for="disciplina"> Disciplinas: </label>
+        <select id="disciplina" disabled>
+        </select><br>
+
+        <script>
+            const qntPeriodos = 10;
+
+            function criarOpcoesPeriodo() {
+                let periodoSelect = document.getElementById("periodo");
+
+                for(i = 1; i <= qntPeriodos; i++) {
+                    let newOption = document.createElement("option");
+                    newOption.innerHTML = i;
+
+                    periodoSelect.appendChild(newOption);
+                }
+            }
+
+            function mudarDisciplinas(jsonResponse) {
+                if(this.readyState == 4 && this.status == 200) {
+                    let rawText = this.responseText;
+                    let disciplinas = JSON.parse(rawText);
+                    
+                    let disciplinasSelect = document.getElementById("disciplina");
+                    disciplinasSelect.innerHTML = "";
+                    disciplinasSelect.disabled = false;
+
+                    for(i = 0; i < disciplinas.length; i++) {
+                        let newOption = document.createElement("option");
+                        newOption.innerHTML = disciplinas[i];
+
+                        disciplinasSelect.appendChild(newOption);
+                    }
+                }
+            }
+
+            function pegarArquivo() {
+                let periodoSelect = document.getElementById("periodo");
+                let index = periodoSelect.options[periodoSelect.selectedIndex].text;
+
+                let httpRequest = new XMLHttpRequest();
+                httpRequest.onreadystatechange = mudarDisciplinas;
+                httpRequest.open("GET", "periodo" + index + ".json", true);
+                httpRequest.send();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="style/style.css" rel="stylesheet"/>
+    </head>
+    <body onload="login(true)">        
+        <h1>Login Page</h1>
+        
+        <label for="username">Username: </label>
+        <input id="username"><br>
+            
+        <label for="password">Password: </label>
+        <input id="password" type="password"><br>            
+           
+        <label id="errorMessage"></label><br>
+        <button onclick="login(false)">Login</button>        
+        
+        <script>
+            function setErrorMessage(errorMessage = "", color = "") {
+                let errorMessageElement = document.getElementById("errorMessage");
+                errorMessageElement.innerHTML = errorMessage;
+                errorMessageElement.style.color = color;
+            }
+            
+            function login(useJWT) {
+                setErrorMessage();
+                let JWT = null;
+                
+                if(useJWT) {
+                    JWT = window.localStorage.getItem("loginJWT");
+                } else {
+                    let username = document.getElementById("username").value;
+                    let password = document.getElementById("password").value;
+                    let object = {username: username, password: password};
+                    JWT = JSON.stringify(object);
+                }             
+
+                if(JWT != null) {
+                    let httpRequest = new XMLHttpRequest;
+                    httpRequest.onreadystatechange = function() {
+                        if(this.readyState == 4) {
+                            if(this.status == 200) {
+                                window.localStorage.setItem("loginJWT", JWT);
+                                setErrorMessage("Success!", "green");                                
+                                document.write(this.responseText);
+                            } else {
+                                window.localStorage.removeItem("loginJWT");
+                                setErrorMessage("Invalid username/password.", "#ff5e5e");                
+                            }
+                        }
+                    };
+
+                    httpRequest.open("POST", "Login", true);
+                    httpRequest.setRequestHeader("Authorization", JWT);
+                    httpRequest.send();
+                }
+            }
+        </script>
+    </body>
+</html>
