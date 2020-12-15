@@ -1,10 +1,10 @@
-% mat: A matela contendo, na primeira linha, os valores de "xi"
+% mat: A matriz contendo, na primeira linha, os valores de "xi"
 % e na segunda linha os valores de "yi".
 
 function [resultado] = diffDiv(mat, xDesejado, grauAMenos = 0)
     colunas = columns(mat)
     
-    % Cria a matela completa
+    % Cria a matriz completa
     for i = 3 : colunas - grauAMenos
         for j = 1 : colunas
             if j < colunas - (i - 3)
