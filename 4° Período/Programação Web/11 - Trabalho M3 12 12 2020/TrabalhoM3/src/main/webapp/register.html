@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="style/style.css" rel="stylesheet"/>
     </head>
-    <body>
+    <body onload="login()">
         <h1>Register</h1>
         
         <form id="registerForm">
@@ -95,7 +95,7 @@
                 httpRequest.onreadystatechange = function() {
                     if(this.readyState == 4) {
                         if(this.status == 200) {
-                            setErrorMessage("Success! ", "green");
+                            setErrorMessage("Success! ", "#31f54e");
                         } else if(this.status == 406){
                             setErrorMessage("The server was not able to validate the data sent.", "#ff5e5e");
                         } else {
@@ -154,9 +154,31 @@
                 }
             }
             
+            function login() {
+                setErrorMessage();
+                let JWT = window.localStorage.getItem("loginJWT");
+
+                if(JWT != null) {
+                    let httpRequest = new XMLHttpRequest;
+                    httpRequest.onreadystatechange = function() {
+                        if(this.readyState == 4) {
+                            if(this.status != 200) {
+                                window.location.href = "login.html";
+                            }
+                        }
+                    };
+
+                    httpRequest.open("POST", "Login", true);
+                    httpRequest.setRequestHeader("Authorization", JWT);
+                    httpRequest.send();
+                } else {
+                    window.location.href = "login.html";
+                }
+            }
+            
             function logout() {
                 window.localStorage.removeItem("loginJWT");
-                location.reload();
+                window.location.href = "login.html";
             }
         </script>
     </body>

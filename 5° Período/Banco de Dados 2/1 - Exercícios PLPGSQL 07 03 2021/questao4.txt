@@ -1,0 +1,14 @@
+CREATE TABLE funcionario(
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR,
+  status INT
+);
+
+CREATE OR REPLACE FUNCTION excluirFuncionario(in INTEGER) RETURNS VOID AS
+	$$
+	DELETE FROM funcionario WHERE id = $1;
+	$$
+LANGUAGE SQL;
+
+SELECT excluirFuncionario(1);
+SELECT * FROM funcionario;

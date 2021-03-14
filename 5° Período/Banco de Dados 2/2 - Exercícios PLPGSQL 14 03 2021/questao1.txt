@@ -1,0 +1,39 @@
+CREATE TABLE LogCalculadora (
+	id SERIAL PRIMARY KEY,
+	num1 float,
+	num2 float,	
+	operation char,
+	operationResult float
+);
+
+CREATE OR REPLACE FUNCTION log_operation(num1 FLOAT, num2 FLOAT, operation CHAR) RETURNS INTEGER AS
+$$
+	DECLARE
+		operationResult INTEGER;
+	BEGIN
+		CASE(operation)
+			WHEN '+' THEN
+				operationResult = num1 + num2;
+			WHEN '-' THEN
+				operationResult = num1 - num2;
+			WHEN '*' THEN
+				operationResult = num1 * num2;
+			WHEN '/' THEN
+				IF num2 != 0 THEN
+					operationResult = num1 / num2;
+				ELSE
+					RAISE EXCEPTION 'Divisão por 0.';
+				END IF;
+			ELSE
+				RAISE EXCEPTION 'Operação inválida.';
+		END CASE;
+		
+		INSERT INTO LogCalculadora (num1, num2, operation, operationResult) VALUES (num1, num2, operation, operationResult);
+		
+		RETURN operationResult;
+	END;
+$$
+LANGUAGE plpgsql;
+
+SELECT log_operation(8, 2, '+');
+SELECT * FROM LogCalculadora;

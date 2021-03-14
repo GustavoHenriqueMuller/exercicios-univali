@@ -1,0 +1,14 @@
+CREATE OR REPLACE PROCEDURE inserirCidade(idEstado INTEGER, nome VARCHAR(50), status BOOLEAN) AS
+$$
+	BEGIN
+		IF NOT EXISTS(SELECT 1 FROM ESTADO WHERE id = idEstado) THEN
+			RAISE EXCEPTION 'Estado de ID % não existe.', idEstado;
+		END IF;
+		
+		INSERT INTO CIDADE (id_estado, nome, status) VALUES (idEstado, nome, status);
+	END;
+$$
+LANGUAGE plpgsql;
+
+SELECT * FROM ESTADO;
+CALL inserirCidade(4, 'Alguma cidade', TRUE);

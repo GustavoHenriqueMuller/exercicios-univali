@@ -1,0 +1,53 @@
+--CREATE TYPE imposto AS (inss FLOAT, irrf FLOAT);
+
+CREATE OR REPLACE FUNCTION calcularImpostos(idVendedor INT, mes INT, ano INT) RETURNS IMPOSTO AS
+$$
+	DECLARE
+		valorTotalVendas FLOAT;
+		salarioFixo FLOAT;
+		salarioFinal FLOAT;
+		
+		aliquotaINSS FLOAT; -- Porcentagem
+		aliquotaIRRF FLOAT; -- Porcentagem
+		
+		descontoINSS FLOAT;
+		descontoIRRF FLOAT;
+	BEGIN
+		-- Calcula o salário final
+		valorTotalVendas := vendasPorVendedor(idVendedor, mes, ano);
+		SELECT salario_fixo FROM VENDEDOR WHERE id = idVendedor INTO salarioFixo;
+		salarioFinal := salarioFixo + 0.1 * valorTotalVendas;
+		
+		-- Calcula a alíquota de INSS
+		IF salarioFinal <= 1100 THEN
+			aliquotaINSS = 7.5;
+		ELSEIF salarioFinal <= 2203.45 THEN
+			aliquotaINSS = 9;
+		ELSEIF salarioFinal <= 3305.22 THEN
+			aliquotaINSS = 12;
+		ELSE
+			aliquotaINSS = 14;
+		END IF;
+			
+		-- Calcula a alíquota de IRRF
+		IF salarioFinal >= 1903.99 AND salarioFinal <= 2826.65 THEN
+			aliquotaIRRF = 7.5;
+		ELSEIF salarioFinal <= 3751.05 THEN
+			aliquotaIRRF = 15;
+		ELSEIF salarioFinal <= 4664.68 THEN
+			aliquotaIRRF = 22.5;
+		ELSE
+			aliquotaIRRF = 27.5;
+		END IF;
+		
+		-- Calcula os descontos
+		descontoINSS = salarioFinal * aliquotaINSS/100;
+		descontoIRRF = salarioFinal * aliquotaIRRF/100;		
+	
+		RETURN (descontoINSS, descontoIRRF);
+	END;
+$$
+LANGUAGE plpgsql;
+
+SELECT * FROM VENDA;
+SELECT calcularImpostos(1, 12, 2016);

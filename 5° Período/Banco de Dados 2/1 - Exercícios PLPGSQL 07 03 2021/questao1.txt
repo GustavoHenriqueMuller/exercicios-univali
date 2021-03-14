@@ -1,0 +1,17 @@
+CREATE TABLE somalog(
+  id SERIAL PRIMARY KEY,
+  valor_1 INT,
+  valor_2 INT,
+  resultado INT
+);
+
+CREATE OR REPLACE FUNCTION soma(in INTEGER, in INTEGER)
+RETURNS INTEGER AS
+$$
+    INSERT INTO somalog (valor_1, valor_2, resultado) VALUES ($1, $2, $1 + $2);
+    SELECT $1 + $2;
+$$
+LANGUAGE SQL;
+
+SELECT soma(2, 5);
+SELECT * FROM somalog;

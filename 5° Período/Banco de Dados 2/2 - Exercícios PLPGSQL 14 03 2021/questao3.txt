@@ -1,0 +1,32 @@
+CREATE OR REPLACE FUNCTION vendasPorVendedor(idVendedor integer, mes integer, ano integer) RETURNS FLOAT AS
+$$
+	DECLARE
+		resultado FLOAT := 0;
+		linha RECORD;
+	BEGIN
+		-- Checa se o vendedor existe
+		IF NOT EXISTS (SELECT 1 FROM vendedor WHERE id = idVendedor) THEN
+			RAISE EXCEPTION 'Vendedor de ID % não existe.', idVendedor;
+		END IF;
+		
+		-- Checa se o vendedor está inativo
+		IF (SELECT status FROM vendedor WHERE id = idVendedor) = FALSE THEN
+			RAISE EXCEPTION 'Vendedor de ID % está inativo.', idVendedor;
+		END IF;
+	
+		-- Itera sobre todas as vendas realizadas pelo vendedor
+		FOR linha IN SELECT valor_total FROM VENDA WHERE
+			id_vendedor = idVendedor AND
+			EXTRACT(MONTH FROM data_venda) = mes AND
+			EXTRACT(YEAR FROM data_venda) = ano LOOP
+			
+			resultado := resultado + linha.valor_total;
+		END LOOP;
+		
+		RETURN resultado;
+	END;
+$$
+LANGUAGE plpgsql;
+
+SELECT * FROM VENDA;
+SELECT vendasPorVendedor(3, 8, 2019);

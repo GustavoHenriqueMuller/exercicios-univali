@@ -1,0 +1,14 @@
+CREATE TABLE funcionario(
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR,
+  status INT
+);
+
+CREATE OR REPLACE FUNCTION atualizarFuncionario(in INTEGER, in VARCHAR) RETURNS VOID AS
+    $$
+    UPDATE funcionario SET nome = $2 WHERE id = $1;
+    $$
+LANGUAGE SQL;
+
+SELECT atualizarFuncionario(1, 'novonome');
+SELECT * FROM funcionario;

@@ -1,0 +1,15 @@
+CREATE TABLE funcionario(
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR,
+  status INT
+);
+
+CREATE OR REPLACE FUNCTION inserirFuncionario(in VARCHAR, in INTEGER)
+RETURNS SETOF funcionario AS
+    $$
+    INSERT INTO funcionario (nome, status) VALUES ($1, $2);
+    SELECT * FROM funcionario;
+    $$
+LANGUAGE SQL;
+
+SELECT inserirFuncionario('Gustavo', 5);

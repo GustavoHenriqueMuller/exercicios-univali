@@ -35,7 +35,7 @@
                     let password = document.getElementById("password").value;
                     let object = {username: username, password: password};
                     JWT = JSON.stringify(object);
-                }             
+                }
 
                 if(JWT != null) {
                     let httpRequest = new XMLHttpRequest;
@@ -43,8 +43,8 @@
                         if(this.readyState == 4) {
                             if(this.status == 200) {
                                 window.localStorage.setItem("loginJWT", JWT);
-                                setErrorMessage("Success!", "green");                                
-                                document.write(this.responseText);
+                                setErrorMessage("Success!", "#31f54e");
+                                window.location.href = "register.html";
                             } else {
                                 window.localStorage.removeItem("loginJWT");
                                 setErrorMessage("Invalid username/password.", "#ff5e5e");                
