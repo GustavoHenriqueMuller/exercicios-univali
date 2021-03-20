@@ -1,0 +1,24 @@
+CREATE OR REPLACE FUNCTION insercao_validacao_venda() RETURNS TRIGGER AS
+$$
+	DECLARE
+		cliente RECORD;
+		vendedor RECORD;
+	BEGIN
+		SELECT * FROM cliente WHERE id = NEW.id_cliente INTO cliente;
+		SELECT * FROM vendedor WHERE id = NEW.id_vendedor INTO vendedor;
+		
+		IF (NOT cliente.status) AND (NOT vendedor.status) THEN
+			RAISE EXCEPTION 'Cliente ou vendedor está/estão inativo(s).';
+			RETURN NULL;
+		END IF;
+		
+		RETURN NEW;
+	END;
+$$
+LANGUAGE plpgsql;
+
+CREATE TRIGGER validacao_venda BEFORE INSERT ON venda
+FOR EACH ROW EXECUTE PROCEDURE insercao_validacao_venda();
+
+INSERT INTO venda(id_cliente, id_vendedor, data_venda, valor_total) VALUES (2, 1, '2038-01-19 03:14:07', 200);
+SELECT * FROM venda;

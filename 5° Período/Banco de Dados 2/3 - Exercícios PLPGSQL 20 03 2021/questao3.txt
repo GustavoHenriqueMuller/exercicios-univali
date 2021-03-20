@@ -1,0 +1,19 @@
+CREATE OR REPLACE FUNCTION atualiza_venda_valor_total() RETURNS TRIGGER AS
+$$
+	DECLARE
+		novo_valor_total FLOAT;
+		preco_produto FLOAT;
+	BEGIN
+		SELECT valor_unitario FROM produto WHERE id = NEW.id_produto INTO preco_produto;
+		novo_valor_total := preco_produto * NEW.quantidade;
+		UPDATE venda SET valor_total = novo_valor_total WHERE id = NEW.id_venda;
+		
+		RETURN NEW;
+	END;
+$$
+LANGUAGE plpgsql;
+
+CREATE TRIGGER venda_valor_total AFTER INSERT OR UPDATE ON produto_venda FOR EACH ROW EXECUTE PROCEDURE atualiza_venda_valor_total();
+
+UPDATE produto_venda SET quantidade = 100 WHERE id = 6;
+SELECT * FROM venda;

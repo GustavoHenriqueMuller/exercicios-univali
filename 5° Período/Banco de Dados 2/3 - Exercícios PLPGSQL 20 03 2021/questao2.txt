@@ -1,0 +1,17 @@
+CREATE OR REPLACE FUNCTION modificacao_neg_item_venda() RETURNS TRIGGER AS
+$$
+	BEGIN
+		IF NEW.quantidade < 0 THEN
+			RAISE EXCEPTION 'Coluna "quantidade" não permite valores negativos (Quantidade inserida: %).', NEW.quantidade;
+			RETURN NULL;
+		END IF;
+		
+		RETURN NEW;
+	END;
+$$
+LANGUAGE plpgsql;
+
+--CREATE TRIGGER neg_item_venda BEFORE INSERT OR UPDATE ON produto_venda FOR EACH ROW EXECUTE PROCEDURE modificacao_neg_item_venda();
+INSERT INTO produto_venda (id_venda, id_produto, quantidade) VALUES (1, 2, -10);
+
+SELECT * FROM produto_venda;

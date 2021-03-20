@@ -1,0 +1,35 @@
+CREATE OR REPLACE FUNCTION atualiza_estoque_produto() RETURNS TRIGGER AS
+$$
+	DECLARE
+		qnt_a_ser_removida INTEGER = 0;
+		estoque_atual_produto INTEGER;
+	BEGIN
+		IF TG_OP = 'INSERT' THEN
+			qnt_a_ser_removida := NEW.quantidade;
+		ELSEIF TG_OP = 'UPDATE' THEN
+			qnt_a_ser_removida := NEW.quantidade - OLD.quantidade;
+		ELSEIF TG_OP = 'DELETE' THEN
+			qnt_a_ser_removida := -OLD.quantidade;
+		END IF;
+		
+		SELECT quantidade_estoque FROM produto INTO estoque_atual_produto;
+		
+		IF qnt_a_ser_removida > estoque_atual_produto THEN
+			RAISE EXCEPTION 'Tentou remover % produtos de ID %, sendo que somente % existem no estoque.', NEW.quantidade, NEW.id_produto, estoque_atual_produto;
+			RETURN NULL;
+		END IF;		
+
+		UPDATE produto SET quantidade_estoque = estoque_atual_produto - qnt_a_ser_removida WHERE id = NEW.id_produto;
+		
+		IF TG_OP = 'INSERT' OR TG_OP = 'UPDATE' THEN
+			RETURN NEW;
+		ELSEIF TG_OP = 'DELETE' THEN
+			RETURN OLD;
+		END IF;
+	END;
+$$
+LANGUAGE plpgsql;
+
+CREATE TRIGGER estoque_produto AFTER INSERT OR UPDATE OR DELETE ON produto_venda FOR EACH ROW EXECUTE PROCEDURE atualiza_estoque_produto();
+
+SELECT * FROM produto;
