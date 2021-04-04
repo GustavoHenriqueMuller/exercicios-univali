@@ -26,18 +26,18 @@ def mediumDeviation(arr):
 
     return totalSum/len(arr)
 
-def standartDeviation(arr):
+def standardDeviation(arr):
     return math.sqrt(variance(arr))
 
 def variationCoeficient(arr):
-    return standartDeviation(arr)/mean(arr)
+    return standardDeviation(arr)/mean(arr)
 
 def main():
     valores = [0.73, 0.81, 0.85, 0.9]
 
     print("Média: {}".format(mean(valores)))
     print("Variância: {}".format(variance(valores)))
-    print("Desvio Padrão: {}".format(standartDeviation(valores)))
+    print("Desvio Padrão: {}".format(standardDeviation(valores)))
     print("Desvio Médio: {}".format(mediumDeviation(valores)))
     print("Coeficiente de Variação: {}".format(variationCoeficient(valores)))
     
