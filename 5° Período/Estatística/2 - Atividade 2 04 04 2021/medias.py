@@ -1,9 +1,18 @@
 import math
 
-def lerp(a,b,k):
-    lo = min(a,b)
-    hi = max(a,b)
-    return lo + (hi - lo) * k
+def round(a):
+    decimal = a - math.floor(a)
+
+    if decimal >= 0.5:
+        return math.ceil(a)
+    else:
+        return math.floor(a)
+
+def median(arr):
+    if len(arr) % 2 == 0:
+        return (arr[int(len(arr)/2)] + arr[int(len(arr)/2) - 1]) / 2
+    else:
+        return arr[int(len(arr)/2)]
 
 def mean(arr):
     return sum(arr)/len(arr)
@@ -15,7 +24,7 @@ def variance(arr):
     for val in arr:
         totalSum += math.pow((val - vectorMean), 2)
 
-    return totalSum/(len(arr)-1)
+    return totalSum/(len(arr) - 1)
 
 def mediumDeviation(arr):
     vectorMean = mean(arr)
@@ -40,7 +49,7 @@ def main():
     print("Desvio Padrão: {}".format(standardDeviation(valores)))
     print("Desvio Médio: {}".format(mediumDeviation(valores)))
     print("Coeficiente de Variação: {}".format(variationCoeficient(valores)))
-    
+
     input()
 
 if __name__ == '__main__':
