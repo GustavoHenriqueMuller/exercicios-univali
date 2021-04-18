@@ -1,0 +1,15 @@
+<resources>
+    <string name="activity_main_name">Franquias</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed libero eros. Proin volutpat urna quis dictum auctor. Fusce lacus nulla, mattis mollis ligula eget, porttitor pellentesque ex. Suspendisse fringilla ligula dolor, quis rutrum turpis aliquet at. In congue vestibulum urna nec elementum. Maecenas vulputate tellus massa, id faucibus erat bibendum quis. Donec laoreet varius lectus vitae sollicitudin. Nunc consectetur tincidunt tellus, sed molestie arcu dictum eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius, leo eu accumsan maximus, augue elit egestas dolor, non egestas justo erat elementum nisl. Aliquam quis diam ac dui ultrices fringilla a in ex. Ut consequat ipsum turpis, vitae vehicula sem condimentum interdum. Aliquam auctor vitae odio et efficitur. Nam viverra sit amet tellus vitae tempus.</string>
+    <string name="title_activity_restaurantes">Restaurantes</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
