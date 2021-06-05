@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Food Menu</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+
+    <string name="get_item_io_error">Could not get items from server (IO Exception).</string>
+    <string name="get_item_parser_configuration_error">An error ocurred in the XML parser configuration.</string>
+    <string name="get_item_parser_sax_error">An error ocurred in the XML parser.</string>
+    <string name="get_item_json_error">Could not parse JSON item from server.</string>
+    <string name="get_item_empty_error">No items could be retrieved from the server.</string>
+</resources>
