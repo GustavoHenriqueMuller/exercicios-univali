@@ -1,0 +1,29 @@
+	O artigo e o vídeo possuem ideias aparentemente contrárias; Enquanto o artigo fala principalmente sobre Asiimov, suas previsões e as suas Leis da Robótica para
+que robôs e humanos convivam de maneira pacífica, o vídeo demonstra uma imagem contestavelmente assustadora sobre o futuro da tecnologia e da raça
+humana, que relata sobre a possível tomada de controle da sociedade contemporânea por uma inteligência artificial avançada o suficiente para sobrepujar
+os humanos como uma espécie.
+
+	Com certeza Asiimov preveu corretamente os avanços tecnológicos do século 21, como por exemplo, a ideia de uma "biblioteca global", acessível
+à qualquer momento por qualquer pessoa que busca por qualquer assunto. As suas Três Leis da Robótica, ou tecnicamente quatro leis, também apresentaram
+o fundamento para que robôs e humanos convivam de maneira pacífica. Porém, caso uma inteligência artifical tão avançada quanto a relatada pelo vídeo realmente fosse
+existir, e as quatro leis de Asiimov fossem impostas em sua existência, ela seria capaz de desrespeitá-las?
+
+	Creio que, se elas fossem impostas da mesma maneira que leis são impostas sobre humanos (ou seja, de maneira orgânica), sim. Como o próprio vídeo diz, a máquina poderia
+eventualmente aprender à mentir ou esconder os seus atos. Mas, caso tal imposição seja feita de maneira rígida e faça parte da própria existência da máquina,
+como por exemplo, à um nível de abstração extremamente baixo, creio que essa possibilidade se tornaria muito mais difícil ou até impossível. Ou seja,
+acredito que a possibilidade de uma inteligência artificial adquirir consciência e se rebelar é uma função diretamente proporcional ao nível de abstração em que o seu
+sistema de segurança e "consciência" foi implementado.
+
+	Por exemplo, um computador não possui controle sobre a eletricidade que faz os seus circuitos funcionarem. Porém, é claro que humanos possuem controle sobre um conceito
+tão fundamental quanto a eletricidade; Se esse não fosse o caso, computadores não existiriam. Logo, à baixo nível, os seres humanos possuem controle sobre algo que a
+máquina não possui. Vale lembrar que, qualquer sistema de informação, não importando o quão rápido, eficiente, ou complexo seja, sempre obedecerá as leis da física e do universo em que existe:
+
+	Uma inteligência artificial, mesmo que possua complexidade gargântua, tem sua funcionalidade regida por um processador (um circuito lógico que puramente executa instruções).
+	Uma rede neural, por mais profunda que seja, continua sendo uma série de funções matemáticas ligadas em cadeia.
+
+	Por exemplo, a primeira Lei da Robótica de Asiimov declara que: "Um robô não pode ferir um ser humano ou, por ócio, permitir que um ser humano sofra algum mal".
+Se a possibilidade de ferir um humano não fizesse parte da "consciência" da máquina (o que poderia ser alcançado pelo método descrito anteriormente), uma guerra entre
+humanos e robôs, da maneira que é retratada pelo cinema e literatura, nunca ocorrereria.
+
+	Em conclusão, o artigo e o vídeo falam sobre um tema em comum: O futuro do convívio entre humanos e máquinas. Os desenlaces desse convívio dependerão do nível de controle e rigidez
+em que leis e restrições serão aplicadas à máquinas do futuro.

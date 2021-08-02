@@ -1,0 +1,44 @@
+O documentário e o artigo possuem dois pontos em comum: O viés presente em modelos de inteligência artificial. Enquanto que o primeiro demonstra o impacto negativo que esse
+viés possui na vida das pessoas, o segundo demonstra como que um viés surge em um modelo de inteligência artificial e como é possível eliminá-lo.
+
+A análise à seguir serve para elaborar esse ponto mais à fundo, e disserta sobre diversos aspectos presentes no artigo
+"É Possível Evitar Vieses Algorítmicos?", escrito por Carlos Henrique Borth (2020).
+
+A primeira parte introduz o leitor ao assunto, demonstrando diversos vieses presentes em Modelos de IA pelo mundo. Um exemplo deles é o COMPAS,
+uma ferramenta utilizada pelos EUA para auxiliar na decisão de concessão de liberdade condicional para detentos, o qual atribuiu um maior risco de reincidência
+especificamente para detentos negros. O grau de dificuldade para eliminar um viés como esse é definido pela transparência do seu Modelo de IA; Quanto maior
+a sua transparência, menor é a sua imunidade ao pensamento crítico humano. Infelizmente, a falta de transparência de muitos desses sistemas faz com que eles
+abusem da confiança dos seres humanos que os utlizam, que é o ponto realizado pelo documentário CODED BIAS, que afirma que essa falta de transparência é como
+uma caixa-preta que possui o potencial de arruinar a vida de uma pessoa.
+
+Dando continuidade, a segunda seção procura explicar como um viés como o do COMPAS surgiu em primeiro lugar. Para responder essa pergunta, o autor faz a distinção
+entre dois modelos computacionais: Os clássicos e os neurais. O modelo clássico segue regras pré-estabelecidas e bem definidas, enquanto que o modelo neural é
+muito mais refinado e complexo, e possui o potencial de reagir à possibilidades que não foram definidas previamente, já que o seu conjunto de regras e comportamentos
+são definidos por um algoritmo de treinamento e os dados fornecidos à ele. Desse modo, o comportamento do modelo neural se aproxima daquele de um ser humano.
+
+Ao fornecer dados que possuem um desbalanço estatístico, vieses serão criados. O exemplo citado pelo autor é de um modelo que interpreta o perfis de possíveis
+candidatos à um cargo de emprego. Caso a maioria dos candidatos sejam homens, é possível que o modelo despreze mulheres. Não só isso, mas o viés também depende
+de como o algoritmo de treinamento foi aplicado. E mesmo que o modelo forneça um resultado correto, ainda não se pode totalmente confiar em suas predições futuras;
+O que garante que o modelo estava ao limiar de fazer uma decisão errada?
+
+Esses pontos geram um ar de desconfiança em modelos neurais. Em contrapartida, para que possamos confiar mais neles, é preciso que eles possuam um grau de tolerância
+balançeado; Por exemplo, um modelo neural que identifica a presença de elefantes em uma foto não pode ser intolerante à ponto de não considerar elefantes com tons de pele
+diferentes, mas não pode ser tolerante à ponto de considerar um esquilo como um elefante. Uma das maneiras de aumentar o grau de confiança e lidar com um viés como esse 
+é introduzindo dados contrários; Isso pode ser feito através da mudança do algoritmo de treinamento ou da seleção cautelosa da base de dados utilizada.
+
+A terceira seção demonstra como o contexto é importante para que um Modelo de IA faça a decisão correta. Este problema se torna especialmente aparente em contextos que
+dependem do senso comum. Como por exemplo, no interior de um restaurante, onde o comportamento considerado correto não depende diretamente de regras bem-definidas,
+em contraste à situações como um jogo de xadrez, que depende somente das regras do jogo e de nenhum contexto externo à ele. No caso do restaurante, um novo fato de extrema
+relevância pode subitamente aparecer (como um incêndio), e um modelo de IA que atua em um contexto insaturado como esse precisa saber lidar com esse tipo de situação e
+levar em conta o que é mais relevante no contexto atual. Como uma infinidade de situações podem ocorrer, é inviável pré-programá-las: É necessário que isso seja realizado
+de maneira dinâmica.
+
+Este problema é conhecido como "Frame Problem", e a sua solução infelizmente não obteve muito progresso até os dias de hoje. Como consequência, para obter melhores
+resultados, muitos modelos focam em um domínio específico e saturado, isto é, independente de contexto. A solução deste problema está relacionada com a discussão de
+vieses pois para que um sistema deixe ter um viés específico, ele precisa ter senso comum para discernir o que é relevante ou não.
+
+Podemos concluir que a eliminação de vieses computacionais depende de onde, como e quando queremos aplicar um certo modelo de IA. Muitos dos modelos são norteados
+por interesses privados, o que signfica que há muitas vezes pouca motivação para tratar esse problema. Pela dificuldade de uma máquina possuir senso comum e inteligência
+abstrata, como demonstrado pelo frame problem, precisamos tratar os resultados trazidos por modelos de IA como hipóteses e no máximo inferências, e não como verdades.
+
+

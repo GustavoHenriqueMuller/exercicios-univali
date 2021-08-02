@@ -1,0 +1,33 @@
+A análise abaixo descorre sobre aspectos abordados no artigo "BIG DATA E A DEMOCRACIA NA SOCIEDADE DA INFORMAÇÃO (Daniel Machado Gomes et al., 2019)".
+
+1° aspecto: Razão entre o acesso à tecnologia e a desigualdade social
+--
+O artigo descorre principalmente sobre a relação entre big-data e os seus impactos em vários âmbitos da sociedade moderna. Enquanto que o principal
+deles discutido foi o de política e democracia, um dos âmbitos que me interessou muito foi o de desigualdade social, sendo que foi citado que outros
+autores alertam que o "fenômeno da sociedade da informação agrava o risco de aumento das desigualdades sociais em virtude do acesso ou não à informação
+e tecnologia".
+
+Eu discordo plenamente com esse alerta, e inclusive acredito justamente no contrário. A internet possui uma quantidade de conhecimento exorbitante e
+globalmente disponível para a grande maioria da população global, incluindo pessoas menos favorecidas. Qualquer um que possua acesso à ela e saiba
+procurar pelo que deseja conseguirá encontrar uma vasta quantidade de artigos, livros, fórums e tutoriais de qualidade sobre qualquer assunto que
+deseja aprender, à qualquer momento e à qualquer hora. Isso se encaixa com a definição de "biblioteca global" concebida por Isaac Asimov.
+Hodiernamente, também é possível estudar à distância, o que favorece pessoas que não podem pagar ou comparecer à um ensino tradicional em campus.
+
+Para provar o meu ponto ainda mais, uma pesquisa realizada pela TIC Domicílios 2019 afirma que 3 à cada 4 brasileiros acessaram a internet nos
+últimos três meses, o que equivale à 134 milhões de pessoas, e com a disseminação cada vez maior da tecnologia na vida das pessoas, é lógico afirmar
+que essa razão continuará à crescer ao decorrer dos próximos anos. Portanto, acredito que as tecnologias de informação modernas fizeram muito mais
+bem do que mal à desigualdade mundial.
+
+2° aspecto: Uso mal-intencionado de big-data
+--
+Outro aspecto que achei interessante é o uso mal-intencionado de técnicas de big-data em épocas de eleições políticas. Como exemplo, o autor cita o uso
+de shitstorms, candystorms e fakenews, mas não apresenta nenhuma solução concreta para esses problemas. Mesmo assim, eu gostaria de discorrer sobre esse
+tema, pois considero ele muito interessante.
+
+Percebo que muitas pessoas solicitam que os donos dos meios de informação por onde esses problemas se espalham são responsáveis por combater tais
+usos mal-intencionados. Medidas já foram implementadas em redes sociais como o Facebook e Whatsapp, por exemplo.
+
+Este é novamente outro ponto que discordo, pela sua pura hipocrisia. É comum que tais pessoas afirmem que essas empresas são movidas por interesses
+privados, e por isso não devemos confiar que os seus julgamentos almejam o bem coletivo, mas então concedem à elas o poder de decidir o que é falso ou não,
+como se os seus interesses privados não fossem influenciar o seu processo de decisão. O ato de filtrar o que é verdadeiro ou falso deve ser realizado
+individualmente por cada um que busca a verdade, e não por uma corporação que busca controle e fins lucrativos.

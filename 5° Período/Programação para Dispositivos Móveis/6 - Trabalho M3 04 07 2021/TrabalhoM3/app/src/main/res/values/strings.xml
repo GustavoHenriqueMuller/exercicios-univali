@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TrabalhoM3</string>
+
+    <string name="image_evaluation_success">All the images are equal.</string>
+    <string name="image_evaluation_failure">Not all images are equal.</string>
+    <string name="image_evaluation_not_enough_images">You need to select all the images.</string>
+
+    <string name="image_choose">Choose image source</string>
+    <string name="image_get_from_camera">Camera</string>
+    <string name="image_get_from_library">Library</string>
+    <string name="image_get_error_exception">An exception ocurred while picking the image.</string>
+    <string name="image_get_error">Could not pick image.</string>
+</resources>
