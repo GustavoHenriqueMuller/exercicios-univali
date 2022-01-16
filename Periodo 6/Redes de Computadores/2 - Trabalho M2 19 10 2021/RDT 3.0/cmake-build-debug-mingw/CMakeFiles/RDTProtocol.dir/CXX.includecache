@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Application.h
+iostream
+-
+Transport.h
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Transport.h
+
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Binary.h
+
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Clock.h
+time.h
+-
+iostream
+-
+Windows.h
+-
+
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Log.h
+iostream
+-
+
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Network.h
+Clock.h
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Clock.h
+Log.h
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Log.h
+Binary.h
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Binary.h
+cmath
+-
+
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Transport.h
+Network.h
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Network.h
+Clock.h
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Clock.h
+
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/main.cpp
+Network/Application.h
+C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Application.h
+

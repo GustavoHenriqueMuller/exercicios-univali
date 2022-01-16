@@ -1,0 +1,45 @@
+#Options
+GenerateScanner = true
+GenerateParser = true
+Language = C++
+ScannerName = Lexico
+ParserName = Sintatico
+SemanticName = Semantico
+Package = Gals
+ScannerCaseSensitive = true
+ScannerTable = Full
+Input = String
+Parser = SLR
+#RegularDefinitions
+
+#Tokens
+:[\n\s\r\t]*
+
+SUM: "+"
+SUB: "-"
+MUL: "*"
+DIV: "/"
+EXP: "^"
+EQ: "="
+
+OPEN: "("
+CLOSE: ")"
+END: ";"
+
+SHOW: "Show"
+NUM: [0-1]+
+VAR: [a-zA-Z]+
+#NonTerminals
+<LIST>
+<CMD>
+<A>
+<B>
+<C> 
+<D>
+#Grammar
+<LIST> ::= <LIST><CMD> | <CMD>;
+<CMD> ::= <A> | VAR #1 EQ <A> END #2 | SHOW OPEN <A> CLOSE END #3;
+<A> ::= <A> SUM <A> #4 | <A> SUB <A> #5 | <B>;
+<B> ::= <B> MUL <B> #6 | <B> DIV <B> #7 | <C>;
+<C> ::= <C> EXP <C> #8 | <D>;
+<D> ::= OPEN <A> CLOSE | VAR #9 | NUM #10;

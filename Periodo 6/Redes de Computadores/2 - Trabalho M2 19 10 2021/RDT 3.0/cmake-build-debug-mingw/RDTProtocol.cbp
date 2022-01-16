@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RDTProtocol"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RDTProtocol">
+				<Option output="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/RDTProtocol.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 RDTProtocol"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RDTProtocol/fast">
+				<Option output="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/RDTProtocol.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 RDTProtocol/fast"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Gustavo/source/repos/RDT/RDT 3.0/cmake-build-debug-mingw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Application.h">
+			<Option target="RDTProtocol"/>
+		</Unit>
+		<Unit filename="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Binary.h">
+			<Option target="RDTProtocol"/>
+		</Unit>
+		<Unit filename="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Clock.h">
+			<Option target="RDTProtocol"/>
+		</Unit>
+		<Unit filename="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Log.h">
+			<Option target="RDTProtocol"/>
+		</Unit>
+		<Unit filename="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Network.h">
+			<Option target="RDTProtocol"/>
+		</Unit>
+		<Unit filename="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/Network/Transport.h">
+			<Option target="RDTProtocol"/>
+		</Unit>
+		<Unit filename="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/main.cpp">
+			<Option target="RDTProtocol"/>
+		</Unit>
+		<Unit filename="C:/Users/Gustavo/source/repos/RDT/RDT 3.0/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
