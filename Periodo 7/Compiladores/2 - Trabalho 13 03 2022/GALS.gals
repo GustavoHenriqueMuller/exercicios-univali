@@ -1,0 +1,84 @@
+#Options
+GenerateScanner = true
+GenerateParser = false
+Language = C++
+ScannerName = Lexico
+ScannerCaseSensitive = true
+ScannerTable = Full
+Input = Stream
+#RegularDefinitions
+LS : [^\"]|(\\\")
+LC : [^']|(\\')
+D : [0-9]
+
+DEC : [0-9]+
+HEX : 0[xX][0-9a-fA-F]+
+BIN : 0[bB][01]+
+
+CMT: [/][/].*
+CMT_LINES : (/\*[^\*]*\*/)
+#Tokens
+INT_DEC : {DEC}
+INT_HEX : {HEX}
+INT_BIN : {BIN}
+FLOAT : {D}+(\.{D}+)?f?
+STRING : \"{LS}*\"
+CHAR : '{LC}?'
+BOOLEAN : (true|false)
+
+VAR_INT: int
+VAR_FLOAT: float
+VAR_STRING: string
+VAR_CHAR: char
+VAR_BOOLEAN: boolean
+
+IF : if
+ELSE : else
+ELSEIF : elseif
+WHILE : while
+FOR : for
+WHEN : when
+IS : is
+
+AND : (and|&&)
+OR : (or|\|\|)
+NOT : (not|!)
+
+GREATER: >
+SMALLER: <
+GREATER_EQ: >=
+SMALLER_EQ: <=
+EQ: ==
+DIF: !=
+
+PLUS: \+
+MINUS: \-
+MULT: \*
+DIV: /
+ASSIGN: =
+
+BIT_AND: &
+BIT_OR: \|
+BIT_XOR: \^
+BIT_NOT: ~
+BIT_RS: >>
+BIT_LS: <<
+
+LSP : \(
+RSP : \)
+LSB : \[ 
+RSB : \]
+LSK : \{
+RSK : \}
+DOT : \.
+END : ;
+COLON : :
+
+ID : [a-zA-Z_][a-zA-Z_0-9]*
+
+: {CMT}
+:! {CMT_LINES}
+
+: [\s\t\n\r ]*
+
+
