@@ -1,0 +1,85 @@
+int funcao1(int[10] a) {
+  if( a[0] > a[1] ) {
+    int i;
+    for( i = 0; i < 10; i++) {
+       a[i] = a[10-i-1] * a[i];
+    }
+  }
+
+  if( a[5] > a[10] ) {
+    while(i > 0 && x != 10) {
+      i = x - 1;
+    }
+  } else {
+    do {
+      x += i * y;
+    } while( x + 1 * 2 -3 || y && 4 );
+  }
+
+
+  return x;
+}
+
+int funcao2(float a, string b) {
+
+  return a * b;
+}
+
+void oi() {
+  printf("Oi");
+}
+
+int main() {
+  // Inicialização múltipla  
+  int a, b, c, d;
+  int a = 4, b, c = 2, d;
+  int a = 5;
+  int a = 2, b = 9, c = 5;
+
+  // Modificadores
+  int a;
+  const int a;
+  const ref string a;
+  ref char a;
+
+  // When-is
+  when (a) {
+    is (0) {
+      printf("Resultado: 0");
+    }
+    is (1) {
+      printf("Resultado: 0");
+    }
+    is (2) {
+      printf("Resultado: 0");
+    }
+    is (3) {
+      printf("Resultado: 0");
+    }
+  }
+
+  oi();
+
+  
+  int a,b;
+  
+  scanf(a);
+  b = a * 2;
+
+  vet[0] = a;
+
+  vet[5] = b;
+
+  vet[9] = vet[1] + vet[2];
+
+  vet[7] = funcao1(vet);
+
+  int[10] vet;
+  
+  c = a + b + vet[7];
+
+  a = funcao2(c,b);
+
+  printf("O resultado e':",a);
+  
+}

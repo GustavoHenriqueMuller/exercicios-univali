@@ -1,0 +1,65 @@
+1 - 30 Munroe St e Linksys_SES_24086.
+
+2 - Os dois são 0.1024s.
+
+3 - 00:16:b6:f7:1d:51.
+
+4 - Broadcast (ff:ff:ff:ff:ff:ff).
+
+5 - 00:16:b6:f7:1d:51.
+
+6 - Taxas suportadas: 1, 2, 5.5, 11.
+    Taxas extendidas: 6, 9, 12, 18, 24, 36, 48, 54.
+
+7 - Frame 474 -> Desination, Source, BSS.
+
+    Wireless Host (source): 00:13:02:d1:b6:4f.
+    Access point: 00:16:b6:f7:1d:51.
+    First hop router: 00:16:b6:f4:eb:a8.
+
+    Source IP address: 192.168.1.109.
+    Destination IP address: 128.199.245.12.
+
+    O endereço de destino corresponde ao domínio gaia.cs.umass.edu.
+
+8 - Frame 476 -> Desination, Source, BSS.
+
+    Host "gaia.cs.umass.edu" (destination): 91:2a:b0:49:b6:4f.
+    Access point: 00:16:b6:f7:1d:51.
+    First hop router: 00:16:b6:f4:eb:a8.
+
+    Não. O endereço MAC de origem corresponde ao first-hop router do host gaia.cs.umass.edu, e não ao
+    PC wireless que fez a requisição HTTP (192.168.1.109).
+
+9 - Pacote 1733 -> Uma release DHCP é enviada pelo host wireless (192.168.1.109) ao servidor DHCP (192.168.1.1).
+    Pacote 1735 -> Um frame 802.11 de deauthentication é enviada pelo host wireless (IntelCor_d1:b6:4f) ao access point (Cisco-Li_f7:1d:51).
+    
+    O host poderia ter enviado um frame 802.11 de desassociação, segundo a especificação IEEE 802.11.
+
+10 - 6 frames de autenticação foram enviados pelo host wireless (pacotes 1740, 1741, 1742, 1744, 1746, 1749).
+
+11 - Por chave.
+
+12 - Não.
+
+13 - Os frames 2156 e 2160 enviados pelo host wireless foram respondidos pelos frames 2158 e 2164 do AP.
+
+14 - O frame 2166 enviado pelo AP para o wireless host representa o ASSOCIATE RESPONSE.
+
+15 - Usando o frame 2162 de ASSOCIATION REQUEST enviado pelo host wireless como referência, as taxas suportadas são
+     1, 2, 5, 5.5, 6, 9, 12 e 18 Mbit/sec. As taxas extendidas são 24, 36, 48 e 54 Mbit/sec.
+
+16 - Usando o frame 50 de PROBE REQUEST como referência:
+
+     Sender: 00:12:f0:1f:57:13.
+     Destination: ff:ff:ff:ff:ff:ff (broadcast).
+     BSS: ff:ff:ff:ff:ff:ff (broadcast).
+
+     Usando o frame 51 de PROBE RESPONSE como referência:
+
+     Sender: 00:16:b6:f7:1d:51.
+     Destination: 00:16:b6:f7:1d:51 (broadcast).
+     BSS: 00:16:b6:f7:1d:51 (broadcast).
+
+     O probe request é um tipo de frame enviado por um host wireless em uma rede de scanning ativo, com o propósito de descobrir quais são os APs disponíveis. É enviado em broadcast.
+     O probe response é um tipo de frame enviado por um AP para um host wireless específico em uma rede de scanning ativo, para notificar tal host de sua existência.

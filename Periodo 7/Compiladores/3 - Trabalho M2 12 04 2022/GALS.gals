@@ -1,0 +1,244 @@
+#Options
+GenerateScanner = true
+GenerateParser = true
+Language = C++
+ScannerName = Lexico
+ParserName = Sintatico
+SemanticName = Semantico
+ScannerCaseSensitive = true
+ScannerTable = Full
+Input = Stream
+Parser = SLR
+#RegularDefinitions
+LS : [^\"]|(\\\")
+LC : [^']|(\\')
+D : [0-9]
+
+DEC : [0-9]+
+HEX : 0[xX][0-9a-fA-F]+
+BIN : 0[bB][01]+
+
+CMT: (/\*([^\*]|[\r\n]|(\*+([^\*/]|[\r\n])))*\*+/)|([/][/].*)
+#Tokens
+INT_DEC : {DEC}
+INT_HEX : {HEX}
+INT_BIN : {BIN}
+FLOAT : {D}+(\.{D}+)?f?
+STRING : \"{LS}*\"
+CHAR : '{LC}?'
+BOOLEAN : (true|false)
+
+VAR_INT: int
+VAR_FLOAT: float
+VAR_DOUBLE: double
+VAR_STRING: string
+VAR_CHAR: char
+VAR_BOOLEAN: boolean
+VAR_VOID: void
+
+CONST : const
+REF: ref
+IF : if
+ELSE : else
+ELSEIF : elseif
+WHILE : while
+DO: do
+FOR : for
+WHEN : when
+IS : is
+RETURN : return
+
+AND : (and|&&)
+OR : (or|\|\|)
+NOT : (not|!)
+
+GREATER: >
+SMALLER: <
+GREATER_EQ: >=
+SMALLER_EQ: <=
+EQ: ==
+DIF: !=
+
+INCREMENT_ASSIGN: \+=
+DECREMENT_ASSIGN: \-=
+
+INCREMENT: \+\+
+DECREMENT: \-\-
+PLUS: \+
+MINUS: \-
+MULT: \*
+DIV: /
+MOD: %
+ASSIGN: =
+
+BIT_AND: &
+BIT_OR: \|
+BIT_XOR: \^
+BIT_NOT: ~
+BIT_RS: >>
+BIT_LS: <<
+
+LSP : \(
+RSP : \)
+LSB : \[ 
+RSB : \]
+LSC : \{
+RSC : \}
+DOT : \.
+END : ;
+COLON : :
+COMMA : ,
+
+ID : [a-zA-Z_][a-zA-Z_0-9]*
+
+: {CMT}
+: [\s\t\n\r ]*
+
+
+#NonTerminals
+// Main
+<main>
+
+// Escopos e funções
+<scope>
+<function>
+<function_list>
+<function_prototype>
+<function_argument_list>
+<function_argument>
+
+<function_call>
+<function_call_argument_list>
+
+// Statements
+<statement_list>
+<statement>
+
+<if_stmt>
+<while_stmt>
+<do_while_stmt>
+
+<for_stmt>
+<for_left>
+
+<when_stmt>
+
+<declaration_stmt>
+<declaration_stmt_id_list>
+
+<assign_stmt>
+<return_stmt>
+
+// Blocos
+<if>
+<else_if>
+<else_if_list>
+<else>
+
+<is_list>
+<is>
+
+// Expressões
+<exp>
+<exp1>
+<exp2>
+<exp3>
+<exp4>
+<exp5>
+<exp6>
+<exp7>
+<exp8>
+<exp9>
+<exp10>
+<exp11>
+
+<type>
+<type_primitive>
+<modifier_list>
+
+<literal>
+<left_value>
+
+// Operadores
+<op_comp>
+<op_unary_left>
+<op_unary_right>
+<op_bitwise>
+<op_arit_low>
+<op_arit_high>
+<op_assign>
+
+#Grammar
+// Main
+<main> ::= <function_list>;
+
+// Escopos e funções
+<scope> ::= LSC RSC | LSC <statement_list> RSC;
+<function> ::= <function_prototype> <scope>;
+<function_list> ::= <function> <function_list> | <function>;
+<function_prototype> ::= <type> ID LSP RSP | <type> ID LSP <function_argument_list> RSP;
+<function_argument_list> ::= <type> ID COMMA <function_argument_list> | <type> ID;
+
+<function_call> ::= ID LSP RSP | ID LSP <function_call_argument_list> RSP;
+<function_call_argument_list> ::= <exp> COMMA <function_call_argument_list> | <exp>;
+
+// Statements
+<statement_list> ::= <statement> <statement_list> | <statement>;
+<statement> ::= <if_stmt> | <while_stmt> | <do_while_stmt> END | <for_stmt> | <declaration_stmt> END | <assign_stmt> END | <return_stmt> END | <exp> END | <when_stmt>;
+
+<if_stmt> ::= <if> | <if> <else> | <if> <else_if_list> <else>;
+<while_stmt> ::= WHILE LSP <exp> RSP <scope>;
+<do_while_stmt> ::= DO <scope> WHILE LSP <exp> RSP;
+
+<for_stmt> ::= FOR LSP <for_left> END <exp> END <exp> RSP <scope>;
+<for_left> ::= <exp> | <declaration_stmt> | <assign_stmt>;
+
+<when_stmt> ::= WHEN LSP <left_value> RSP LSC <is_list> RSC | WHEN LSP <left_value> RSP LSC RSC;
+
+<declaration_stmt> ::= <type> <declaration_stmt_id_list>;
+<declaration_stmt_id_list> ::= ID COMMA <declaration_stmt_id_list> | ID ASSIGN <exp> COMMA <declaration_stmt_id_list> | ID | ID ASSIGN <exp>;
+
+<assign_stmt> ::= <left_value> <op_assign> <exp>;
+<return_stmt> ::= RETURN <exp>;
+
+// Blocos
+<if> ::= IF LSP <exp> RSP <scope>;
+<else_if_list> ::= <else_if> <else_if_list> | <else_if>;
+<else_if> ::= ELSEIF LSP <exp> RSP <scope>;
+<else> ::= ELSE <scope>;
+
+<is_list> ::= <is> <is_list> | <is>;
+<is> ::= IS LSP <exp> RSP <scope>;
+
+// Expressões
+<exp>  ::= <exp> OR <exp1> | <exp1>;
+<exp1> ::= <exp1> AND <exp2> | <exp2>;
+<exp2> ::= <exp2> BIT_OR <exp3> | <exp3>;
+<exp3> ::= <exp3> BIT_XOR <exp4> | <exp4>;
+<exp4> ::= <exp4> BIT_AND <exp5> | <exp5>;
+<exp5> ::= <exp5> <op_comp> <exp6> | <exp6>;
+<exp6> ::= <exp6> <op_bitwise> <exp7> | <exp7>;
+<exp7> ::= <exp7> <op_arit_low> <exp8> | <exp8>;
+<exp8> ::= <exp8> <op_arit_high> <exp9> | <exp9> ;
+<exp9> ::= <exp10> <op_unary_right> | <exp10>;
+<exp10> ::= <op_unary_left> <exp11> | <exp11>;
+<exp11> ::= <literal> | <left_value> | <function_call> | LSP <exp> RSP;
+
+<type> ::= <modifier_list> <type_primitive> | <modifier_list> <type_primitive> LSB RSB | <modifier_list> <type_primitive> LSB <exp> RSB;
+<type_primitive> ::= VAR_INT | VAR_FLOAT | VAR_DOUBLE | VAR_STRING | VAR_CHAR | VAR_BOOLEAN | VAR_VOID;
+<modifier_list> ::= CONST REF | CONST | REF | î;
+
+<literal> ::= INT_DEC | INT_HEX | INT_BIN | FLOAT | STRING | CHAR | BOOLEAN;
+<left_value> ::= ID | ID LSB <exp> RSB;
+
+// Operadores
+<op_comp> ::= GREATER | SMALLER | GREATER_EQ | SMALLER_EQ | EQ | DIF; 
+<op_unary_left> ::= MINUS | BIT_NOT | NOT | INCREMENT | DECREMENT;
+<op_unary_right> ::= INCREMENT | DECREMENT;
+<op_bitwise> ::= BIT_LS | BIT_RS;
+<op_arit_low> ::= PLUS | MINUS;
+<op_arit_high> ::= MULT | DIV | MOD;
+<op_assign> ::= INCREMENT_ASSIGN | DECREMENT_ASSIGN | ASSIGN;
+
+// Exemplo com tudo para ser usado no simulador
+// -x + 8.8 - !x * 2 / ~y % 3 << 7 != y >> 3 || (x <= 3 && y > 8) | p & (h ^ g)

@@ -1,0 +1,6 @@
+URL do repositório no github: https://github.com/GustavoHenriqueMuller/CubeGLUT
+O repositório tem o arquivo PDF de pesquisa.
+
+Integrantes:
+Gustavo Henrique Stahl Müller
+Paulo Henrique Rohling

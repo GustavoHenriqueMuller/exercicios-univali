@@ -1,0 +1,32 @@
+// DADOS
+Pacote 69 -> HTTP GET REQUEST
+Pacote 113 -> HTTP GET RESPONSE
+
+Pacote 24/25 -> ARP
+
+// RESPOSTAS
+
+1 - 04:d9:f5:79:f4:4a.
+2 - d8:0d:17:43:6b:ba.
+    Não, é o endereço ethernet de uma das interfaces de rede do meu roteador.
+3 - 0x0800. IPv4.
+4 - 54 bytes.
+5 - d8:0d:17:43:6b:ba. É o endereço ethernet de uma das interfaces de rede do meu roteador.
+6 - 04:d9:f5:79:f4:4a. Sim, é o endereço ethernet de uma das interfaces de rede do meu computador.
+7 - 0x0800. IPv4.
+8 - 54 bytes.
+9 - print
+10 - 04:d9:f5:79:f4:4a, ff:ff:ff:ff:ff:ff.
+11 - 0x0806. ARP.
+12 - 20 bytes.
+     Request (1).
+     Sim.
+     No endereço de destino (00:00:00:00:00:00).
+13 - 20 bytes.
+     Reply (2).
+     Sim.
+     No sender MAC address (d8:0d:17:43:6b:ba).
+14 - Origem: d8:0d:17:43:6b:ba.
+     Destino: 04:d9:f5:79:f4:4a.
+15 - Porque a resposta ARP foi enviada diretamente ao endereço ethernet da outra máquina, e o Wireshark mostra somente as mensagens recebidas/enviadas
+de uma só maquina.
