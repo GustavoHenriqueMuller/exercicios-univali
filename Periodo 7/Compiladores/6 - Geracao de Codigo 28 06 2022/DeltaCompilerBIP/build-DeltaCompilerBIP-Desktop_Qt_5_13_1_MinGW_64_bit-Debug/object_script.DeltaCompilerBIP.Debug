@@ -1,0 +1,12 @@
+debug/ConsoleParser.o
+debug/Constants.o
+debug/Lexico.o
+debug/Semantico.o
+debug/Sintatico.o
+debug/Generator.o
+debug/Logger.o
+debug/Main.o
+debug/Operation.o
+debug/OperationManager.o
+debug/Symbol.o
+debug/Utils.o

@@ -1,0 +1,12 @@
+release/ConsoleParser.o
+release/Constants.o
+release/Lexico.o
+release/Semantico.o
+release/Sintatico.o
+release/Generator.o
+release/Logger.o
+release/Main.o
+release/Operation.o
+release/OperationManager.o
+release/Symbol.o
+release/Utils.o
