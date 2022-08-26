@@ -1,0 +1,21 @@
+<div class="flex items-center w-full h-9 text-white border-b border-davys-gray">
+  Symbol Table
+</div>
+
+<div class="flex flex-col text-white w-full h-full select-none overflow-auto text-sm">
+  <div class="flex w-full bg-gunmetal flex-shrink-0">
+    <ng-container *ngFor="let header of symbolKeys">
+      <div class="flex w-1/5 flex-shrink-0">{{header.toUpperCase()}}</div>
+    </ng-container>
+  </div>
+
+  <ng-container *ngFor="let symbol of (actualSymbolList$ | async)">
+    <div class="flex group w-full flex-shrink-0">
+      <ng-container *ngFor="let key of symbolKeys">
+        <div class="flex w-1/5 group-hover:bg-gunmetal flex-shrink-0 text-auro-metal-saurus group-hover:text-white">
+          {{symbol[key]}}
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

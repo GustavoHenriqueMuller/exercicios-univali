@@ -1,0 +1,9 @@
+<div [ngClass]="container">
+  <div class="flex items-center w-full h-full"
+       [ngClass]="(!alignLeft && !alignRight) ? 'justify-center' : alignLeft ? 'justify-start' : 'justify-end'">
+    <svg [attr.viewBox]="iconValue?.viewBox" class="h-full renderSvg fill-current" [ngClass]="[clazz]"
+         fill="none" xmlns="http://www.w3.org/2000/svg" stroke="none">
+      <path [attr.d]="iconValue?.display"/>
+    </svg>
+  </div>
+</div>

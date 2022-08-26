@@ -1,0 +1,7 @@
+app-file-view {
+  @apply flex w-full h-full overflow-hidden;
+}
+
+ngx-monaco-editor {
+  @apply w-full min-h-full leading-10;
+}

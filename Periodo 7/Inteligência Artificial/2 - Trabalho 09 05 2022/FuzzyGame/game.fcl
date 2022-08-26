@@ -1,0 +1,107 @@
+FUNCTION_BLOCK game
+
+
+VAR_INPUT
+	Quantidade_Analises_Positivas : REAL;
+	Preco : REAL;
+	Quantidade_Espectadores : REAL;
+END_VAR
+
+VAR_OUTPUT
+	Indice_Popularidade : REAL;
+END_VAR
+
+
+FUZZIFY Quantidade_Analises_Positivas
+	TERM Baixa := (0, 1) (400, 1) (500, 0);
+	TERM Media := (400, 0) (500, 1) (900, 1) (1000, 0);
+	TERM Alta := (900, 0) (1000, 1) (1500, 1);
+END_FUZZIFY
+
+FUZZIFY Preco
+	TERM MuitoBaixo := (0, 1) (5, 1) (10, 0);
+	TERM Baixo := (5, 0) (10, 1) (20, 1) (25, 0);
+	TERM Medio := (20, 0) (25, 1) (75, 1) (90, 0);
+	TERM Alto := (75, 0) (90, 1) (150, 1) (160, 0);
+	TERM MuitoAlto := (150, 0) (160, 1) (250, 1);
+END_FUZZIFY
+
+FUZZIFY Quantidade_Espectadores
+	TERM Baixa := (0, 1) (800, 1) (1000, 0);
+	TERM Media := (800, 0) (1000, 1) (3000, 1) (3500, 0);
+	TERM Alta := (3000, 0) (3500, 1) (5000, 1);
+END_FUZZIFY
+
+
+DEFUZZIFY Indice_Popularidade
+	TERM Baixo := (0, 1) (25, 1) (50, 0);
+	TERM Medio := (25, 0) (50, 1) (75, 0);
+	TERM Alto := (50, 0) (75, 1) (100, 1);
+	METHOD : COG;
+	DEFAULT := 0;
+END_DEFUZZIFY
+
+
+RULEBLOCK Rules
+	AND : MIN;
+	ACT : MIN;
+	ACCU : MAX;
+
+	Rule 1 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS MuitoBaixo AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Baixo;
+	Rule 2 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS Baixo AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Baixo;
+	Rule 3 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS Medio AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Medio;
+	Rule 4 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS Alto AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Baixo;
+	Rule 5 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS MuitoAlto AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Baixo;
+
+	Rule 6 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS MuitoBaixo AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Baixo;
+	Rule 7 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS Baixo AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+	Rule 8 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS Medio AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+	Rule 9 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS Alto AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+	Rule 10 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS MuitoAlto AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Baixo;
+
+	Rule 11 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS MuitoBaixo AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Baixo;
+	Rule 12 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS Baixo AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Medio;
+	Rule 13 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS Medio AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Alto;
+	Rule 14 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS Alto AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Medio;
+	Rule 15 : IF Quantidade_Analises_Positivas IS Baixa AND Preco IS MuitoAlto AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Baixo;
+
+	Rule 16 : IF Quantidade_Analises_Positivas IS Media AND Preco IS MuitoBaixo AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Baixo;
+	Rule 17 : IF Quantidade_Analises_Positivas IS Media AND Preco IS Baixo AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Medio;
+	Rule 18 : IF Quantidade_Analises_Positivas IS Media AND Preco IS Medio AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Medio;
+	Rule 19 : IF Quantidade_Analises_Positivas IS Media AND Preco IS Alto AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Medio;
+	Rule 20 : IF Quantidade_Analises_Positivas IS Media AND Preco IS MuitoAlto AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Baixo;
+
+	Rule 21 : IF Quantidade_Analises_Positivas IS Media AND Preco IS MuitoBaixo AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+	Rule 22 : IF Quantidade_Analises_Positivas IS Media AND Preco IS Baixo AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+	Rule 23 : IF Quantidade_Analises_Positivas IS Media AND Preco IS Medio AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Alto;
+	Rule 24 : IF Quantidade_Analises_Positivas IS Media AND Preco IS Alto AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+	Rule 25 : IF Quantidade_Analises_Positivas IS Media AND Preco IS MuitoAlto AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+
+	Rule 26 : IF Quantidade_Analises_Positivas IS Media AND Preco IS MuitoBaixo AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Medio;
+	Rule 27 : IF Quantidade_Analises_Positivas IS Media AND Preco IS Baixo AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Medio;
+	Rule 28 : IF Quantidade_Analises_Positivas IS Media AND Preco IS Medio AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Alto;
+	Rule 29 : IF Quantidade_Analises_Positivas IS Media AND Preco IS Alto AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Medio;
+	Rule 30 : IF Quantidade_Analises_Positivas IS Media AND Preco IS MuitoAlto AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Medio;
+
+	Rule 31 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS MuitoBaixo AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Baixo;
+	Rule 32 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS Baixo AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Medio;
+	Rule 33 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS Medio AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Medio;
+	Rule 34 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS Alto AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Medio;
+	Rule 35 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS MuitoAlto AND Quantidade_Espectadores IS Baixa THEN Indice_Popularidade IS Baixo;
+
+	Rule 36 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS MuitoBaixo AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+	Rule 37 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS Baixo AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+	Rule 38 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS Medio AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Alto;
+	Rule 39 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS Alto AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+	Rule 40 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS MuitoAlto AND Quantidade_Espectadores IS Media THEN Indice_Popularidade IS Medio;
+
+	Rule 41 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS MuitoBaixo AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Medio;
+	Rule 42 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS Baixo AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Alto;
+	Rule 43 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS Medio AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Alto;
+	Rule 44 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS Alto AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Alto;
+	Rule 45 : IF Quantidade_Analises_Positivas IS Alta AND Preco IS MuitoAlto AND Quantidade_Espectadores IS Alta THEN Indice_Popularidade IS Medio;
+END_RULEBLOCK
+
+
+
+END_FUNCTION_BLOCK

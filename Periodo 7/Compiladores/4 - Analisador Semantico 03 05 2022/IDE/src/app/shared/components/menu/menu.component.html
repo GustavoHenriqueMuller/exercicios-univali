@@ -1,0 +1,39 @@
+<app-icon
+  (click)="menuService.newFile()"
+  [icon]="'FILE_PLUS'"
+  [container]="'group w-10 h-full py-2.5 cursor-pointer bg-davys-gray/0 hover:bg-davys-gray/40'"
+  [clazz]="'text-davys-gray group-hover:text-white'"></app-icon>
+
+<app-icon
+  (click)="menuService.openFile()"
+  [icon]="'FOLDER'"
+  [container]="'group w-10 h-full py-2.5 cursor-pointer bg-davys-gray/0 hover:bg-davys-gray/40'"
+  [clazz]="'text-davys-gray group-hover:text-white'"></app-icon>
+
+<app-icon
+  (click)="menuService.saveFile()"
+  [icon]="'SAVE'"
+  [container]="'group w-10 h-full py-2.5 cursor-pointer bg-davys-gray/0 hover:bg-davys-gray/40'"
+  [clazz]="'text-davys-gray group-hover:text-white'"></app-icon>
+
+<app-icon
+  (click)="menuService.buildFile()"
+  [icon]="'play'"
+  [container]="'group w-10 h-full py-2.5 cursor-pointer bg-davys-gray/0 hover:bg-davys-gray/40'"
+  [clazz]="'text-davys-gray group-hover:text-white'"></app-icon>
+
+<app-icon
+  (click)="menuService.setExecutable()"
+  [icon]="'SETTINGS'"
+  [container]="'group w-10 h-full py-2.5 cursor-pointer bg-davys-gray/0 hover:bg-davys-gray/40'"
+  [clazz]="'text-davys-gray group-hover:text-white'"></app-icon>
+
+<app-icon
+  [icon]="'MOON'"
+  [container]="'group w-10 h-full py-2.5 cursor-pointer bg-davys-gray/0 hover:bg-davys-gray/40'"
+  [clazz]="'text-davys-gray group-hover:text-white'"></app-icon>
+
+
+<div class="flex flex-1 justify-end items-center h-full text-white mr-5">
+  {{(this.fileService.isNotSaved$ | async) ? "Não salvo" : ""}}
+</div>
