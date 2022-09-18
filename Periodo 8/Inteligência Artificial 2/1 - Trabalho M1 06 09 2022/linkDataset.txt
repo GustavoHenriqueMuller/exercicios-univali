@@ -1,0 +1,2 @@
+URL original: https://www.kaggle.com/datasets/flaredown/flaredown-autoimmune-symptom-tracker
+URL do google drive: https://drive.google.com/file/d/1ZcMNOTFuysQoXJ3HuxTPG25o0f0QQIrS/view?usp=sharing

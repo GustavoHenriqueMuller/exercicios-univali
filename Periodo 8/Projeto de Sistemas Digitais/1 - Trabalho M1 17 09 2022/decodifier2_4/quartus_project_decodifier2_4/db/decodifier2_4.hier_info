@@ -1,0 +1,15 @@
+|decodifier2_4
+in_NUMBER[0] => out_S.IN0
+in_NUMBER[0] => out_S.IN0
+in_NUMBER[0] => out_S.IN0
+in_NUMBER[0] => out_S.IN0
+in_NUMBER[1] => out_S.IN1
+in_NUMBER[1] => out_S.IN1
+in_NUMBER[1] => out_S.IN1
+in_NUMBER[1] => out_S.IN1
+out_S[0] <= out_S.DB_MAX_OUTPUT_PORT_TYPE
+out_S[1] <= out_S.DB_MAX_OUTPUT_PORT_TYPE
+out_S[2] <= out_S.DB_MAX_OUTPUT_PORT_TYPE
+out_S[3] <= out_S.DB_MAX_OUTPUT_PORT_TYPE
+
+

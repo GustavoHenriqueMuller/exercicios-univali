@@ -1,0 +1,58 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity decodifier2_4_tb is
+end decodifier2_4_tb;
+
+architecture arch_decodifier2_4_tb of decodifier2_4_tb is
+  component decodifier2_4 is
+  port
+    (
+      i_A: in std_logic_vector (1 downto 0);
+      o_S: out std_logic_vector (3 downto 0)
+    );
+  end component;
+  
+  signal w_A: std_logic_vector (1 downto 0);
+  signal w_S: std_logic_vector (3 downto 0);
+
+  begin
+    decodifier_instance: decodifier2_4 port map(w_A, w_S);
+      
+    process
+    begin
+      w_A(1) <= '0';
+      w_A(0) <= '0';
+      wait for 1ns;
+      assert (w_S(3) = '0') report "Fail 0/0 -> output(3) == 1" severity error;
+      assert (w_S(2) = '0') report "Fail 0/0 -> output(2) == 1" severity error;
+      assert (w_S(1) = '0') report "Fail 0/0 -> output(1) == 1" severity error;
+      assert (w_S(0) = '1') report "Fail 0/0 -> output(0) != 1" severity error;
+      
+      w_A(1) <= '0';
+      w_A(0) <= '1';     
+      wait for 1ns;
+      assert (w_S(3) = '0') report "Fail 0/1 -> output(3) == 1" severity error;
+      assert (w_S(2) = '0') report "Fail 0/1 -> output(2) == 1" severity error;
+      assert (w_S(1) = '1') report "Fail 0/1 -> output(1) != 1" severity error;
+      assert (w_S(0) = '0') report "Fail 0/1 -> output(0) == 1" severity error;
+      
+      w_A(1) <= '1';
+      w_A(0) <= '0';
+      wait for 1ns;
+      assert (w_S(3) = '0') report "Fail 1/0 -> output(3) == 1" severity error;
+      assert (w_S(2) = '1') report "Fail 1/0 -> output(2) != 1" severity error;
+      assert (w_S(1) = '0') report "Fail 1/0 -> output(1) == 1" severity error;
+      assert (w_S(0) = '0') report "Fail 1/0 -> output(0) == 1" severity error;
+      
+      w_A(1) <= '1';
+      w_A(0) <= '1';
+      wait for 1ns;
+      assert (w_S(3) = '1') report "Fail 1/1 -> output(3) != 1" severity error;
+      assert (w_S(2) = '0') report "Fail 1/1 -> output(2) == 1" severity error;
+      assert (w_S(1) = '0') report "Fail 1/1 -> output(1) == 1" severity error;
+      assert (w_S(0) = '0') report "Fail 1/1 -> output(0) == 1" severity error;
+
+      wait;
+    end process;
+end arch_decodifier2_4_tb;

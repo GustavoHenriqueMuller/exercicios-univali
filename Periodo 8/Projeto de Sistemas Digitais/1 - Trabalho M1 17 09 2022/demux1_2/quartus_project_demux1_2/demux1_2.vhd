@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity demux1_2 is
+port
+  (
+    i_A: in std_logic;
+    i_SEL: in std_logic;
+    o_S: out std_logic_vector (1 downto 0)
+  );
+end demux1_2;
+
+architecture arch_demux1_2 of demux1_2 is
+begin
+  o_S(0) <= i_A and not i_SEL;
+  o_S(1) <= i_A and i_SEL;
+end arch_demux1_2;

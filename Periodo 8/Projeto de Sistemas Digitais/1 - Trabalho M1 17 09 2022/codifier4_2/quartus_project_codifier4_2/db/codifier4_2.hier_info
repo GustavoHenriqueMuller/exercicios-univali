@@ -1,0 +1,10 @@
+|codifier4_2
+in_A[0] => ~NO_FANOUT~
+in_A[1] => out_NUMBER.IN0
+in_A[2] => out_NUMBER.IN0
+in_A[3] => out_NUMBER.IN1
+in_A[3] => out_NUMBER.IN1
+out_NUMBER[0] <= out_NUMBER.DB_MAX_OUTPUT_PORT_TYPE
+out_NUMBER[1] <= out_NUMBER.DB_MAX_OUTPUT_PORT_TYPE
+
+

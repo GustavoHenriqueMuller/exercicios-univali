@@ -1,0 +1,51 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity demux1_2_tb is
+end demux1_2_tb;
+
+architecture arch_demux1_2_tb of demux1_2_tb is
+  component demux1_2 is
+  port
+      (
+        i_A: in std_logic;
+        i_SEL: in std_logic;
+        o_S: out std_logic_vector (1 downto 0)
+      );
+  end component;
+  
+  signal w_A, w_SEL: std_logic;
+  signal w_S: std_logic_vector (1 downto 0);
+
+  begin
+    demux_instance: demux1_2 port map(w_A, w_SEL, w_S);
+      
+    process
+    begin
+      w_A <= '0';
+      w_SEL <= '0';
+      wait for 1ns;
+      assert (w_S(1) = '0') report "Fail 0/0 == 0 -> output(1) != 0" severity error;
+      assert (w_S(0) = '0') report "Fail 0/0 == 0 -> output(0) != 0" severity error;
+        
+      w_A <= '0';
+      w_SEL <= '1';
+      wait for 1ns;
+      assert (w_S(1) = '0') report "Fail 0/1 == 0 -> output(1) != 0" severity error;
+      assert (w_S(0) = '0') report "Fail 0/1 == 0 -> output(0) != 0" severity error;
+        
+      w_A <= '1';
+      w_SEL <= '0';
+      wait for 1ns;
+      assert (w_S(1) = '0') report "Fail 1/0 == 0 -> output(1) != 0" severity error;
+      assert (w_S(0) = '1') report "Fail 1/0 == 1 -> output(0) != 1" severity error;
+        
+      w_A <= '1';
+      w_SEL <= '1';
+      wait for 1ns;
+      assert (w_S(1) = '1') report "Fail 1/1 == 1 -> output(1) != 1" severity error;
+      assert (w_S(0) = '0') report "Fail 1/1 == 0 -> output(0) != 0" severity error;
+      
+      wait;
+    end process;
+end arch_demux1_2_tb;
