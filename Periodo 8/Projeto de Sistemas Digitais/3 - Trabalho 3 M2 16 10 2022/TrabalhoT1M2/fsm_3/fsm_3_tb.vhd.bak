@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity fsm_3_tb is
+end fsm_3_tb;
+
+architecture arch_fsm_3_tb of fsm_3_tb is
+
+	begin
+	
+end arch_fsm_3_tb;

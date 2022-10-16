@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity fsm_1 is
+	port
+	(
+		i_CLR_n: in std_logic;
+		i_CLK: in std_logic;
+		o_X: out std_logic;
+		o_Y: out std_logic;
+		o_Z: out std_logic;
+	);
+end fsm_1;
+
+architecture arch_fsm_1 of fsm_1 is
+	type t_STATE is (s0, s1, s2, s3);
+	signal r_STATE: t_STATE;
+	signal w_NEXT_STATE: t_STATE;
+	
+	begin
+		p_CHANGE_STATE: process(i_CLR_n, i_CLK) begin
+			if (i_CLR_n = '0') then
+				r_STATE <= s0;
+			elsif (rising_edge(i_CLK)) then
+				r_STATE <= w_NEXT_STATE;
+			end if;
+		end process;
+	
+		p_NEXT_STATE: process(r_STATE) begin
+			case (r_STATE) is
+				when s0 => w_NEXT <= s1;
+				when s1 => w_NEXT <= s2;
+				when s2 => w_NEXT <= s3;
+				when s3 => w_NEXT <= s0;
+			when others => w_NEXT_STATE <= s0;
+		end process;
+		
+		p_OUTPUT: process(r_STATE) begin
+			case (r_STATE) is
+				when s0 => o_X <= "0", o_Y <= "0", o_Z <= "0";
+				when s0 => o_X <= "0", o_Y <= "0", o_Z <= "0";
+				when s0 => o_X <= "0", o_Y <= "0", o_Z <= "0";
+				when s0 => o_X <= "0", o_Y <= "0", o_Z <= "0";
+			when others => 
+		end process;
+	end;
+end arch_fsm_1;

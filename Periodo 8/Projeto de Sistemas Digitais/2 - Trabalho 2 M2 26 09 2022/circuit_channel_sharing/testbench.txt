@@ -1,0 +1,93 @@
+-- Code your testbench here
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity circuit_channel_sharing_tb is
+end circuit_channel_sharing_tb;
+
+architecture arch_circuit_channel_sharing_tb of circuit_channel_sharing_tb is
+  component circuit_channel_sharing is
+    port
+    (
+      i_SW: in std_logic_vector (1 downto 0);
+      i_SEL: in std_logic;
+      o_LED: out std_logic_vector (1 downto 0)
+    );
+  end component;
+  
+  signal w_SW: std_logic_vector (1 downto 0);
+  signal w_SEL: std_logic;
+  signal w_LED: std_logic_vector (1 downto 0);
+    
+  begin
+    u_design: circuit_channel_sharing port map (w_SW, w_SEL, w_LED);
+        
+    process
+    begin
+      w_SW(0) <= '0';
+      w_SW(1) <= '0';
+      w_SEL <= '0';
+      wait for 1ns;
+      
+      assert (w_LED(0) = '0') report "Fail 0/0/0 -> LED(0)" severity error;
+      assert (w_LED(1) = '0') report "Fail 0/0/0 -> LED(1)" severity error;
+      
+      w_SW(0) <= '0';
+      w_SW(1) <= '0';
+      w_SEL <= '1';
+      wait for 1ns;
+      
+      assert (w_LED(0) = '0') report "Fail 0/0/1 -> LED(0)" severity error;
+      assert (w_LED(1) = '0') report "Fail 0/0/1 -> LED(1)" severity error;
+      
+      w_SW(0) <= '0';
+      w_SW(1) <= '1';
+      w_SEL <= '0';
+      wait for 1ns;
+      
+      assert (w_LED(0) = '0') report "Fail 0/1/0 -> LED(0)" severity error;
+      assert (w_LED(1) = '0') report "Fail 0/1/0 -> LED(1)" severity error;
+      
+      w_SW(0) <= '0';
+      w_SW(1) <= '1';
+      w_SEL <= '1';
+      wait for 1ns;
+      
+      assert (w_LED(0) = '0') report "Fail 0/1/1 -> LED(0)" severity error;
+      assert (w_LED(1) = '1') report "Fail 0/1/1 -> LED(1)" severity error;
+      
+      w_SW(0) <= '1';
+      w_SW(1) <= '0';
+      w_SEL <= '0';
+      wait for 1ns;
+      
+      assert (w_LED(0) = '1') report "Fail 1/0/0 -> LED(0)" severity error;
+      assert (w_LED(1) = '0') report "Fail 1/0/0 -> LED(1)" severity error;
+      
+      w_SW(0) <= '1';
+      w_SW(1) <= '0';
+      w_SEL <= '1';
+      wait for 1ns;
+     
+      assert (w_LED(0) = '0') report "Fail 1/0/1 -> LED(0)" severity error;
+      assert (w_LED(1) = '0') report "Fail 1/0/1 -> LED(1)" severity error;
+      
+      w_SW(0) <= '1';
+      w_SW(1) <= '1';
+      w_SEL <= '0';
+      wait for 1ns;
+      
+      assert (w_LED(0) = '1') report "Fail 1/1/0 -> LED(0)" severity error;
+      assert (w_LED(1) = '0') report "Fail 1/1/0 -> LED(1)" severity error;
+      
+      w_SW(0) <= '1';
+      w_SW(1) <= '1';
+      w_SEL <= '1';
+      wait for 1ns;
+      
+      assert (w_LED(0) = '0') report "Fail 1/1/1 -> LED(0)" severity error;
+      assert (w_LED(1) = '1') report "Fail 1/1/1 -> LED(1)" severity error;
+      
+      wait;
+    end process;
+end arch_circuit_channel_sharing_tb;

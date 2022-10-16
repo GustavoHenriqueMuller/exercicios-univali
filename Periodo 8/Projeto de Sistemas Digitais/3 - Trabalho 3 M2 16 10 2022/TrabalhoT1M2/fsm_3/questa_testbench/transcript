@@ -1,0 +1,72 @@
+vsim fsm_3_tb
+# vsim fsm_3_tb 
+# Start time: 16:35:42 on Oct 16,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fsm_3_tb(arch_fsm_3_tb)#1
+add wave *
+run 20 ns
+# ** Error: Fail x @ 0
+#    Time: 1 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail y @ 0
+#    Time: 1 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail z @ 0
+#    Time: 1 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail x @ 1
+#    Time: 3 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail y @ 1
+#    Time: 3 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail z @ 1
+#    Time: 3 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail x @ 2
+#    Time: 5 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail y @ 2
+#    Time: 5 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail z @ 2
+#    Time: 5 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail x @ 3
+#    Time: 7 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail y @ 3
+#    Time: 7 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail z @ 3
+#    Time: 7 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail x @ 4
+#    Time: 9 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail y @ 4
+#    Time: 9 ns  Iteration: 0  Instance: /fsm_3_tb
+# ** Error: Fail z @ 4
+#    Time: 9 ns  Iteration: 0  Instance: /fsm_3_tb
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+vcom ../*.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:41:40 on Oct 16,2022
+# vcom -reportprogress 300 ../fsm_3.vhd ../fsm_3_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fsm_3
+# -- Compiling architecture arch_fsm_3 of fsm_3
+# -- Compiling entity fsm_3_tb
+# -- Compiling architecture arch_fsm_3_tb of fsm_3_tb
+# End time: 16:41:40 on Oct 16,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+pwd
+# C:/Users/Gustavo/Desktop/TrabalhoT1M2/fsm_3/questa_testbench
+vsim fsm_3_tb
+# End time: 16:41:55 on Oct 16,2022, Elapsed time: 0:06:13
+# Errors: 0, Warnings: 1
+# vsim fsm_3_tb 
+# Start time: 16:41:55 on Oct 16,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fsm_3_tb(arch_fsm_3_tb)#1
+add wave *
+run 20 ns
+# End time: 16:47:53 on Oct 16,2022, Elapsed time: 0:05:58
+# Errors: 0, Warnings: 1

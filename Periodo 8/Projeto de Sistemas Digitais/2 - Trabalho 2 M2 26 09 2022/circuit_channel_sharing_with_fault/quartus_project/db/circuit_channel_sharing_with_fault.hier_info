@@ -1,0 +1,26 @@
+|circuit_channel_sharing_with_fault
+i_SW[0] => mux2_1bit:mux2_1bit_instance.i_A
+i_SW[1] => mux2_1bit:mux2_1bit_instance.i_B
+i_SEL => mux2_1bit:mux2_1bit_instance.i_SEL
+i_SEL => demux1_2bit:demux1_2bit_instance.i_SEL
+i_BT => o_MUX_BT.IN1
+o_LED[0] <= demux1_2bit:demux1_2bit_instance.o_S[0]
+o_LED[1] <= demux1_2bit:demux1_2bit_instance.o_S[1]
+
+
+|circuit_channel_sharing_with_fault|mux2_1bit:mux2_1bit_instance
+i_SEL => o_S.OUTPUTSELECT
+i_A => o_S.DATAB
+i_B => o_S.DATAA
+o_S <= o_S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuit_channel_sharing_with_fault|demux1_2bit:demux1_2bit_instance
+i_A => o_S.IN0
+i_A => o_S.IN0
+i_SEL => o_S.IN1
+i_SEL => o_S.IN1
+o_S[0] <= o_S.DB_MAX_OUTPUT_PORT_TYPE
+o_S[1] <= o_S.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity tmr3_1bit is
+end tmr3_1bit;
+
+architecture arch_tmr3_1bit of tmr3_1bit is
+end arch_tmr3_1bit;

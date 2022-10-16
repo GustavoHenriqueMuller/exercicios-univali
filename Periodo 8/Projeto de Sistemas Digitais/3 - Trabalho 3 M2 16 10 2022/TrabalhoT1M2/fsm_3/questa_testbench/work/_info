@@ -1,0 +1,106 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/Gustavo/Desktop/TrabalhoT1M2/fsm_3/questa_testbench
+T_opt
+!s110 1665949315
+VAHeGD``z8OEeQ7fnlAMeU1
+04 8 13 work fsm_3_tb arch_fsm_3_tb 1
+=1-04d9f579f44a-634c5e83-2a8-47b0
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Efsm_3
+Z2 w1665949233
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 11
+R1
+Z5 8../fsm_3.vhd
+Z6 F../fsm_3.vhd
+l0
+L4 1
+VYQ4lVo8;Zf8TJ<PCg6lE<0
+!s100 f<;2R1N4=9Q`J@lWQjUR41
+Z7 OL;C;2021.2;73
+32
+Z8 !s110 1665949300
+!i10b 1
+Z9 !s108 1665949300.000000
+Z10 !s90 -reportprogress|300|../fsm_3.vhd|../fsm_3_tb.vhd|
+Z11 !s107 ../fsm_3_tb.vhd|../fsm_3.vhd|
+!i113 0
+Z12 tExplicit 1 CvgOpt 0
+Aarch_fsm_3
+R3
+R4
+DEx4 work 5 fsm_3 0 22 YQ4lVo8;Zf8TJ<PCg6lE<0
+!i122 11
+l18
+L14 29
+VTb_Gh5g5hc2z?Y:JS[k9L1
+!s100 34GU``f:LPAb5h9X6f5RI2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+Efsm_3_tb
+Z13 w1665947290
+R3
+R4
+!i122 11
+R1
+Z14 8../fsm_3_tb.vhd
+Z15 F../fsm_3_tb.vhd
+l0
+L4 1
+V>2S=o[2YWd=Ck>hXbkM6j0
+!s100 zYS<je2N;15?DnFG[oB=f0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+Aarch_fsm_3_tb
+R3
+R4
+DEx4 work 8 fsm_3_tb 0 22 >2S=o[2YWd=Ck>hXbkM6j0
+!i122 11
+l23
+L7 71
+VDacBPM?nlOB=dk9TPb?TM0
+!s100 Ym1dmHfNEAkEhb5SF@mhJ1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12

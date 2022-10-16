@@ -1,0 +1,8 @@
+|fsm_3
+i_CLK => r_STATE[0].CLK
+i_CLK => r_STATE[1].CLK
+o_X <= o_X.DB_MAX_OUTPUT_PORT_TYPE
+o_Y <= o_Y.DB_MAX_OUTPUT_PORT_TYPE
+o_Z <= o_Z.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,100 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Gustavo/Desktop/TrabalhoT1M2/fsm_3/questa_testbench
+T_opt
+!s110 1665944374
+VICi>FVCoAk>bfl^QK1C572
+04 8 13 work fsm_1_tb arch_fsm_1_tb 1
+=1-04d9f579f44a-634c4b36-251-1ec0
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Efsm_1
+Z0 w1665944348
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+Z3 dC:/Users/Gustavo/Desktop/TrabalhoT1M2/fsm_1/questa_testbench
+Z4 8../fsm_1.vhd
+Z5 F../fsm_1.vhd
+l0
+L4 1
+VY=^3^Gaei`:1BTgFVN@>D1
+!s100 1i^bB53UTRJ6D`W`z=P??3
+Z6 OL;C;2021.2;73
+32
+Z7 !s110 1665944365
+!i10b 1
+Z8 !s108 1665944365.000000
+Z9 !s90 -reportprogress|300|../fsm_1.vhd|
+Z10 !s107 ../fsm_1.vhd|
+!i113 0
+Z11 tExplicit 1 CvgOpt 0
+Aarch_fsm_1
+R1
+R2
+DEx4 work 5 fsm_1 0 22 Y=^3^Gaei`:1BTgFVN@>D1
+!i122 3
+l19
+L14 34
+VDagn5V4^O>lVCaRnkM][90
+!s100 `GTFl_Nj?0ZihKC_:1=300
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+Efsm_1_tb
+Z12 w1665944299
+R1
+R2
+!i122 4
+R3
+Z13 8../fsm_1_tb.vhd
+Z14 F../fsm_1_tb.vhd
+l0
+L4 1
+Vfjah]>5I[W]zHPMWk_TCT2
+!s100 Ta3>=foTF<Zo@kV^9T2VT3
+R6
+32
+Z15 !s110 1665944369
+!i10b 1
+Z16 !s108 1665944369.000000
+Z17 !s90 -reportprogress|300|../fsm_1_tb.vhd|
+Z18 !s107 ../fsm_1_tb.vhd|
+!i113 0
+R11
+Aarch_fsm_1_tb
+R1
+R2
+DEx4 work 8 fsm_1_tb 0 22 fjah]>5I[W]zHPMWk_TCT2
+!i122 4
+l23
+L7 72
+V`U[]ge1AAc76TcTQjAFZz1
+!s100 oMH4U?Qb[IQSC@HS`lgn71
+R6
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 0
+R11
