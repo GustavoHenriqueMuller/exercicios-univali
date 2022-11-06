@@ -1,0 +1,46 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity subtractor_4bit is
+	port
+	(
+		i_A: in std_logic_vector (3 downto 0);
+		i_B: in std_logic_vector (3 downto 0);
+		
+		o_R: out std_logic_vector (3 downto 0);
+		o_CARRY_OUT: out std_logic
+	);
+end subtractor_4bit;
+
+architecture arch_subtractor_4bit of subtractor_4bit is
+
+component adder_4bit is
+	port
+	(
+		i_A: in std_logic_vector (3 downto 0);
+		i_B: in std_logic_vector (3 downto 0);
+		
+		o_R: out std_logic_vector (3 downto 0);
+		o_CARRY_OUT: out std_logic
+	);
+end component;
+
+component inverter_4bit is
+	port
+	(
+		i_A: in std_logic_vector (3 downto 0);
+		o_R: out std_logic_vector (3 downto 0)
+	);
+end component;
+
+signal inverted_B: std_logic_vector (3 downto 0);
+signal complement_B: std_logic_vector (3 downto 0);
+
+begin
+	inverter: inverter_4bit port map(i_B, inverted_B);
+	adder: adder_4bit port map(i_A, "0001", o_R, o_CARRY_OUT);
+
+	process(i_A, i_B)
+	begin
+	end process;
+end arch_subtractor_4bit;

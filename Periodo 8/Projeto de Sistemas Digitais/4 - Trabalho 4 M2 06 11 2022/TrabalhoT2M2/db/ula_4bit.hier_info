@@ -1,0 +1,529 @@
+|ula_4bit
+i_A[0] => adder_4bit:u_ADDER.i_A[0]
+i_A[0] => subtractor_4bit:u_SUBTRACTOR.i_A[0]
+i_A[0] => incrementer_4bit:u_INCREMENTER.i_A[0]
+i_A[0] => and_4bit:u_AND.i_A[0]
+i_A[0] => or_4bit:u_OR.i_A[0]
+i_A[0] => xor_4bit:u_XOR.i_A[0]
+i_A[0] => inverter_4bit:u_INVERTER.i_A[0]
+i_A[0] => mux_8x4bit:u_MUX.i_A_3[0]
+i_A[1] => adder_4bit:u_ADDER.i_A[1]
+i_A[1] => subtractor_4bit:u_SUBTRACTOR.i_A[1]
+i_A[1] => incrementer_4bit:u_INCREMENTER.i_A[1]
+i_A[1] => and_4bit:u_AND.i_A[1]
+i_A[1] => or_4bit:u_OR.i_A[1]
+i_A[1] => xor_4bit:u_XOR.i_A[1]
+i_A[1] => inverter_4bit:u_INVERTER.i_A[1]
+i_A[1] => mux_8x4bit:u_MUX.i_A_3[1]
+i_A[2] => adder_4bit:u_ADDER.i_A[2]
+i_A[2] => subtractor_4bit:u_SUBTRACTOR.i_A[2]
+i_A[2] => incrementer_4bit:u_INCREMENTER.i_A[2]
+i_A[2] => and_4bit:u_AND.i_A[2]
+i_A[2] => or_4bit:u_OR.i_A[2]
+i_A[2] => xor_4bit:u_XOR.i_A[2]
+i_A[2] => inverter_4bit:u_INVERTER.i_A[2]
+i_A[2] => mux_8x4bit:u_MUX.i_A_3[2]
+i_A[3] => adder_4bit:u_ADDER.i_A[3]
+i_A[3] => subtractor_4bit:u_SUBTRACTOR.i_A[3]
+i_A[3] => incrementer_4bit:u_INCREMENTER.i_A[3]
+i_A[3] => and_4bit:u_AND.i_A[3]
+i_A[3] => or_4bit:u_OR.i_A[3]
+i_A[3] => xor_4bit:u_XOR.i_A[3]
+i_A[3] => inverter_4bit:u_INVERTER.i_A[3]
+i_A[3] => mux_8x4bit:u_MUX.i_A_3[3]
+i_B[0] => adder_4bit:u_ADDER.i_B[0]
+i_B[0] => subtractor_4bit:u_SUBTRACTOR.i_B[0]
+i_B[0] => and_4bit:u_AND.i_B[0]
+i_B[0] => or_4bit:u_OR.i_B[0]
+i_B[0] => xor_4bit:u_XOR.i_B[0]
+i_B[1] => adder_4bit:u_ADDER.i_B[1]
+i_B[1] => subtractor_4bit:u_SUBTRACTOR.i_B[1]
+i_B[1] => and_4bit:u_AND.i_B[1]
+i_B[1] => or_4bit:u_OR.i_B[1]
+i_B[1] => xor_4bit:u_XOR.i_B[1]
+i_B[2] => adder_4bit:u_ADDER.i_B[2]
+i_B[2] => subtractor_4bit:u_SUBTRACTOR.i_B[2]
+i_B[2] => and_4bit:u_AND.i_B[2]
+i_B[2] => or_4bit:u_OR.i_B[2]
+i_B[2] => xor_4bit:u_XOR.i_B[2]
+i_B[3] => adder_4bit:u_ADDER.i_B[3]
+i_B[3] => subtractor_4bit:u_SUBTRACTOR.i_B[3]
+i_B[3] => and_4bit:u_AND.i_B[3]
+i_B[3] => or_4bit:u_OR.i_B[3]
+i_B[3] => xor_4bit:u_XOR.i_B[3]
+i_SEL[0] => mux_8x4bit:u_MUX.i_SEL[0]
+i_SEL[1] => mux_8x4bit:u_MUX.i_SEL[1]
+i_SEL[2] => mux_8x4bit:u_MUX.i_SEL[2]
+i_LOAD => register_4bit:u_REGISTER.i_LOAD
+i_CLK => register_4bit:u_REGISTER.i_CLK
+o_R[0] <= register_4bit:u_REGISTER.o_R[0]
+o_R[1] <= register_4bit:u_REGISTER.o_R[1]
+o_R[2] <= register_4bit:u_REGISTER.o_R[2]
+o_R[3] <= register_4bit:u_REGISTER.o_R[3]
+
+
+|ula_4bit|adder_4bit:u_ADDER
+i_A[0] => full_adder_1bit:u_FULL_ADDER_0.i_A
+i_A[1] => full_adder_1bit:u_FULL_ADDER_1.i_A
+i_A[2] => full_adder_1bit:u_FULL_ADDER_2.i_A
+i_A[3] => full_adder_1bit:u_FULL_ADDER_3.i_A
+i_B[0] => full_adder_1bit:u_FULL_ADDER_0.i_B
+i_B[1] => full_adder_1bit:u_FULL_ADDER_1.i_B
+i_B[2] => full_adder_1bit:u_FULL_ADDER_2.i_B
+i_B[3] => full_adder_1bit:u_FULL_ADDER_3.i_B
+o_R[0] <= full_adder_1bit:u_FULL_ADDER_0.o_R
+o_R[1] <= full_adder_1bit:u_FULL_ADDER_1.o_R
+o_R[2] <= full_adder_1bit:u_FULL_ADDER_2.o_R
+o_R[3] <= full_adder_1bit:u_FULL_ADDER_3.o_R
+o_CARRY_OUT <= full_adder_1bit:u_FULL_ADDER_3.o_CARRY_OUT
+
+
+|ula_4bit|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_1
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_2
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_3
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR
+i_A[0] => adder_4bit:u_ADDER.i_A[0]
+i_A[1] => adder_4bit:u_ADDER.i_A[1]
+i_A[2] => adder_4bit:u_ADDER.i_A[2]
+i_A[3] => adder_4bit:u_ADDER.i_A[3]
+i_B[0] => inverter_4bit:u_INVERTER.i_A[0]
+i_B[1] => inverter_4bit:u_INVERTER.i_A[1]
+i_B[2] => inverter_4bit:u_INVERTER.i_A[2]
+i_B[3] => inverter_4bit:u_INVERTER.i_A[3]
+o_R[0] <= adder_4bit:u_ADDER.o_R[0]
+o_R[1] <= adder_4bit:u_ADDER.o_R[1]
+o_R[2] <= adder_4bit:u_ADDER.o_R[2]
+o_R[3] <= adder_4bit:u_ADDER.o_R[3]
+o_CARRY_OUT <= adder_4bit:u_ADDER.o_CARRY_OUT
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|inverter_4bit:u_INVERTER
+i_A[0] => o_R[0].DATAIN
+i_A[1] => o_R[1].DATAIN
+i_A[2] => o_R[2].DATAIN
+i_A[3] => o_R[3].DATAIN
+o_R[0] <= i_A[0].DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= i_A[1].DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= i_A[2].DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= i_A[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|incrementer_4bit:u_INCREMENTER
+i_A[0] => adder_4bit:u_ADDER.i_A[0]
+i_A[1] => adder_4bit:u_ADDER.i_A[1]
+i_A[2] => adder_4bit:u_ADDER.i_A[2]
+i_A[3] => adder_4bit:u_ADDER.i_A[3]
+o_R[0] <= adder_4bit:u_ADDER.o_R[0]
+o_R[1] <= adder_4bit:u_ADDER.o_R[1]
+o_R[2] <= adder_4bit:u_ADDER.o_R[2]
+o_R[3] <= adder_4bit:u_ADDER.o_R[3]
+o_CARRY_OUT <= adder_4bit:u_ADDER.o_CARRY_OUT
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER
+i_A[0] => full_adder_1bit:u_FULL_ADDER_0.i_A
+i_A[1] => full_adder_1bit:u_FULL_ADDER_1.i_A
+i_A[2] => full_adder_1bit:u_FULL_ADDER_2.i_A
+i_A[3] => full_adder_1bit:u_FULL_ADDER_3.i_A
+i_B[0] => full_adder_1bit:u_FULL_ADDER_0.i_B
+i_B[1] => full_adder_1bit:u_FULL_ADDER_1.i_B
+i_B[2] => full_adder_1bit:u_FULL_ADDER_2.i_B
+i_B[3] => full_adder_1bit:u_FULL_ADDER_3.i_B
+o_R[0] <= full_adder_1bit:u_FULL_ADDER_0.o_R
+o_R[1] <= full_adder_1bit:u_FULL_ADDER_1.o_R
+o_R[2] <= full_adder_1bit:u_FULL_ADDER_2.o_R
+o_R[3] <= full_adder_1bit:u_FULL_ADDER_3.o_R
+o_CARRY_OUT <= full_adder_1bit:u_FULL_ADDER_3.o_CARRY_OUT
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_1
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_2
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_3
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|adder_4bit:u_ADDER
+i_A[0] => full_adder_1bit:u_FULL_ADDER_0.i_A
+i_A[1] => full_adder_1bit:u_FULL_ADDER_1.i_A
+i_A[2] => full_adder_1bit:u_FULL_ADDER_2.i_A
+i_A[3] => full_adder_1bit:u_FULL_ADDER_3.i_A
+i_B[0] => full_adder_1bit:u_FULL_ADDER_0.i_B
+i_B[1] => full_adder_1bit:u_FULL_ADDER_1.i_B
+i_B[2] => full_adder_1bit:u_FULL_ADDER_2.i_B
+i_B[3] => full_adder_1bit:u_FULL_ADDER_3.i_B
+o_R[0] <= full_adder_1bit:u_FULL_ADDER_0.o_R
+o_R[1] <= full_adder_1bit:u_FULL_ADDER_1.o_R
+o_R[2] <= full_adder_1bit:u_FULL_ADDER_2.o_R
+o_R[3] <= full_adder_1bit:u_FULL_ADDER_3.o_R
+o_CARRY_OUT <= full_adder_1bit:u_FULL_ADDER_3.o_CARRY_OUT
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_1
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_2
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|subtractor_4bit:u_SUBTRACTOR|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_3
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|incrementer_4bit:u_INCREMENTER
+i_A[0] => adder_4bit:u_ADDER.i_A[0]
+i_A[1] => adder_4bit:u_ADDER.i_A[1]
+i_A[2] => adder_4bit:u_ADDER.i_A[2]
+i_A[3] => adder_4bit:u_ADDER.i_A[3]
+o_R[0] <= adder_4bit:u_ADDER.o_R[0]
+o_R[1] <= adder_4bit:u_ADDER.o_R[1]
+o_R[2] <= adder_4bit:u_ADDER.o_R[2]
+o_R[3] <= adder_4bit:u_ADDER.o_R[3]
+o_CARRY_OUT <= adder_4bit:u_ADDER.o_CARRY_OUT
+
+
+|ula_4bit|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER
+i_A[0] => full_adder_1bit:u_FULL_ADDER_0.i_A
+i_A[1] => full_adder_1bit:u_FULL_ADDER_1.i_A
+i_A[2] => full_adder_1bit:u_FULL_ADDER_2.i_A
+i_A[3] => full_adder_1bit:u_FULL_ADDER_3.i_A
+i_B[0] => full_adder_1bit:u_FULL_ADDER_0.i_B
+i_B[1] => full_adder_1bit:u_FULL_ADDER_1.i_B
+i_B[2] => full_adder_1bit:u_FULL_ADDER_2.i_B
+i_B[3] => full_adder_1bit:u_FULL_ADDER_3.i_B
+o_R[0] <= full_adder_1bit:u_FULL_ADDER_0.o_R
+o_R[1] <= full_adder_1bit:u_FULL_ADDER_1.o_R
+o_R[2] <= full_adder_1bit:u_FULL_ADDER_2.o_R
+o_R[3] <= full_adder_1bit:u_FULL_ADDER_3.o_R
+o_CARRY_OUT <= full_adder_1bit:u_FULL_ADDER_3.o_CARRY_OUT
+
+
+|ula_4bit|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_1
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_2
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|incrementer_4bit:u_INCREMENTER|adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_3
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|and_4bit:u_AND
+i_A[0] => o_R.IN0
+i_A[1] => o_R.IN0
+i_A[2] => o_R.IN0
+i_A[3] => o_R.IN0
+i_B[0] => o_R.IN1
+i_B[1] => o_R.IN1
+i_B[2] => o_R.IN1
+i_B[3] => o_R.IN1
+o_R[0] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|or_4bit:u_OR
+i_A[0] => o_R.IN0
+i_A[1] => o_R.IN0
+i_A[2] => o_R.IN0
+i_A[3] => o_R.IN0
+i_B[0] => o_R.IN1
+i_B[1] => o_R.IN1
+i_B[2] => o_R.IN1
+i_B[3] => o_R.IN1
+o_R[0] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|xor_4bit:u_XOR
+i_A[0] => o_R.IN0
+i_A[1] => o_R.IN0
+i_A[2] => o_R.IN0
+i_A[3] => o_R.IN0
+i_B[0] => o_R.IN1
+i_B[1] => o_R.IN1
+i_B[2] => o_R.IN1
+i_B[3] => o_R.IN1
+o_R[0] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|inverter_4bit:u_INVERTER
+i_A[0] => o_R[0].DATAIN
+i_A[1] => o_R[1].DATAIN
+i_A[2] => o_R[2].DATAIN
+i_A[3] => o_R[3].DATAIN
+o_R[0] <= i_A[0].DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= i_A[1].DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= i_A[2].DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= i_A[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|mux_8x4bit:u_MUX
+i_A_0[0] => Mux3.IN0
+i_A_0[1] => Mux2.IN0
+i_A_0[2] => Mux1.IN0
+i_A_0[3] => Mux0.IN0
+i_A_1[0] => Mux3.IN1
+i_A_1[1] => Mux2.IN1
+i_A_1[2] => Mux1.IN1
+i_A_1[3] => Mux0.IN1
+i_A_2[0] => Mux3.IN2
+i_A_2[1] => Mux2.IN2
+i_A_2[2] => Mux1.IN2
+i_A_2[3] => Mux0.IN2
+i_A_3[0] => Mux3.IN3
+i_A_3[1] => Mux2.IN3
+i_A_3[2] => Mux1.IN3
+i_A_3[3] => Mux0.IN3
+i_A_4[0] => Mux3.IN4
+i_A_4[1] => Mux2.IN4
+i_A_4[2] => Mux1.IN4
+i_A_4[3] => Mux0.IN4
+i_A_5[0] => Mux3.IN5
+i_A_5[1] => Mux2.IN5
+i_A_5[2] => Mux1.IN5
+i_A_5[3] => Mux0.IN5
+i_A_6[0] => Mux3.IN6
+i_A_6[1] => Mux2.IN6
+i_A_6[2] => Mux1.IN6
+i_A_6[3] => Mux0.IN6
+i_A_7[0] => Mux3.IN7
+i_A_7[1] => Mux2.IN7
+i_A_7[2] => Mux1.IN7
+i_A_7[3] => Mux0.IN7
+i_SEL[0] => Mux0.IN10
+i_SEL[0] => Mux1.IN10
+i_SEL[0] => Mux2.IN10
+i_SEL[0] => Mux3.IN10
+i_SEL[1] => Mux0.IN9
+i_SEL[1] => Mux1.IN9
+i_SEL[1] => Mux2.IN9
+i_SEL[1] => Mux3.IN9
+i_SEL[2] => Mux0.IN8
+i_SEL[2] => Mux1.IN8
+i_SEL[2] => Mux2.IN8
+i_SEL[2] => Mux3.IN8
+o_R[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_4bit|register_4bit:u_REGISTER
+i_A[0] => o_R[0]~reg0.DATAIN
+i_A[1] => o_R[1]~reg0.DATAIN
+i_A[2] => o_R[2]~reg0.DATAIN
+i_A[3] => o_R[3]~reg0.DATAIN
+i_LOAD => o_R[0]~reg0.ENA
+i_LOAD => o_R[1]~reg0.ENA
+i_LOAD => o_R[2]~reg0.ENA
+i_LOAD => o_R[3]~reg0.ENA
+i_CLK => o_R[0]~reg0.CLK
+i_CLK => o_R[1]~reg0.CLK
+i_CLK => o_R[2]~reg0.CLK
+i_CLK => o_R[3]~reg0.CLK
+o_R[0] <= o_R[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= o_R[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= o_R[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= o_R[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

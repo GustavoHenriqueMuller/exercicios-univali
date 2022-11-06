@@ -1,0 +1,199 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Gustavo/Desktop/TrabalhoT2M2/simulation/qsim
+Eadder_4bit
+Z1 w1667738429
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 Go?7O^>gO9PUGAbd]57Qz3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 KJiN=<?XEUbkUE2[idYZK3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 kfhVHUgSbAm[03BJI^Zk12
+!i122 0
+R0
+Z9 8ula_4bit.vho
+Z10 Fula_4bit.vho
+l0
+L37 1
+Vi_PjT`nLSf5SU6jn;DoK82
+!s100 aPfof:3`0f6EnlgzmUO7>0
+Z11 OL;C;2021.2;73
+32
+Z12 !s110 1667738431
+!i10b 1
+Z13 !s108 1667738431.000000
+Z14 !s90 -work|work|ula_4bit.vho|
+Z15 !s107 ula_4bit.vho|
+!i113 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 10 adder_4bit 0 22 i_PjT`nLSf5SU6jn;DoK82
+!i122 0
+l101
+L62 339
+V5llml@zCPN:CI0N;L?Fo<2
+!s100 WcZGoAXcNnf8?kWI;R[Um3
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Eadder_4bit_vhd_vec_tst
+Z18 w1667738428
+R6
+R7
+!i122 1
+R0
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
+l0
+Z21 L32 1
+VUn8B[X4FzSFFY:zoH9Y=P3
+!s100 EHUDmORLOd]9fzP>i3]D[3
+R11
+32
+R12
+!i10b 1
+R13
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
+!i113 0
+R16
+R17
+Aadder_4bit_arch
+R6
+R7
+DEx4 work 22 adder_4bit_vhd_vec_tst 0 22 Un8B[X4FzSFFY:zoH9Y=P3
+!i122 1
+l49
+L34 73
+Vgl8c9_V2Q3VZoCQC9HI[10
+!s100 a_ZmPUN4QGaJPbg3hHn`80
+R11
+32
+R12
+!i10b 1
+R13
+R22
+R23
+!i113 0
+R16
+R17
+Eula_4bit
+Z24 w1667742047
+R3
+R5
+R8
+R2
+Z25 DPx6 altera 11 dffeas_pack 0 22 ?LXJY1:Lo@gFD7X:NR80G0
+R4
+R6
+R7
+Z26 DPx6 altera 28 altera_primitives_components 0 22 YYoQ82]HzeJG>EHgnbGN33
+!i122 6
+R0
+R9
+R10
+l0
+L39 1
+VL`z`AmX@ZXgbJn4VZMS6]0
+!s100 D=PBB`;@=a2`Y365ngeSS2
+R11
+32
+Z27 !s110 1667742048
+!i10b 1
+Z28 !s108 1667742048.000000
+R14
+R15
+!i113 0
+R16
+R17
+Astructure
+R3
+R5
+R8
+R2
+R25
+R4
+R6
+R7
+R26
+DEx4 work 8 ula_4bit 0 22 L`z`AmX@ZXgbJn4VZMS6]0
+!i122 6
+l142
+L70 711
+V>a^gUnk2lI25a]=9j@;:d3
+!s100 >9c4HOajM@c7JZ5FM78KR2
+R11
+32
+R27
+!i10b 1
+R28
+R14
+R15
+!i113 0
+R16
+R17
+Eula_4bit_vhd_vec_tst
+Z29 w1667742046
+R6
+R7
+!i122 7
+R0
+R19
+R20
+l0
+R21
+Vd;a=X?T2OcT?0Tc?aYJBI2
+!s100 JoRP?oJKTn[da7:3c?6:z3
+R11
+32
+R27
+!i10b 1
+R28
+R22
+R23
+!i113 0
+R16
+R17
+Aula_4bit_arch
+R6
+R7
+Z30 DEx4 work 20 ula_4bit_vhd_vec_tst 0 22 d;a=X?T2OcT?0Tc?aYJBI2
+!i122 7
+l53
+Z31 L34 111
+Z32 V`d@KkedzjR4S:5:V6PZA82
+Z33 !s100 Mg;YH1JYSSD9ZfLOL1hi@0
+R11
+32
+R27
+!i10b 1
+R28
+R22
+R23
+!i113 0
+R16
+R17

@@ -1,0 +1,42 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity adder_4bit is
+	port
+	(
+		i_A: in std_logic_vector (3 downto 0);
+		i_B: in std_logic_vector (3 downto 0);
+		
+		o_R: out std_logic_vector (3 downto 0);
+		o_CARRY_OUT: out std_logic
+	);
+end adder_4bit;
+
+architecture arch_adder_4bit of adder_4bit is
+
+component full_adder_1bit is
+	port
+	(
+		i_A: in std_logic;
+		i_B: in std_logic;
+		i_CARRY_IN: in std_logic;
+		
+		o_R: out std_logic;
+		o_CARRY_OUT: out std_logic
+	);
+end component;
+
+signal carry_out_0: std_logic_vector;
+signal carry_out_1: std_logic_vector;
+signal carry_out_2: std_logic_vector;
+
+begin
+	full_adder_0: full_adder_1bit port map(i_A(0), i_B(0), 0, o_R(0), carry_out_0);
+	full_adder_1: full_adder_1bit port map(i_A(1), i_B(1), carry_out_0, o_R(1), carry_out_1);
+	full_adder_2: full_adder_1bit port map(i_A(2), i_B(2), carry_out_1, o_R(2), carry_out_2);
+	full_adder_3: full_adder_1bit port map(i_A(3), i_B(3), carry_out_2, o_R(3), o_CARRY_OUT);
+	
+	process(i_A, i_B)
+	begin
+	end process;
+end arch_adder_4bit;

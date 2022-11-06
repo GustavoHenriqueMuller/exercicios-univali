@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity ula_4bit_tb is
+end ula_4bit_tb;
+
+architecture arch_ula_4bit_tb of ula_4bit_tb is
+end architecture arch_ula_4bit_tb;
