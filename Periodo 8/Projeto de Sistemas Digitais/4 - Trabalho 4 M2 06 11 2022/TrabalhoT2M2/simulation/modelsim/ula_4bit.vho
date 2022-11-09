@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition"
 
--- DATE "11/06/2022 15:05:47"
+-- DATE "11/09/2022 13:46:38"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -43,7 +43,7 @@ ENTITY 	ula_4bit IS
 	i_SEL : IN std_logic_vector(2 DOWNTO 0);
 	i_LOAD : IN std_logic;
 	i_CLK : IN std_logic;
-	o_R : OUT std_logic_vector(3 DOWNTO 0)
+	o_R : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END ula_4bit;
 
@@ -115,28 +115,28 @@ SIGNAL \u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_3|o_R~0_combout\ : std_logic;
 SIGNAL \u_ADDER|u_FULL_ADDER_3|o_R~combout\ : std_logic;
 SIGNAL \u_MUX|Mux0~0_combout\ : std_logic;
 SIGNAL \u_REGISTER|o_R\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \u_MUX|ALT_INV_Mux3~1_combout\ : std_logic;
-SIGNAL \u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_2|ALT_INV_o_R~combout\ : std_logic;
-SIGNAL \u_ADDER|u_FULL_ADDER_1|ALT_INV_o_CARRY_OUT~0_combout\ : std_logic;
-SIGNAL \u_MUX|ALT_INV_Mux1~1_combout\ : std_logic;
-SIGNAL \u_MUX|ALT_INV_Mux1~2_combout\ : std_logic;
-SIGNAL \u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_3|ALT_INV_o_R~0_combout\ : std_logic;
-SIGNAL \u_ADDER|u_FULL_ADDER_3|ALT_INV_o_R~combout\ : std_logic;
-SIGNAL \u_INCREMENTER|u_ADDER|u_FULL_ADDER_2|ALT_INV_o_CARRY_OUT~0_combout\ : std_logic;
-SIGNAL \u_MUX|ALT_INV_Mux0~4_combout\ : std_logic;
-SIGNAL \u_MUX|ALT_INV_Mux2~0_combout\ : std_logic;
-SIGNAL \u_MUX|ALT_INV_Mux2~1_combout\ : std_logic;
-SIGNAL \ALT_INV_i_A[0]~input_o\ : std_logic;
-SIGNAL \ALT_INV_i_B[0]~input_o\ : std_logic;
-SIGNAL \ALT_INV_i_SEL[1]~input_o\ : std_logic;
-SIGNAL \ALT_INV_i_SEL[2]~input_o\ : std_logic;
-SIGNAL \ALT_INV_i_SEL[0]~input_o\ : std_logic;
-SIGNAL \ALT_INV_i_A[1]~input_o\ : std_logic;
-SIGNAL \ALT_INV_i_B[1]~input_o\ : std_logic;
-SIGNAL \ALT_INV_i_B[2]~input_o\ : std_logic;
-SIGNAL \ALT_INV_i_A[2]~input_o\ : std_logic;
-SIGNAL \ALT_INV_i_B[3]~input_o\ : std_logic;
 SIGNAL \ALT_INV_i_A[3]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_B[3]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_A[2]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_B[2]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_B[1]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_A[1]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_SEL[0]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_SEL[2]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_SEL[1]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_B[0]~input_o\ : std_logic;
+SIGNAL \ALT_INV_i_A[0]~input_o\ : std_logic;
+SIGNAL \u_MUX|ALT_INV_Mux2~1_combout\ : std_logic;
+SIGNAL \u_MUX|ALT_INV_Mux2~0_combout\ : std_logic;
+SIGNAL \u_MUX|ALT_INV_Mux0~4_combout\ : std_logic;
+SIGNAL \u_INCREMENTER|u_ADDER|u_FULL_ADDER_2|ALT_INV_o_CARRY_OUT~0_combout\ : std_logic;
+SIGNAL \u_ADDER|u_FULL_ADDER_3|ALT_INV_o_R~combout\ : std_logic;
+SIGNAL \u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_3|ALT_INV_o_R~0_combout\ : std_logic;
+SIGNAL \u_MUX|ALT_INV_Mux1~2_combout\ : std_logic;
+SIGNAL \u_MUX|ALT_INV_Mux1~1_combout\ : std_logic;
+SIGNAL \u_ADDER|u_FULL_ADDER_1|ALT_INV_o_CARRY_OUT~0_combout\ : std_logic;
+SIGNAL \u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_2|ALT_INV_o_R~combout\ : std_logic;
+SIGNAL \u_MUX|ALT_INV_Mux3~1_combout\ : std_logic;
 SIGNAL \u_MUX|ALT_INV_Mux1~0_combout\ : std_logic;
 
 BEGIN
@@ -150,28 +150,28 @@ o_R <= ww_o_R;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\u_MUX|ALT_INV_Mux3~1_combout\ <= NOT \u_MUX|Mux3~1_combout\;
-\u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_2|ALT_INV_o_R~combout\ <= NOT \u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_2|o_R~combout\;
-\u_ADDER|u_FULL_ADDER_1|ALT_INV_o_CARRY_OUT~0_combout\ <= NOT \u_ADDER|u_FULL_ADDER_1|o_CARRY_OUT~0_combout\;
-\u_MUX|ALT_INV_Mux1~1_combout\ <= NOT \u_MUX|Mux1~1_combout\;
-\u_MUX|ALT_INV_Mux1~2_combout\ <= NOT \u_MUX|Mux1~2_combout\;
-\u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_3|ALT_INV_o_R~0_combout\ <= NOT \u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_3|o_R~0_combout\;
-\u_ADDER|u_FULL_ADDER_3|ALT_INV_o_R~combout\ <= NOT \u_ADDER|u_FULL_ADDER_3|o_R~combout\;
-\u_INCREMENTER|u_ADDER|u_FULL_ADDER_2|ALT_INV_o_CARRY_OUT~0_combout\ <= NOT \u_INCREMENTER|u_ADDER|u_FULL_ADDER_2|o_CARRY_OUT~0_combout\;
-\u_MUX|ALT_INV_Mux0~4_combout\ <= NOT \u_MUX|Mux0~4_combout\;
-\u_MUX|ALT_INV_Mux2~0_combout\ <= NOT \u_MUX|Mux2~0_combout\;
-\u_MUX|ALT_INV_Mux2~1_combout\ <= NOT \u_MUX|Mux2~1_combout\;
-\ALT_INV_i_A[0]~input_o\ <= NOT \i_A[0]~input_o\;
-\ALT_INV_i_B[0]~input_o\ <= NOT \i_B[0]~input_o\;
-\ALT_INV_i_SEL[1]~input_o\ <= NOT \i_SEL[1]~input_o\;
-\ALT_INV_i_SEL[2]~input_o\ <= NOT \i_SEL[2]~input_o\;
-\ALT_INV_i_SEL[0]~input_o\ <= NOT \i_SEL[0]~input_o\;
-\ALT_INV_i_A[1]~input_o\ <= NOT \i_A[1]~input_o\;
-\ALT_INV_i_B[1]~input_o\ <= NOT \i_B[1]~input_o\;
-\ALT_INV_i_B[2]~input_o\ <= NOT \i_B[2]~input_o\;
-\ALT_INV_i_A[2]~input_o\ <= NOT \i_A[2]~input_o\;
-\ALT_INV_i_B[3]~input_o\ <= NOT \i_B[3]~input_o\;
 \ALT_INV_i_A[3]~input_o\ <= NOT \i_A[3]~input_o\;
+\ALT_INV_i_B[3]~input_o\ <= NOT \i_B[3]~input_o\;
+\ALT_INV_i_A[2]~input_o\ <= NOT \i_A[2]~input_o\;
+\ALT_INV_i_B[2]~input_o\ <= NOT \i_B[2]~input_o\;
+\ALT_INV_i_B[1]~input_o\ <= NOT \i_B[1]~input_o\;
+\ALT_INV_i_A[1]~input_o\ <= NOT \i_A[1]~input_o\;
+\ALT_INV_i_SEL[0]~input_o\ <= NOT \i_SEL[0]~input_o\;
+\ALT_INV_i_SEL[2]~input_o\ <= NOT \i_SEL[2]~input_o\;
+\ALT_INV_i_SEL[1]~input_o\ <= NOT \i_SEL[1]~input_o\;
+\ALT_INV_i_B[0]~input_o\ <= NOT \i_B[0]~input_o\;
+\ALT_INV_i_A[0]~input_o\ <= NOT \i_A[0]~input_o\;
+\u_MUX|ALT_INV_Mux2~1_combout\ <= NOT \u_MUX|Mux2~1_combout\;
+\u_MUX|ALT_INV_Mux2~0_combout\ <= NOT \u_MUX|Mux2~0_combout\;
+\u_MUX|ALT_INV_Mux0~4_combout\ <= NOT \u_MUX|Mux0~4_combout\;
+\u_INCREMENTER|u_ADDER|u_FULL_ADDER_2|ALT_INV_o_CARRY_OUT~0_combout\ <= NOT \u_INCREMENTER|u_ADDER|u_FULL_ADDER_2|o_CARRY_OUT~0_combout\;
+\u_ADDER|u_FULL_ADDER_3|ALT_INV_o_R~combout\ <= NOT \u_ADDER|u_FULL_ADDER_3|o_R~combout\;
+\u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_3|ALT_INV_o_R~0_combout\ <= NOT \u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_3|o_R~0_combout\;
+\u_MUX|ALT_INV_Mux1~2_combout\ <= NOT \u_MUX|Mux1~2_combout\;
+\u_MUX|ALT_INV_Mux1~1_combout\ <= NOT \u_MUX|Mux1~1_combout\;
+\u_ADDER|u_FULL_ADDER_1|ALT_INV_o_CARRY_OUT~0_combout\ <= NOT \u_ADDER|u_FULL_ADDER_1|o_CARRY_OUT~0_combout\;
+\u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_2|ALT_INV_o_R~combout\ <= NOT \u_SUBTRACTOR|u_ADDER|u_FULL_ADDER_2|o_R~combout\;
+\u_MUX|ALT_INV_Mux3~1_combout\ <= NOT \u_MUX|Mux3~1_combout\;
 \u_MUX|ALT_INV_Mux1~0_combout\ <= NOT \u_MUX|Mux1~0_combout\;
 
 -- Location: IOOBUF_X89_Y37_N56

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ula_4bit
-Sun Nov  6 15:05:01 2022
+Wed Nov  9 13:45:42 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov  6 15:05:01 2022       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov  9 13:45:42 2022       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; ula_4bit                                    ;
 ; Top-level Entity Name           ; ula_4bit                                    ;
@@ -173,23 +173,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                               ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
-; ula_4bit.vhd                     ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd         ;         ;
-; adder_4bit.vhd                   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/adder_4bit.vhd       ;         ;
-; full_adder_1bit.vhd              ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/full_adder_1bit.vhd  ;         ;
-; inverter_4bit.vhd                ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/inverter_4bit.vhd    ;         ;
-; incrementer_4bit.vhd             ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/incrementer_4bit.vhd ;         ;
-; subtractor_4bit.vhd              ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/subtractor_4bit.vhd  ;         ;
-; and_4bit.vhd                     ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/and_4bit.vhd         ;         ;
-; or_4bit.vhd                      ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/or_4bit.vhd          ;         ;
-; mux_8x8bit.vhd                   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/mux_8x8bit.vhd       ;         ;
-; xor_4bit.vhd                     ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/xor_4bit.vhd         ;         ;
-; register_4bit.vhd                ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT2M2/register_4bit.vhd    ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+; ula_4bit.vhd                     ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd         ;         ;
+; adder_4bit.vhd                   ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/adder_4bit.vhd       ;         ;
+; full_adder_1bit.vhd              ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/full_adder_1bit.vhd  ;         ;
+; inverter_4bit.vhd                ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/inverter_4bit.vhd    ;         ;
+; incrementer_4bit.vhd             ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/incrementer_4bit.vhd ;         ;
+; subtractor_4bit.vhd              ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/subtractor_4bit.vhd  ;         ;
+; and_4bit.vhd                     ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/and_4bit.vhd         ;         ;
+; or_4bit.vhd                      ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/or_4bit.vhd          ;         ;
+; xor_4bit.vhd                     ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/xor_4bit.vhd         ;         ;
+; register_4bit.vhd                ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/register_4bit.vhd    ;         ;
+; mux_8x4bit.vhd                   ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/mux_8x4bit.vhd       ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -358,84 +358,84 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sun Nov  6 15:04:53 2022
+    Info: Processing started: Wed Nov  9 13:45:33 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula_4bit -c ula_4bit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula_4bit.vhd
-    Info (12022): Found design unit 1: ula_4bit-arch_ula_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd Line: 16
-    Info (12023): Found entity 1: ula_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: ula_4bit-arch_ula_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd Line: 16
+    Info (12023): Found entity 1: ula_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_4bit.vhd
-    Info (12022): Found design unit 1: adder_4bit-arch_adder_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/adder_4bit.vhd Line: 14
-    Info (12023): Found entity 1: adder_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/adder_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: adder_4bit-arch_adder_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/adder_4bit.vhd Line: 14
+    Info (12023): Found entity 1: adder_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/adder_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file full_adder_1bit.vhd
-    Info (12022): Found design unit 1: full_adder_1bit-arch_full_adder_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/full_adder_1bit.vhd Line: 15
-    Info (12023): Found entity 1: full_adder_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/full_adder_1bit.vhd Line: 4
+    Info (12022): Found design unit 1: full_adder_1bit-arch_full_adder_1bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/full_adder_1bit.vhd Line: 15
+    Info (12023): Found entity 1: full_adder_1bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/full_adder_1bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file inverter_4bit.vhd
-    Info (12022): Found design unit 1: inverter_4bit-arch_inverter_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/inverter_4bit.vhd Line: 12
-    Info (12023): Found entity 1: inverter_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/inverter_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: inverter_4bit-arch_inverter_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/inverter_4bit.vhd Line: 12
+    Info (12023): Found entity 1: inverter_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/inverter_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file incrementer_4bit.vhd
-    Info (12022): Found design unit 1: incrementer_4bit-arch_incrementer_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/incrementer_4bit.vhd Line: 13
-    Info (12023): Found entity 1: incrementer_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/incrementer_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: incrementer_4bit-arch_incrementer_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/incrementer_4bit.vhd Line: 13
+    Info (12023): Found entity 1: incrementer_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/incrementer_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file subtractor_4bit.vhd
-    Info (12022): Found design unit 1: subtractor_4bit-arch_subtractor_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/subtractor_4bit.vhd Line: 14
-    Info (12023): Found entity 1: subtractor_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/subtractor_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: subtractor_4bit-arch_subtractor_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/subtractor_4bit.vhd Line: 14
+    Info (12023): Found entity 1: subtractor_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/subtractor_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file and_4bit.vhd
-    Info (12022): Found design unit 1: and_4bit-arch_and_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/and_4bit.vhd Line: 13
-    Info (12023): Found entity 1: and_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/and_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: and_4bit-arch_and_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/and_4bit.vhd Line: 13
+    Info (12023): Found entity 1: and_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/and_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file or_4bit.vhd
-    Info (12022): Found design unit 1: or_4bit-arch_or_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/or_4bit.vhd Line: 13
-    Info (12023): Found entity 1: or_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/or_4bit.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file mux_8x8bit.vhd
-    Info (12022): Found design unit 1: mux_8x4bit-arch_mux_8x4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/mux_8x8bit.vhd Line: 20
-    Info (12023): Found entity 1: mux_8x4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/mux_8x8bit.vhd Line: 4
+    Info (12022): Found design unit 1: or_4bit-arch_or_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/or_4bit.vhd Line: 13
+    Info (12023): Found entity 1: or_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/or_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file xor_4bit.vhd
-    Info (12022): Found design unit 1: xor_4bit-arch_xor_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/xor_4bit.vhd Line: 13
-    Info (12023): Found entity 1: xor_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/xor_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: xor_4bit-arch_xor_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/xor_4bit.vhd Line: 13
+    Info (12023): Found entity 1: xor_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/xor_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/and_4bit_tb.vhd
-    Info (12022): Found design unit 1: and_4bit_tb-arch_and_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/and_4bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: and_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/and_4bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: and_4bit_tb-arch_and_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/and_4bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: and_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/and_4bit_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/or_4bit_tb.vhd
-    Info (12022): Found design unit 1: or_4bit_tb-arch_or_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/or_4bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: or_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/or_4bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: or_4bit_tb-arch_or_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/or_4bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: or_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/or_4bit_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/xor_4bit_tb.vhd
-    Info (12022): Found design unit 1: xor_4bit_tb-arch_xor_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/xor_4bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: xor_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/xor_4bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: xor_4bit_tb-arch_xor_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/xor_4bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: xor_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/xor_4bit_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/inverter_4bit_tb.vhd
-    Info (12022): Found design unit 1: inverter_4bit_tb-arch_inverter_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/inverter_4bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: inverter_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/inverter_4bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: inverter_4bit_tb-arch_inverter_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/inverter_4bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: inverter_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/inverter_4bit_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/full_adder_1bit_tb.vhd
-    Info (12022): Found design unit 1: full_adder_1bit_tb-arch_full_adder_1bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/full_adder_1bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: full_adder_1bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/full_adder_1bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: full_adder_1bit_tb-arch_full_adder_1bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/full_adder_1bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: full_adder_1bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/full_adder_1bit_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/adder_4bit_tb.vhd
-    Info (12022): Found design unit 1: adder_4bit_tb-arch_adder_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/adder_4bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: adder_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/adder_4bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: adder_4bit_tb-arch_adder_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/adder_4bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: adder_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/adder_4bit_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/subtractor_4bit_tb.vhd
-    Info (12022): Found design unit 1: subtractor_4bit_tb-arch_subtractor_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/subtractor_4bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: subtractor_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/subtractor_4bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: subtractor_4bit_tb-arch_subtractor_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/subtractor_4bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: subtractor_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/subtractor_4bit_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/incrementer_4bit_tb.vhd
-    Info (12022): Found design unit 1: incrementer_4bit_tb-arch_incrementer_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/incrementer_4bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: incrementer_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/incrementer_4bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: incrementer_4bit_tb-arch_incrementer_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/incrementer_4bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: incrementer_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/incrementer_4bit_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/ula_4bit_tb.vhd
-    Info (12022): Found design unit 1: ula_4bit_tb-arch_ula_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/ula_4bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: ula_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/ula_4bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: ula_4bit_tb-arch_ula_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/ula_4bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: ula_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/ula_4bit_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file register_4bit.vhd
-    Info (12022): Found design unit 1: register_4bit-arch_register_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/register_4bit.vhd Line: 14
-    Info (12023): Found entity 1: register_4bit File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/register_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: register_4bit-arch_register_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/register_4bit.vhd Line: 14
+    Info (12023): Found entity 1: register_4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/register_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/register_4bit_tb.vhd
-    Info (12022): Found design unit 1: register_4bit_tb-arch_register_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/register_4bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: register_4bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/testbenches/register_4bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: register_4bit_tb-arch_register_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/register_4bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: register_4bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/testbenches/register_4bit_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_8x4bit.vhd
+    Info (12022): Found design unit 1: mux_8x4bit-arch_mux_8x4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/mux_8x4bit.vhd Line: 20
+    Info (12023): Found entity 1: mux_8x4bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/mux_8x4bit.vhd Line: 4
 Info (12127): Elaborating entity "ula_4bit" for the top level hierarchy
-Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:u_ADDER" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd Line: 119
-Info (12128): Elaborating entity "full_adder_1bit" for hierarchy "adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/adder_4bit.vhd Line: 32
-Info (12128): Elaborating entity "subtractor_4bit" for hierarchy "subtractor_4bit:u_SUBTRACTOR" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd Line: 120
-Info (12128): Elaborating entity "inverter_4bit" for hierarchy "subtractor_4bit:u_SUBTRACTOR|inverter_4bit:u_INVERTER" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/subtractor_4bit.vhd Line: 47
-Info (12128): Elaborating entity "incrementer_4bit" for hierarchy "subtractor_4bit:u_SUBTRACTOR|incrementer_4bit:u_INCREMENTER" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/subtractor_4bit.vhd Line: 48
-Info (12128): Elaborating entity "and_4bit" for hierarchy "and_4bit:u_AND" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd Line: 122
-Info (12128): Elaborating entity "or_4bit" for hierarchy "or_4bit:u_OR" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd Line: 123
-Info (12128): Elaborating entity "xor_4bit" for hierarchy "xor_4bit:u_XOR" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd Line: 124
-Info (12128): Elaborating entity "mux_8x4bit" for hierarchy "mux_8x4bit:u_MUX" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd Line: 127
-Info (12128): Elaborating entity "register_4bit" for hierarchy "register_4bit:u_REGISTER" File: C:/Users/Gustavo/Desktop/TrabalhoT2M2/ula_4bit.vhd Line: 140
+Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:u_ADDER" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd Line: 119
+Info (12128): Elaborating entity "full_adder_1bit" for hierarchy "adder_4bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/adder_4bit.vhd Line: 32
+Info (12128): Elaborating entity "subtractor_4bit" for hierarchy "subtractor_4bit:u_SUBTRACTOR" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd Line: 120
+Info (12128): Elaborating entity "inverter_4bit" for hierarchy "subtractor_4bit:u_SUBTRACTOR|inverter_4bit:u_INVERTER" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/subtractor_4bit.vhd Line: 47
+Info (12128): Elaborating entity "incrementer_4bit" for hierarchy "subtractor_4bit:u_SUBTRACTOR|incrementer_4bit:u_INCREMENTER" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/subtractor_4bit.vhd Line: 48
+Info (12128): Elaborating entity "and_4bit" for hierarchy "and_4bit:u_AND" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd Line: 122
+Info (12128): Elaborating entity "or_4bit" for hierarchy "or_4bit:u_OR" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd Line: 123
+Info (12128): Elaborating entity "xor_4bit" for hierarchy "xor_4bit:u_XOR" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd Line: 124
+Info (12128): Elaborating entity "mux_8x4bit" for hierarchy "mux_8x4bit:u_MUX" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd Line: 127
+Info (12128): Elaborating entity "register_4bit" for hierarchy "register_4bit:u_REGISTER" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/ula_4bit.vhd Line: 140
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -444,9 +444,9 @@ Info (21057): Implemented 33 device resources after synthesis - the final resour
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 16 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4875 megabytes
-    Info: Processing ended: Sun Nov  6 15:05:01 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Wed Nov  9 13:45:42 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
 
 

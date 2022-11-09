@@ -1,5 +1,5 @@
 Assembler report for ula_4bit
-Sun Nov  6 15:05:41 2022
+Wed Nov  9 13:46:31 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Gustavo/Desktop/TrabalhoT2M2/output_files/ula_4bit.sof
+  5. Assembler Device Options: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/output_files/ula_4bit.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Nov  6 15:05:41 2022 ;
+; Assembler Status      ; Successful - Wed Nov  9 13:46:31 2022 ;
 ; Revision Name         ; ula_4bit                              ;
 ; Top-level Entity Name ; ula_4bit                              ;
 ; Family                ; Cyclone V                             ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------------+
-; Assembler Generated Files                                       ;
-+-----------------------------------------------------------------+
-; File Name                                                       ;
-+-----------------------------------------------------------------+
-; C:/Users/Gustavo/Desktop/TrabalhoT2M2/output_files/ula_4bit.sof ;
-+-----------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                                        ;
++----------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                        ;
++----------------------------------------------------------------------------------------------------------------------------------+
+; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/output_files/ula_4bit.sof ;
++----------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Gustavo/Desktop/TrabalhoT2M2/output_files/ula_4bit.sof ;
-+----------------+--------------------------------------------------------------------------+
-; Option         ; Setting                                                                  ;
-+----------------+--------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00EC9811                                                               ;
-; Checksum       ; 0x00EC9811                                                               ;
-+----------------+--------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/4 - Trabalho 4 M2 06 11 2022/TrabalhoT2M2/output_files/ula_4bit.sof ;
++----------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                                   ;
++----------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00EC9811                                                                                                                                ;
+; Checksum       ; 0x00EC9811                                                                                                                                ;
++----------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sun Nov  6 15:05:35 2022
+    Info: Processing started: Wed Nov  9 13:46:22 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ula_4bit -c ula_4bit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4869 megabytes
-    Info: Processing ended: Sun Nov  6 15:05:41 2022
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Wed Nov  9 13:46:31 2022
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:06
 
 

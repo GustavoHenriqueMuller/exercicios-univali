@@ -56,10 +56,10 @@ i_SEL[1] => mux_8x4bit:u_MUX.i_SEL[1]
 i_SEL[2] => mux_8x4bit:u_MUX.i_SEL[2]
 i_LOAD => register_4bit:u_REGISTER.i_LOAD
 i_CLK => register_4bit:u_REGISTER.i_CLK
-o_R[0] <= register_4bit:u_REGISTER.o_R[0]
-o_R[1] <= register_4bit:u_REGISTER.o_R[1]
-o_R[2] <= register_4bit:u_REGISTER.o_R[2]
-o_R[3] <= register_4bit:u_REGISTER.o_R[3]
+o_R[0] << register_4bit:u_REGISTER.o_R[0]
+o_R[1] << register_4bit:u_REGISTER.o_R[1]
+o_R[2] << register_4bit:u_REGISTER.o_R[2]
+o_R[3] << register_4bit:u_REGISTER.o_R[3]
 
 
 |ula_4bit|adder_4bit:u_ADDER
