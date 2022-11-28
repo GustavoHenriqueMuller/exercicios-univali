@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity comparator_1bit is
+end comparator_1bit;
+
+architecture arch_comparator_1bit of comparator_1bit is
+end arch_comparator_1bit;

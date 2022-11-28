@@ -1,0 +1,449 @@
+Analysis & Synthesis report for mdc
+Mon Nov 28 16:03:37 2022
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |mdc_top|mdc_control:u_MDC_CONTROL|r_STATE
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_0"
+ 11. Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR"
+ 12. Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1"
+ 13. Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER"
+ 14. Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Nov 28 16:03:37 2022       ;
+; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Revision Name                   ; mdc                                         ;
+; Top-level Entity Name           ; mdc_top                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 35                                          ;
+; Total pins                      ; 27                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; mdc_top            ; mdc                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; mdc_top.vhd                      ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd                    ;         ;
+; mdc_control.vhd                  ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_control.vhd                ;         ;
+; mdc_datapath.vhd                 ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd               ;         ;
+; components/register_8bit.vhd     ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/register_8bit.vhd   ;         ;
+; components/subtractor_8bit.vhd   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd ;         ;
+; components/adder_8bit.vhd        ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/adder_8bit.vhd      ;         ;
+; components/comparator_1bit.vhd   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_1bit.vhd ;         ;
+; components/full_adder_1bit.vhd   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/full_adder_1bit.vhd ;         ;
+; components/comparator_8bit.vhd   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_8bit.vhd ;         ;
+; components/mux_2x8bit.vhd        ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/mux_2x8bit.vhd      ;         ;
+; components/inverter_8bit.vhd     ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/inverter_8bit.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 30          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 43          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 14          ;
+;     -- 5 input functions                    ; 5           ;
+;     -- 4 input functions                    ; 6           ;
+;     -- <=3 input functions                  ; 18          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 35          ;
+;                                             ;             ;
+; I/O pins                                    ; 27          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; i_CLK~input ;
+; Maximum fan-out                             ; 35          ;
+; Total fan-out                               ; 355         ;
+; Average fan-out                             ; 2.69        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |mdc_top                                     ; 43 (0)              ; 35 (0)                    ; 0                 ; 0          ; 27   ; 0            ; |mdc_top                                                                                                              ; mdc_top         ; work         ;
+;    |mdc_control:u_MDC_CONTROL|               ; 12 (12)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_control:u_MDC_CONTROL                                                                                    ; mdc_control     ; work         ;
+;    |mdc_datapath:u_MDC_DATAPATH|             ; 31 (0)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH                                                                                  ; mdc_datapath    ; work         ;
+;       |comparator_8bit:u_COMPARATOR|         ; 13 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR                                                     ; comparator_8bit ; work         ;
+;          |comparator_1bit:u_COMPARATOR_0|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_0                      ; comparator_1bit ; work         ;
+;          |comparator_1bit:u_COMPARATOR_2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_2                      ; comparator_1bit ; work         ;
+;          |comparator_1bit:u_COMPARATOR_3|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_3                      ; comparator_1bit ; work         ;
+;          |comparator_1bit:u_COMPARATOR_4|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_4                      ; comparator_1bit ; work         ;
+;          |comparator_1bit:u_COMPARATOR_6|    ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_6                      ; comparator_1bit ; work         ;
+;          |comparator_1bit:u_COMPARATOR_7|    ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_7                      ; comparator_1bit ; work         ;
+;       |register_8bit:u_REGISTER_X|           ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|register_8bit:u_REGISTER_X                                                       ; register_8bit   ; work         ;
+;       |register_8bit:u_REGISTER_Y|           ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|register_8bit:u_REGISTER_Y                                                       ; register_8bit   ; work         ;
+;       |register_8bit:u_REGSITER_D|           ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|register_8bit:u_REGSITER_D                                                       ; register_8bit   ; work         ;
+;       |subtractor_8bit:u_SUBTRACTOR_0|       ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0                                                   ; subtractor_8bit ; work         ;
+;          |adder_8bit:u_ADDER|                ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER                                ; adder_8bit      ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_1 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_2| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_2 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_3 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_4| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_4 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_5| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_5 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_6| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_6 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_7| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_7 ; full_adder_1bit ; work         ;
+;       |subtractor_8bit:u_SUBTRACTOR_1|       ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1                                                   ; subtractor_8bit ; work         ;
+;          |adder_8bit:u_ADDER|                ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER                                ; adder_8bit      ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_1 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_2| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_2 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_3 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_4| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_4 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_5| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_5 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_6| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_6 ; full_adder_1bit ; work         ;
+;             |full_adder_1bit:u_FULL_ADDER_7| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_7 ; full_adder_1bit ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |mdc_top|mdc_control:u_MDC_CONTROL|r_STATE                                                                                                  ;
++-------------+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+; Name        ; r_STATE.s10 ; r_STATE.s9 ; r_STATE.s8 ; r_STATE.s7 ; r_STATE.s6 ; r_STATE.s5 ; r_STATE.s4 ; r_STATE.s3 ; r_STATE.s2 ; r_STATE.s1 ; r_STATE.s0 ;
++-------------+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+; r_STATE.s0  ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ;
+; r_STATE.s1  ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 1          ;
+; r_STATE.s2  ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 1          ;
+; r_STATE.s3  ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 1          ;
+; r_STATE.s4  ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 1          ;
+; r_STATE.s5  ; 0           ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; r_STATE.s6  ; 0           ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; r_STATE.s7  ; 0           ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; r_STATE.s8  ; 0           ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; r_STATE.s9  ; 0           ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; r_STATE.s10 ; 1           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
++-------------+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 35    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 24    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_0" ;
++------+-------+----------+-------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------+
+; i_gt ; Input ; Info     ; Stuck at GND                                                                              ;
+; i_eq ; Input ; Info     ; Stuck at VCC                                                                              ;
+; i_lt ; Input ; Info     ; Stuck at GND                                                                              ;
++------+-------+----------+-------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR"                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; o_gt ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1"                                ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER" ;
++------------+-------+----------+---------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                   ;
++------------+-------+----------+---------------------------------------------------------------------------+
+; i_carry_in ; Input ; Info     ; Stuck at VCC                                                              ;
++------------+-------+----------+---------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0"                                ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 35                          ;
+;     ENA CLR           ; 8                           ;
+;     ENA CLR SLD       ; 16                          ;
+;     plain             ; 11                          ;
+; arriav_lcell_comb     ; 43                          ;
+;     normal            ; 43                          ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 14                          ;
+; boundary_port         ; 27                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.60                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Processing started: Mon Nov 28 16:03:30 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mdc -c mdc
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file mdc_top.vhd
+    Info (12022): Found design unit 1: mdc_top-arch_mdc_top File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd Line: 17
+    Info (12023): Found entity 1: mdc_top File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mdc_control.vhd
+    Info (12022): Found design unit 1: mdc_control-arch_mdc_control File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_control.vhd Line: 29
+    Info (12023): Found entity 1: mdc_control File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mdc_datapath.vhd
+    Info (12022): Found design unit 1: mdc_datapath-arch_mdc_datapath File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 30
+    Info (12023): Found entity 1: mdc_datapath File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file components/register_8bit.vhd
+    Info (12022): Found design unit 1: register_8bit-arch_register_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/register_8bit.vhd Line: 15
+    Info (12023): Found entity 1: register_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/register_8bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file components/subtractor_8bit.vhd
+    Info (12022): Found design unit 1: subtractor_8bit-arch_subtractor_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 14
+    Info (12023): Found entity 1: subtractor_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file components/adder_8bit.vhd
+    Info (12022): Found design unit 1: adder_8bit-arch_adder_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/adder_8bit.vhd Line: 15
+    Info (12023): Found entity 1: adder_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/adder_8bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file components/comparator_1bit.vhd
+    Info (12022): Found design unit 1: comparator_1bit-arch_comparator_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_1bit.vhd Line: 19
+    Info (12023): Found entity 1: comparator_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_1bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file components/full_adder_1bit.vhd
+    Info (12022): Found design unit 1: full_adder_1bit-arch_full_adder_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/full_adder_1bit.vhd Line: 15
+    Info (12023): Found entity 1: full_adder_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/full_adder_1bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file components/comparator_8bit.vhd
+    Info (12022): Found design unit 1: comparator_8bit-arch_comparator_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_8bit.vhd Line: 15
+    Info (12023): Found entity 1: comparator_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_8bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file components/mux_2x8bit.vhd
+    Info (12022): Found design unit 1: mux_2x8bit-arch_mux_2x8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/mux_2x8bit.vhd Line: 14
+    Info (12023): Found entity 1: mux_2x8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/mux_2x8bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file testbenches/mdc_top_tb.vhd
+    Info (12022): Found design unit 1: mdc_top_tb-arch_mdc_top_tb File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/testbenches/mdc_top_tb.vhd Line: 7
+    Info (12023): Found entity 1: mdc_top_tb File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/testbenches/mdc_top_tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file components/inverter_8bit.vhd
+    Info (12022): Found design unit 1: inverter_8bit-arch_inverter_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/inverter_8bit.vhd Line: 12
+    Info (12023): Found entity 1: inverter_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/inverter_8bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file testbenches/comparator_8bit_tb.vhd
+    Info (12022): Found design unit 1: comparator_8bit_tb-arch_comparator_8bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/testbenches/comparator_8bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: comparator_8bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/testbenches/comparator_8bit_tb.vhd Line: 4
+Info (12127): Elaborating entity "mdc_top" for the top level hierarchy
+Info (12128): Elaborating entity "mdc_control" for hierarchy "mdc_control:u_MDC_CONTROL" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd Line: 90
+Info (12128): Elaborating entity "mdc_datapath" for hierarchy "mdc_datapath:u_MDC_DATAPATH" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd Line: 110
+Info (12128): Elaborating entity "subtractor_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 84
+Info (12128): Elaborating entity "inverter_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|inverter_8bit:u_INVERTER" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 38
+Info (12128): Elaborating entity "adder_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 39
+Info (12128): Elaborating entity "full_adder_1bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/adder_8bit.vhd Line: 37
+Info (12128): Elaborating entity "comparator_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 86
+Info (12128): Elaborating entity "comparator_1bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_0" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_8bit.vhd Line: 60
+Info (12128): Elaborating entity "mux_2x8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|mux_2x8bit:u_MUX_X" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 88
+Info (12128): Elaborating entity "register_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|register_8bit:u_REGISTER_X" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 91
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 55 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4894 megabytes
+    Info: Processing ended: Mon Nov 28 16:03:37 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
+
+

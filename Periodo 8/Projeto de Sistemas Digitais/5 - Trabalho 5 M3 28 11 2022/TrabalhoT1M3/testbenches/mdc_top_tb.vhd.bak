@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity mdc_top_tb is
+	port
+	(
+	);
+end mdc_top_tb;
+
+architecture arch_mdc_top_tb of mdc_top_tb is
+begin
+	process
+	begin
+		
+	
+		wait;
+	end process;
+end mdc_top_tb;

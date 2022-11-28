@@ -1,0 +1,68 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity comparator_8bit is
+	port
+	(
+		i_A: in std_logic_vector (7 downto 0);
+		i_B: in std_logic_vector (7 downto 0);
+		o_GT: out std_logic;
+		o_EQ: out std_logic;
+		o_LT: out std_logic;
+	);
+end comparator_8bit;
+
+architecture arch_comparator_8bit of comparator_8bit is
+
+component comparator_1bit is
+	port
+	(
+		i_A: in std_logic;
+		i_B: in std_logic;
+		i_GT: in std_logic;
+		i_EQ: in std_logic;
+		i_LT: in std_logic;
+		o_GT: out std_logic;
+		o_EQ: out std_logic;
+		o_LT: out std_logic;
+	);
+end component;
+
+signal w_COMPARATOR_0_GT: std_logic;
+signal w_COMPARATOR_0_EQ: std_logic;
+signal w_COMPARATOR_0_LT: std_logic;
+
+signal w_COMPARATOR_1_GT: std_logic;
+signal w_COMPARATOR_1_EQ: std_logic;
+signal w_COMPARATOR_1_LT: std_logic;
+
+signal w_COMPARATOR_2_GT: std_logic;
+signal w_COMPARATOR_2_EQ: std_logic;
+signal w_COMPARATOR_2_LT: std_logic;
+
+signal w_COMPARATOR_3_GT: std_logic;
+signal w_COMPARATOR_3_EQ: std_logic;
+signal w_COMPARATOR_3_LT: std_logic;
+
+signal w_COMPARATOR_4_GT: std_logic;
+signal w_COMPARATOR_4_EQ: std_logic;
+signal w_COMPARATOR_4_LT: std_logic;
+
+signal w_COMPARATOR_5_GT: std_logic;
+signal w_COMPARATOR_5_EQ: std_logic;
+signal w_COMPARATOR_5_LT: std_logic;
+
+signal w_COMPARATOR_6_GT: std_logic;
+signal w_COMPARATOR_6_EQ: std_logic;
+signal w_COMPARATOR_6_LT: std_logic;
+
+begin
+	u_COMPARATOR_0: comparator_1bit port map(i_A(7), i_B(7), '0', '1', '0', w_COMPARATOR_0_GT, w_COMPARATOR_0_EQ, w_COMPARATOR_0_LT);
+	u_COMPARATOR_1: comparator_1bit port map(i_A(6), i_B(6), w_COMPARATOR_0_GT, w_COMPARATOR_0_EQ, w_COMPARATOR_0_LT, w_COMPARATOR_1_GT, w_COMPARATOR_1_EQ, w_COMPARATOR_1_LT);
+	u_COMPARATOR_2: comparator_1bit port map(i_A(5), i_B(5), w_COMPARATOR_1_GT, w_COMPARATOR_1_EQ, w_COMPARATOR_1_LT, w_COMPARATOR_2_GT, w_COMPARATOR_2_EQ, w_COMPARATOR_2_LT);
+	u_COMPARATOR_3: comparator_1bit port map(i_A(4), i_B(4), w_COMPARATOR_2_GT, w_COMPARATOR_2_EQ, w_COMPARATOR_2_LT, w_COMPARATOR_3_GT, w_COMPARATOR_3_EQ, w_COMPARATOR_3_LT);
+	u_COMPARATOR_4: comparator_1bit port map(i_A(3), i_B(3), w_COMPARATOR_3_GT, w_COMPARATOR_3_EQ, w_COMPARATOR_3_LT, w_COMPARATOR_4_GT, w_COMPARATOR_4_EQ, w_COMPARATOR_4_LT);
+	u_COMPARATOR_5: comparator_1bit port map(i_A(2), i_B(2), w_COMPARATOR_4_GT, w_COMPARATOR_4_EQ, w_COMPARATOR_4_LT, w_COMPARATOR_5_GT, w_COMPARATOR_5_EQ, w_COMPARATOR_5_LT);
+	u_COMPARATOR_6: comparator_1bit port map(i_A(1), i_B(1), w_COMPARATOR_5_GT, w_COMPARATOR_5_EQ, w_COMPARATOR_5_LT, w_COMPARATOR_6_GT, w_COMPARATOR_6_EQ, w_COMPARATOR_6_LT);
+	u_COMPARATOR_7: comparator_1bit port map(i_A(0), i_B(0), w_COMPARATOR_6_GT, w_COMPARATOR_6_EQ, w_COMPARATOR_6_LT, o_GT, o_EQ, o_LT);
+end arch_comparator_8bit;

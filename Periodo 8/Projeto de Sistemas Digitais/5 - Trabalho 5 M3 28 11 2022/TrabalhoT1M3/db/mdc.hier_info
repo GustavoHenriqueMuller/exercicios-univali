@@ -1,0 +1,823 @@
+|mdc_top
+i_X[0] => mdc_datapath:u_MDC_DATAPATH.i_X[0]
+i_X[1] => mdc_datapath:u_MDC_DATAPATH.i_X[1]
+i_X[2] => mdc_datapath:u_MDC_DATAPATH.i_X[2]
+i_X[3] => mdc_datapath:u_MDC_DATAPATH.i_X[3]
+i_X[4] => mdc_datapath:u_MDC_DATAPATH.i_X[4]
+i_X[5] => mdc_datapath:u_MDC_DATAPATH.i_X[5]
+i_X[6] => mdc_datapath:u_MDC_DATAPATH.i_X[6]
+i_X[7] => mdc_datapath:u_MDC_DATAPATH.i_X[7]
+i_Y[0] => mdc_datapath:u_MDC_DATAPATH.i_Y[0]
+i_Y[1] => mdc_datapath:u_MDC_DATAPATH.i_Y[1]
+i_Y[2] => mdc_datapath:u_MDC_DATAPATH.i_Y[2]
+i_Y[3] => mdc_datapath:u_MDC_DATAPATH.i_Y[3]
+i_Y[4] => mdc_datapath:u_MDC_DATAPATH.i_Y[4]
+i_Y[5] => mdc_datapath:u_MDC_DATAPATH.i_Y[5]
+i_Y[6] => mdc_datapath:u_MDC_DATAPATH.i_Y[6]
+i_Y[7] => mdc_datapath:u_MDC_DATAPATH.i_Y[7]
+i_GO => mdc_control:u_MDC_CONTROL.i_GO
+i_CLK => mdc_control:u_MDC_CONTROL.i_CLK
+i_CLK => mdc_datapath:u_MDC_DATAPATH.i_CLK
+o_D[0] << mdc_datapath:u_MDC_DATAPATH.o_D[0]
+o_D[1] << mdc_datapath:u_MDC_DATAPATH.o_D[1]
+o_D[2] << mdc_datapath:u_MDC_DATAPATH.o_D[2]
+o_D[3] << mdc_datapath:u_MDC_DATAPATH.o_D[3]
+o_D[4] << mdc_datapath:u_MDC_DATAPATH.o_D[4]
+o_D[5] << mdc_datapath:u_MDC_DATAPATH.o_D[5]
+o_D[6] << mdc_datapath:u_MDC_DATAPATH.o_D[6]
+o_D[7] << mdc_datapath:u_MDC_DATAPATH.o_D[7]
+o_RDY << mdc_control:u_MDC_CONTROL.o_RDY
+
+
+|mdc_top|mdc_control:u_MDC_CONTROL
+i_CLK => r_STATE~1.DATAIN
+i_GO => w_NEXT_STATE.s3.DATAB
+i_GO => Selector0.IN2
+i_X_EQ_Y => w_NEXT_STATE.s10.DATAB
+i_X_EQ_Y => w_NEXT_STATE.s6.DATAB
+i_X_LT_Y => w_NEXT_STATE.s7.DATAB
+i_X_LT_Y => w_NEXT_STATE.s8.DATAB
+o_RDY <= o_RDY.DB_MAX_OUTPUT_PORT_TYPE
+o_X_CLRn <= o_D_CLRn.DB_MAX_OUTPUT_PORT_TYPE
+o_X_LOAD <= o_X_LOAD.DB_MAX_OUTPUT_PORT_TYPE
+o_X_LOAD_MODE <= o_X_LOAD_MODE.DB_MAX_OUTPUT_PORT_TYPE
+o_Y_CLRn <= o_D_CLRn.DB_MAX_OUTPUT_PORT_TYPE
+o_Y_LOAD <= o_Y_LOAD.DB_MAX_OUTPUT_PORT_TYPE
+o_Y_LOAD_MODE <= o_Y_LOAD_MODE.DB_MAX_OUTPUT_PORT_TYPE
+o_D_CLRn <= o_D_CLRn.DB_MAX_OUTPUT_PORT_TYPE
+o_D_LOAD <= o_D_LOAD.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH
+i_CLK => register_8bit:u_REGISTER_X.i_CLK
+i_CLK => register_8bit:u_REGISTER_Y.i_CLK
+i_CLK => register_8bit:u_REGSITER_D.i_CLK
+i_X[0] => mux_2x8bit:u_MUX_X.i_A[0]
+i_X[1] => mux_2x8bit:u_MUX_X.i_A[1]
+i_X[2] => mux_2x8bit:u_MUX_X.i_A[2]
+i_X[3] => mux_2x8bit:u_MUX_X.i_A[3]
+i_X[4] => mux_2x8bit:u_MUX_X.i_A[4]
+i_X[5] => mux_2x8bit:u_MUX_X.i_A[5]
+i_X[6] => mux_2x8bit:u_MUX_X.i_A[6]
+i_X[7] => mux_2x8bit:u_MUX_X.i_A[7]
+i_X_LOAD => register_8bit:u_REGISTER_X.i_LOAD
+i_X_CLRn => register_8bit:u_REGISTER_X.i_CLRn
+i_X_LOAD_MODE => mux_2x8bit:u_MUX_X.i_SEL
+i_Y[0] => mux_2x8bit:u_MUX_Y.i_A[0]
+i_Y[1] => mux_2x8bit:u_MUX_Y.i_A[1]
+i_Y[2] => mux_2x8bit:u_MUX_Y.i_A[2]
+i_Y[3] => mux_2x8bit:u_MUX_Y.i_A[3]
+i_Y[4] => mux_2x8bit:u_MUX_Y.i_A[4]
+i_Y[5] => mux_2x8bit:u_MUX_Y.i_A[5]
+i_Y[6] => mux_2x8bit:u_MUX_Y.i_A[6]
+i_Y[7] => mux_2x8bit:u_MUX_Y.i_A[7]
+i_Y_LOAD => register_8bit:u_REGISTER_Y.i_LOAD
+i_Y_CLRn => register_8bit:u_REGISTER_Y.i_CLRn
+i_Y_LOAD_MODE => mux_2x8bit:u_MUX_Y.i_SEL
+i_D_LOAD => register_8bit:u_REGSITER_D.i_LOAD
+i_D_CLRn => register_8bit:u_REGSITER_D.i_CLRn
+o_X_EQ_Y <= comparator_8bit:u_COMPARATOR.o_EQ
+o_X_LT_Y <= comparator_8bit:u_COMPARATOR.o_LT
+o_D[0] <= register_8bit:u_REGSITER_D.o_R[0]
+o_D[1] <= register_8bit:u_REGSITER_D.o_R[1]
+o_D[2] <= register_8bit:u_REGSITER_D.o_R[2]
+o_D[3] <= register_8bit:u_REGSITER_D.o_R[3]
+o_D[4] <= register_8bit:u_REGSITER_D.o_R[4]
+o_D[5] <= register_8bit:u_REGSITER_D.o_R[5]
+o_D[6] <= register_8bit:u_REGSITER_D.o_R[6]
+o_D[7] <= register_8bit:u_REGSITER_D.o_R[7]
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0
+i_A[0] => adder_8bit:u_ADDER.i_A[0]
+i_A[1] => adder_8bit:u_ADDER.i_A[1]
+i_A[2] => adder_8bit:u_ADDER.i_A[2]
+i_A[3] => adder_8bit:u_ADDER.i_A[3]
+i_A[4] => adder_8bit:u_ADDER.i_A[4]
+i_A[5] => adder_8bit:u_ADDER.i_A[5]
+i_A[6] => adder_8bit:u_ADDER.i_A[6]
+i_A[7] => adder_8bit:u_ADDER.i_A[7]
+i_B[0] => inverter_8bit:u_INVERTER.i_A[0]
+i_B[1] => inverter_8bit:u_INVERTER.i_A[1]
+i_B[2] => inverter_8bit:u_INVERTER.i_A[2]
+i_B[3] => inverter_8bit:u_INVERTER.i_A[3]
+i_B[4] => inverter_8bit:u_INVERTER.i_A[4]
+i_B[5] => inverter_8bit:u_INVERTER.i_A[5]
+i_B[6] => inverter_8bit:u_INVERTER.i_A[6]
+i_B[7] => inverter_8bit:u_INVERTER.i_A[7]
+o_R[0] <= adder_8bit:u_ADDER.o_R[0]
+o_R[1] <= adder_8bit:u_ADDER.o_R[1]
+o_R[2] <= adder_8bit:u_ADDER.o_R[2]
+o_R[3] <= adder_8bit:u_ADDER.o_R[3]
+o_R[4] <= adder_8bit:u_ADDER.o_R[4]
+o_R[5] <= adder_8bit:u_ADDER.o_R[5]
+o_R[6] <= adder_8bit:u_ADDER.o_R[6]
+o_R[7] <= adder_8bit:u_ADDER.o_R[7]
+o_CARRY_OUT <= adder_8bit:u_ADDER.o_CARRY_OUT
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|inverter_8bit:u_INVERTER
+i_A[0] => o_R[0].DATAIN
+i_A[1] => o_R[1].DATAIN
+i_A[2] => o_R[2].DATAIN
+i_A[3] => o_R[3].DATAIN
+i_A[4] => o_R[4].DATAIN
+i_A[5] => o_R[5].DATAIN
+i_A[6] => o_R[6].DATAIN
+i_A[7] => o_R[7].DATAIN
+o_R[0] <= i_A[0].DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= i_A[1].DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= i_A[2].DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= i_A[3].DB_MAX_OUTPUT_PORT_TYPE
+o_R[4] <= i_A[4].DB_MAX_OUTPUT_PORT_TYPE
+o_R[5] <= i_A[5].DB_MAX_OUTPUT_PORT_TYPE
+o_R[6] <= i_A[6].DB_MAX_OUTPUT_PORT_TYPE
+o_R[7] <= i_A[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER
+i_A[0] => full_adder_1bit:u_FULL_ADDER_0.i_A
+i_A[1] => full_adder_1bit:u_FULL_ADDER_1.i_A
+i_A[2] => full_adder_1bit:u_FULL_ADDER_2.i_A
+i_A[3] => full_adder_1bit:u_FULL_ADDER_3.i_A
+i_A[4] => full_adder_1bit:u_FULL_ADDER_4.i_A
+i_A[5] => full_adder_1bit:u_FULL_ADDER_5.i_A
+i_A[6] => full_adder_1bit:u_FULL_ADDER_6.i_A
+i_A[7] => full_adder_1bit:u_FULL_ADDER_7.i_A
+i_B[0] => full_adder_1bit:u_FULL_ADDER_0.i_B
+i_B[1] => full_adder_1bit:u_FULL_ADDER_1.i_B
+i_B[2] => full_adder_1bit:u_FULL_ADDER_2.i_B
+i_B[3] => full_adder_1bit:u_FULL_ADDER_3.i_B
+i_B[4] => full_adder_1bit:u_FULL_ADDER_4.i_B
+i_B[5] => full_adder_1bit:u_FULL_ADDER_5.i_B
+i_B[6] => full_adder_1bit:u_FULL_ADDER_6.i_B
+i_B[7] => full_adder_1bit:u_FULL_ADDER_7.i_B
+i_CARRY_IN => full_adder_1bit:u_FULL_ADDER_0.i_CARRY_IN
+o_R[0] <= full_adder_1bit:u_FULL_ADDER_0.o_R
+o_R[1] <= full_adder_1bit:u_FULL_ADDER_1.o_R
+o_R[2] <= full_adder_1bit:u_FULL_ADDER_2.o_R
+o_R[3] <= full_adder_1bit:u_FULL_ADDER_3.o_R
+o_R[4] <= full_adder_1bit:u_FULL_ADDER_4.o_R
+o_R[5] <= full_adder_1bit:u_FULL_ADDER_5.o_R
+o_R[6] <= full_adder_1bit:u_FULL_ADDER_6.o_R
+o_R[7] <= full_adder_1bit:u_FULL_ADDER_7.o_R
+o_CARRY_OUT <= full_adder_1bit:u_FULL_ADDER_7.o_CARRY_OUT
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_1
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_2
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_3
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_4
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_5
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_6
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_7
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1
+i_A[0] => adder_8bit:u_ADDER.i_A[0]
+i_A[1] => adder_8bit:u_ADDER.i_A[1]
+i_A[2] => adder_8bit:u_ADDER.i_A[2]
+i_A[3] => adder_8bit:u_ADDER.i_A[3]
+i_A[4] => adder_8bit:u_ADDER.i_A[4]
+i_A[5] => adder_8bit:u_ADDER.i_A[5]
+i_A[6] => adder_8bit:u_ADDER.i_A[6]
+i_A[7] => adder_8bit:u_ADDER.i_A[7]
+i_B[0] => inverter_8bit:u_INVERTER.i_A[0]
+i_B[1] => inverter_8bit:u_INVERTER.i_A[1]
+i_B[2] => inverter_8bit:u_INVERTER.i_A[2]
+i_B[3] => inverter_8bit:u_INVERTER.i_A[3]
+i_B[4] => inverter_8bit:u_INVERTER.i_A[4]
+i_B[5] => inverter_8bit:u_INVERTER.i_A[5]
+i_B[6] => inverter_8bit:u_INVERTER.i_A[6]
+i_B[7] => inverter_8bit:u_INVERTER.i_A[7]
+o_R[0] <= adder_8bit:u_ADDER.o_R[0]
+o_R[1] <= adder_8bit:u_ADDER.o_R[1]
+o_R[2] <= adder_8bit:u_ADDER.o_R[2]
+o_R[3] <= adder_8bit:u_ADDER.o_R[3]
+o_R[4] <= adder_8bit:u_ADDER.o_R[4]
+o_R[5] <= adder_8bit:u_ADDER.o_R[5]
+o_R[6] <= adder_8bit:u_ADDER.o_R[6]
+o_R[7] <= adder_8bit:u_ADDER.o_R[7]
+o_CARRY_OUT <= adder_8bit:u_ADDER.o_CARRY_OUT
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|inverter_8bit:u_INVERTER
+i_A[0] => o_R[0].DATAIN
+i_A[1] => o_R[1].DATAIN
+i_A[2] => o_R[2].DATAIN
+i_A[3] => o_R[3].DATAIN
+i_A[4] => o_R[4].DATAIN
+i_A[5] => o_R[5].DATAIN
+i_A[6] => o_R[6].DATAIN
+i_A[7] => o_R[7].DATAIN
+o_R[0] <= i_A[0].DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= i_A[1].DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= i_A[2].DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= i_A[3].DB_MAX_OUTPUT_PORT_TYPE
+o_R[4] <= i_A[4].DB_MAX_OUTPUT_PORT_TYPE
+o_R[5] <= i_A[5].DB_MAX_OUTPUT_PORT_TYPE
+o_R[6] <= i_A[6].DB_MAX_OUTPUT_PORT_TYPE
+o_R[7] <= i_A[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER
+i_A[0] => full_adder_1bit:u_FULL_ADDER_0.i_A
+i_A[1] => full_adder_1bit:u_FULL_ADDER_1.i_A
+i_A[2] => full_adder_1bit:u_FULL_ADDER_2.i_A
+i_A[3] => full_adder_1bit:u_FULL_ADDER_3.i_A
+i_A[4] => full_adder_1bit:u_FULL_ADDER_4.i_A
+i_A[5] => full_adder_1bit:u_FULL_ADDER_5.i_A
+i_A[6] => full_adder_1bit:u_FULL_ADDER_6.i_A
+i_A[7] => full_adder_1bit:u_FULL_ADDER_7.i_A
+i_B[0] => full_adder_1bit:u_FULL_ADDER_0.i_B
+i_B[1] => full_adder_1bit:u_FULL_ADDER_1.i_B
+i_B[2] => full_adder_1bit:u_FULL_ADDER_2.i_B
+i_B[3] => full_adder_1bit:u_FULL_ADDER_3.i_B
+i_B[4] => full_adder_1bit:u_FULL_ADDER_4.i_B
+i_B[5] => full_adder_1bit:u_FULL_ADDER_5.i_B
+i_B[6] => full_adder_1bit:u_FULL_ADDER_6.i_B
+i_B[7] => full_adder_1bit:u_FULL_ADDER_7.i_B
+i_CARRY_IN => full_adder_1bit:u_FULL_ADDER_0.i_CARRY_IN
+o_R[0] <= full_adder_1bit:u_FULL_ADDER_0.o_R
+o_R[1] <= full_adder_1bit:u_FULL_ADDER_1.o_R
+o_R[2] <= full_adder_1bit:u_FULL_ADDER_2.o_R
+o_R[3] <= full_adder_1bit:u_FULL_ADDER_3.o_R
+o_R[4] <= full_adder_1bit:u_FULL_ADDER_4.o_R
+o_R[5] <= full_adder_1bit:u_FULL_ADDER_5.o_R
+o_R[6] <= full_adder_1bit:u_FULL_ADDER_6.o_R
+o_R[7] <= full_adder_1bit:u_FULL_ADDER_7.o_R
+o_CARRY_OUT <= full_adder_1bit:u_FULL_ADDER_7.o_CARRY_OUT
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_1
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_2
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_3
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_4
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_5
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_6
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_1|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_7
+i_A => o_R.IN0
+i_A => o_CARRY_OUT.IN0
+i_A => o_CARRY_OUT.IN0
+i_B => o_R.IN1
+i_B => o_CARRY_OUT.IN1
+i_B => o_CARRY_OUT.IN0
+i_CARRY_IN => o_R.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+i_CARRY_IN => o_CARRY_OUT.IN1
+o_R <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_CARRY_OUT <= o_CARRY_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR
+i_A[0] => comparator_1bit:u_COMPARATOR_7.i_A
+i_A[1] => comparator_1bit:u_COMPARATOR_6.i_A
+i_A[2] => comparator_1bit:u_COMPARATOR_5.i_A
+i_A[3] => comparator_1bit:u_COMPARATOR_4.i_A
+i_A[4] => comparator_1bit:u_COMPARATOR_3.i_A
+i_A[5] => comparator_1bit:u_COMPARATOR_2.i_A
+i_A[6] => comparator_1bit:u_COMPARATOR_1.i_A
+i_A[7] => comparator_1bit:u_COMPARATOR_0.i_A
+i_B[0] => comparator_1bit:u_COMPARATOR_7.i_B
+i_B[1] => comparator_1bit:u_COMPARATOR_6.i_B
+i_B[2] => comparator_1bit:u_COMPARATOR_5.i_B
+i_B[3] => comparator_1bit:u_COMPARATOR_4.i_B
+i_B[4] => comparator_1bit:u_COMPARATOR_3.i_B
+i_B[5] => comparator_1bit:u_COMPARATOR_2.i_B
+i_B[6] => comparator_1bit:u_COMPARATOR_1.i_B
+i_B[7] => comparator_1bit:u_COMPARATOR_0.i_B
+o_GT <= comparator_1bit:u_COMPARATOR_7.o_GT
+o_EQ <= comparator_1bit:u_COMPARATOR_7.o_EQ
+o_LT <= comparator_1bit:u_COMPARATOR_7.o_LT
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_0
+i_A => o_GT.IN0
+i_A => o_EQ.IN0
+i_A => o_LT.IN0
+i_B => o_EQ.IN1
+i_B => o_LT.IN1
+i_B => o_GT.IN1
+i_GT => o_GT.IN1
+i_EQ => o_GT.IN1
+i_EQ => o_EQ.IN1
+i_EQ => o_LT.IN1
+i_LT => o_LT.IN1
+o_GT <= o_GT.DB_MAX_OUTPUT_PORT_TYPE
+o_EQ <= o_EQ.DB_MAX_OUTPUT_PORT_TYPE
+o_LT <= o_LT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_1
+i_A => o_GT.IN0
+i_A => o_EQ.IN0
+i_A => o_LT.IN0
+i_B => o_EQ.IN1
+i_B => o_LT.IN1
+i_B => o_GT.IN1
+i_GT => o_GT.IN1
+i_EQ => o_GT.IN1
+i_EQ => o_EQ.IN1
+i_EQ => o_LT.IN1
+i_LT => o_LT.IN1
+o_GT <= o_GT.DB_MAX_OUTPUT_PORT_TYPE
+o_EQ <= o_EQ.DB_MAX_OUTPUT_PORT_TYPE
+o_LT <= o_LT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_2
+i_A => o_GT.IN0
+i_A => o_EQ.IN0
+i_A => o_LT.IN0
+i_B => o_EQ.IN1
+i_B => o_LT.IN1
+i_B => o_GT.IN1
+i_GT => o_GT.IN1
+i_EQ => o_GT.IN1
+i_EQ => o_EQ.IN1
+i_EQ => o_LT.IN1
+i_LT => o_LT.IN1
+o_GT <= o_GT.DB_MAX_OUTPUT_PORT_TYPE
+o_EQ <= o_EQ.DB_MAX_OUTPUT_PORT_TYPE
+o_LT <= o_LT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_3
+i_A => o_GT.IN0
+i_A => o_EQ.IN0
+i_A => o_LT.IN0
+i_B => o_EQ.IN1
+i_B => o_LT.IN1
+i_B => o_GT.IN1
+i_GT => o_GT.IN1
+i_EQ => o_GT.IN1
+i_EQ => o_EQ.IN1
+i_EQ => o_LT.IN1
+i_LT => o_LT.IN1
+o_GT <= o_GT.DB_MAX_OUTPUT_PORT_TYPE
+o_EQ <= o_EQ.DB_MAX_OUTPUT_PORT_TYPE
+o_LT <= o_LT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_4
+i_A => o_GT.IN0
+i_A => o_EQ.IN0
+i_A => o_LT.IN0
+i_B => o_EQ.IN1
+i_B => o_LT.IN1
+i_B => o_GT.IN1
+i_GT => o_GT.IN1
+i_EQ => o_GT.IN1
+i_EQ => o_EQ.IN1
+i_EQ => o_LT.IN1
+i_LT => o_LT.IN1
+o_GT <= o_GT.DB_MAX_OUTPUT_PORT_TYPE
+o_EQ <= o_EQ.DB_MAX_OUTPUT_PORT_TYPE
+o_LT <= o_LT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_5
+i_A => o_GT.IN0
+i_A => o_EQ.IN0
+i_A => o_LT.IN0
+i_B => o_EQ.IN1
+i_B => o_LT.IN1
+i_B => o_GT.IN1
+i_GT => o_GT.IN1
+i_EQ => o_GT.IN1
+i_EQ => o_EQ.IN1
+i_EQ => o_LT.IN1
+i_LT => o_LT.IN1
+o_GT <= o_GT.DB_MAX_OUTPUT_PORT_TYPE
+o_EQ <= o_EQ.DB_MAX_OUTPUT_PORT_TYPE
+o_LT <= o_LT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_6
+i_A => o_GT.IN0
+i_A => o_EQ.IN0
+i_A => o_LT.IN0
+i_B => o_EQ.IN1
+i_B => o_LT.IN1
+i_B => o_GT.IN1
+i_GT => o_GT.IN1
+i_EQ => o_GT.IN1
+i_EQ => o_EQ.IN1
+i_EQ => o_LT.IN1
+i_LT => o_LT.IN1
+o_GT <= o_GT.DB_MAX_OUTPUT_PORT_TYPE
+o_EQ <= o_EQ.DB_MAX_OUTPUT_PORT_TYPE
+o_LT <= o_LT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_7
+i_A => o_GT.IN0
+i_A => o_EQ.IN0
+i_A => o_LT.IN0
+i_B => o_EQ.IN1
+i_B => o_LT.IN1
+i_B => o_GT.IN1
+i_GT => o_GT.IN1
+i_EQ => o_GT.IN1
+i_EQ => o_EQ.IN1
+i_EQ => o_LT.IN1
+i_LT => o_LT.IN1
+o_GT <= o_GT.DB_MAX_OUTPUT_PORT_TYPE
+o_EQ <= o_EQ.DB_MAX_OUTPUT_PORT_TYPE
+o_LT <= o_LT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|mux_2x8bit:u_MUX_X
+i_A[0] => o_R.DATAB
+i_A[1] => o_R.DATAB
+i_A[2] => o_R.DATAB
+i_A[3] => o_R.DATAB
+i_A[4] => o_R.DATAB
+i_A[5] => o_R.DATAB
+i_A[6] => o_R.DATAB
+i_A[7] => o_R.DATAB
+i_B[0] => o_R.DATAA
+i_B[1] => o_R.DATAA
+i_B[2] => o_R.DATAA
+i_B[3] => o_R.DATAA
+i_B[4] => o_R.DATAA
+i_B[5] => o_R.DATAA
+i_B[6] => o_R.DATAA
+i_B[7] => o_R.DATAA
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+o_R[0] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[4] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[5] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[6] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[7] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|mux_2x8bit:u_MUX_Y
+i_A[0] => o_R.DATAB
+i_A[1] => o_R.DATAB
+i_A[2] => o_R.DATAB
+i_A[3] => o_R.DATAB
+i_A[4] => o_R.DATAB
+i_A[5] => o_R.DATAB
+i_A[6] => o_R.DATAB
+i_A[7] => o_R.DATAB
+i_B[0] => o_R.DATAA
+i_B[1] => o_R.DATAA
+i_B[2] => o_R.DATAA
+i_B[3] => o_R.DATAA
+i_B[4] => o_R.DATAA
+i_B[5] => o_R.DATAA
+i_B[6] => o_R.DATAA
+i_B[7] => o_R.DATAA
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+i_SEL => o_R.OUTPUTSELECT
+o_R[0] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[4] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[5] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[6] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+o_R[7] <= o_R.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|register_8bit:u_REGISTER_X
+i_A[0] => o_R[0]~reg0.DATAIN
+i_A[1] => o_R[1]~reg0.DATAIN
+i_A[2] => o_R[2]~reg0.DATAIN
+i_A[3] => o_R[3]~reg0.DATAIN
+i_A[4] => o_R[4]~reg0.DATAIN
+i_A[5] => o_R[5]~reg0.DATAIN
+i_A[6] => o_R[6]~reg0.DATAIN
+i_A[7] => o_R[7]~reg0.DATAIN
+i_LOAD => o_R[7]~reg0.ENA
+i_LOAD => o_R[6]~reg0.ENA
+i_LOAD => o_R[5]~reg0.ENA
+i_LOAD => o_R[4]~reg0.ENA
+i_LOAD => o_R[3]~reg0.ENA
+i_LOAD => o_R[2]~reg0.ENA
+i_LOAD => o_R[1]~reg0.ENA
+i_LOAD => o_R[0]~reg0.ENA
+i_CLRn => o_R[0]~reg0.ACLR
+i_CLRn => o_R[1]~reg0.ACLR
+i_CLRn => o_R[2]~reg0.ACLR
+i_CLRn => o_R[3]~reg0.ACLR
+i_CLRn => o_R[4]~reg0.ACLR
+i_CLRn => o_R[5]~reg0.ACLR
+i_CLRn => o_R[6]~reg0.ACLR
+i_CLRn => o_R[7]~reg0.ACLR
+i_CLK => o_R[0]~reg0.CLK
+i_CLK => o_R[1]~reg0.CLK
+i_CLK => o_R[2]~reg0.CLK
+i_CLK => o_R[3]~reg0.CLK
+i_CLK => o_R[4]~reg0.CLK
+i_CLK => o_R[5]~reg0.CLK
+i_CLK => o_R[6]~reg0.CLK
+i_CLK => o_R[7]~reg0.CLK
+o_R[0] <= o_R[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= o_R[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= o_R[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= o_R[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[4] <= o_R[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[5] <= o_R[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[6] <= o_R[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[7] <= o_R[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|register_8bit:u_REGISTER_Y
+i_A[0] => o_R[0]~reg0.DATAIN
+i_A[1] => o_R[1]~reg0.DATAIN
+i_A[2] => o_R[2]~reg0.DATAIN
+i_A[3] => o_R[3]~reg0.DATAIN
+i_A[4] => o_R[4]~reg0.DATAIN
+i_A[5] => o_R[5]~reg0.DATAIN
+i_A[6] => o_R[6]~reg0.DATAIN
+i_A[7] => o_R[7]~reg0.DATAIN
+i_LOAD => o_R[7]~reg0.ENA
+i_LOAD => o_R[6]~reg0.ENA
+i_LOAD => o_R[5]~reg0.ENA
+i_LOAD => o_R[4]~reg0.ENA
+i_LOAD => o_R[3]~reg0.ENA
+i_LOAD => o_R[2]~reg0.ENA
+i_LOAD => o_R[1]~reg0.ENA
+i_LOAD => o_R[0]~reg0.ENA
+i_CLRn => o_R[0]~reg0.ACLR
+i_CLRn => o_R[1]~reg0.ACLR
+i_CLRn => o_R[2]~reg0.ACLR
+i_CLRn => o_R[3]~reg0.ACLR
+i_CLRn => o_R[4]~reg0.ACLR
+i_CLRn => o_R[5]~reg0.ACLR
+i_CLRn => o_R[6]~reg0.ACLR
+i_CLRn => o_R[7]~reg0.ACLR
+i_CLK => o_R[0]~reg0.CLK
+i_CLK => o_R[1]~reg0.CLK
+i_CLK => o_R[2]~reg0.CLK
+i_CLK => o_R[3]~reg0.CLK
+i_CLK => o_R[4]~reg0.CLK
+i_CLK => o_R[5]~reg0.CLK
+i_CLK => o_R[6]~reg0.CLK
+i_CLK => o_R[7]~reg0.CLK
+o_R[0] <= o_R[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= o_R[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= o_R[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= o_R[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[4] <= o_R[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[5] <= o_R[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[6] <= o_R[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[7] <= o_R[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mdc_top|mdc_datapath:u_MDC_DATAPATH|register_8bit:u_REGSITER_D
+i_A[0] => o_R[0]~reg0.DATAIN
+i_A[1] => o_R[1]~reg0.DATAIN
+i_A[2] => o_R[2]~reg0.DATAIN
+i_A[3] => o_R[3]~reg0.DATAIN
+i_A[4] => o_R[4]~reg0.DATAIN
+i_A[5] => o_R[5]~reg0.DATAIN
+i_A[6] => o_R[6]~reg0.DATAIN
+i_A[7] => o_R[7]~reg0.DATAIN
+i_LOAD => o_R[7]~reg0.ENA
+i_LOAD => o_R[6]~reg0.ENA
+i_LOAD => o_R[5]~reg0.ENA
+i_LOAD => o_R[4]~reg0.ENA
+i_LOAD => o_R[3]~reg0.ENA
+i_LOAD => o_R[2]~reg0.ENA
+i_LOAD => o_R[1]~reg0.ENA
+i_LOAD => o_R[0]~reg0.ENA
+i_CLRn => o_R[0]~reg0.ACLR
+i_CLRn => o_R[1]~reg0.ACLR
+i_CLRn => o_R[2]~reg0.ACLR
+i_CLRn => o_R[3]~reg0.ACLR
+i_CLRn => o_R[4]~reg0.ACLR
+i_CLRn => o_R[5]~reg0.ACLR
+i_CLRn => o_R[6]~reg0.ACLR
+i_CLRn => o_R[7]~reg0.ACLR
+i_CLK => o_R[0]~reg0.CLK
+i_CLK => o_R[1]~reg0.CLK
+i_CLK => o_R[2]~reg0.CLK
+i_CLK => o_R[3]~reg0.CLK
+i_CLK => o_R[4]~reg0.CLK
+i_CLK => o_R[5]~reg0.CLK
+i_CLK => o_R[6]~reg0.CLK
+i_CLK => o_R[7]~reg0.CLK
+o_R[0] <= o_R[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[1] <= o_R[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[2] <= o_R[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[3] <= o_R[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[4] <= o_R[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[5] <= o_R[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[6] <= o_R[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_R[7] <= o_R[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
