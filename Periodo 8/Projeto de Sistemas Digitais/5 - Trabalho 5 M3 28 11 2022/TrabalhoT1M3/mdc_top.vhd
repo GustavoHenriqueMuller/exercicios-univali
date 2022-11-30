@@ -67,10 +67,7 @@ component mdc_datapath is
 	);
 end component;
 
--- Clock signal
-signal w_CLK: std_logic;
-
--- Controller outputs to Datapath
+-- Controller to Datapath outputs
 signal w_X_CLRn: std_logic;
 signal w_X_LOAD: std_logic;
 signal w_X_LOAD_MODE: std_logic;
@@ -82,7 +79,7 @@ signal w_Y_LOAD_MODE: std_logic;
 signal w_D_CLRn: std_logic;
 signal w_D_LOAD: std_logic;
 
--- Datapath outputs to Controller
+-- Datapath to Controller outputs
 signal w_X_EQ_Y: std_logic;
 signal w_X_LT_Y: std_logic;
 

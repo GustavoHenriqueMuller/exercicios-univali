@@ -1,14 +1,13 @@
 
 State Machine - |mdc_top|mdc_control:u_MDC_CONTROL|r_STATE
-Name r_STATE.s10 r_STATE.s9 r_STATE.s8 r_STATE.s7 r_STATE.s6 r_STATE.s5 r_STATE.s4 r_STATE.s3 r_STATE.s2 r_STATE.s1 r_STATE.s0 
-r_STATE.s0 0 0 0 0 0 0 0 0 0 0 0 
-r_STATE.s1 0 0 0 0 0 0 0 0 0 1 1 
-r_STATE.s2 0 0 0 0 0 0 0 0 1 0 1 
-r_STATE.s3 0 0 0 0 0 0 0 1 0 0 1 
-r_STATE.s4 0 0 0 0 0 0 1 0 0 0 1 
-r_STATE.s5 0 0 0 0 0 1 0 0 0 0 1 
-r_STATE.s6 0 0 0 0 1 0 0 0 0 0 1 
-r_STATE.s7 0 0 0 1 0 0 0 0 0 0 1 
-r_STATE.s8 0 0 1 0 0 0 0 0 0 0 1 
-r_STATE.s9 0 1 0 0 0 0 0 0 0 0 1 
-r_STATE.s10 1 0 0 0 0 0 0 0 0 0 1 
+Name r_STATE.s9 r_STATE.s8 r_STATE.s7 r_STATE.s6 r_STATE.s5 r_STATE.s4 r_STATE.s3 r_STATE.s2 r_STATE.s1 r_STATE.s0 
+r_STATE.s0 0 0 0 0 0 0 0 0 0 0 
+r_STATE.s1 0 0 0 0 0 0 0 0 1 1 
+r_STATE.s2 0 0 0 0 0 0 0 1 0 1 
+r_STATE.s3 0 0 0 0 0 0 1 0 0 1 
+r_STATE.s4 0 0 0 0 0 1 0 0 0 1 
+r_STATE.s5 0 0 0 0 1 0 0 0 0 1 
+r_STATE.s6 0 0 0 1 0 0 0 0 0 1 
+r_STATE.s7 0 0 1 0 0 0 0 0 0 1 
+r_STATE.s8 0 1 0 0 0 0 0 0 0 1 
+r_STATE.s9 1 0 0 0 0 0 0 0 0 1 

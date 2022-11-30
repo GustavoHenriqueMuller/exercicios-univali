@@ -25,6 +25,7 @@ R0
 R0
 R0
 R0
+R0
 !s11e vcom 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -34,10 +35,10 @@ R0
 cModel Technology
 Z1 dC:/Users/Gustavo/Desktop/TrabalhoT1M3/questa
 T_opt
-!s110 1669663417
-VaWP^3dAFWaYL^9GILjPhe2
+!s110 1669815288
+V0JJJoJSY_azdg88aagHi=0
 04 10 15 work mdc_top_tb arch_mdc_top_tb 1
-=1-04d9f579f44a-63850ab8-303-49e8
+=1-04d9f579f44a-63875bf8-1b9-1208
 !s124 OEM10U40 
 Z2 o-quiet -auto_acc_if_foreign -work work
 Z3 tCvgOpt 0
@@ -58,7 +59,7 @@ Eadder_4bit
 Z5 w1667753874
 Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 59
+!i122 61
 R1
 Z8 8../components/adder_4bit.vhd
 Z9 F../components/adder_4bit.vhd
@@ -68,9 +69,9 @@ V93BfQGim^T:1=`lO9L6?c2
 !s100 gz2RO5;KVmGYX6K?ICb2R1
 Z10 OL;C;2021.2;73
 32
-Z11 !s110 1669663412
+Z11 !s110 1669815280
 !i10b 1
-Z12 !s108 1669663412.000000
+Z12 !s108 1669815280.000000
 Z13 !s90 -reportprogress|300|../components/adder_4bit.vhd|../components/adder_8bit.vhd|../components/comparator_1bit.vhd|../components/comparator_8bit.vhd|../components/full_adder_1bit.vhd|../components/inverter_8bit.vhd|../components/mux_2x8bit.vhd|../components/register_8bit.vhd|../components/subtractor_8bit.vhd|
 Z14 !s107 ../components/subtractor_8bit.vhd|../components/register_8bit.vhd|../components/mux_2x8bit.vhd|../components/inverter_8bit.vhd|../components/full_adder_1bit.vhd|../components/comparator_8bit.vhd|../components/comparator_1bit.vhd|../components/adder_8bit.vhd|../components/adder_4bit.vhd|
 !i113 0
@@ -79,7 +80,7 @@ Aarch_adder_4bit
 R6
 R7
 DEx4 work 10 adder_4bit 0 22 93BfQGim^T:1=`lO9L6?c2
-!i122 59
+!i122 61
 l31
 L14 23
 VH?_lXoVcPIf=FMdY8MJLB3
@@ -97,7 +98,7 @@ Eadder_8bit
 Z16 w1669607947
 R6
 R7
-!i122 59
+!i122 61
 R1
 Z17 8../components/adder_8bit.vhd
 Z18 F../components/adder_8bit.vhd
@@ -118,7 +119,7 @@ Aarch_adder_8bit
 R6
 R7
 DEx4 work 10 adder_8bit 0 22 7a:GnXC6HgeJNRf`Re;nS0
-!i122 59
+!i122 61
 l36
 L15 31
 VF:I5z9ZOJ?18b4kPH54D82
@@ -136,7 +137,7 @@ Ecomparator_1bit
 Z19 w1669640719
 R6
 R7
-!i122 59
+!i122 61
 R1
 Z20 8../components/comparator_1bit.vhd
 Z21 F../components/comparator_1bit.vhd
@@ -157,7 +158,7 @@ Aarch_comparator_1bit
 R6
 R7
 DEx4 work 15 comparator_1bit 0 22 md=eP_T>6[8e=XX^f6fO22
-!i122 59
+!i122 61
 l21
 L19 7
 V`O@7zV[ZgiJ4AI`MCD:2h3
@@ -175,7 +176,7 @@ Ecomparator_8bit
 Z22 w1669607901
 R6
 R7
-!i122 59
+!i122 61
 R1
 Z23 8../components/comparator_8bit.vhd
 Z24 F../components/comparator_8bit.vhd
@@ -196,7 +197,7 @@ Aarch_comparator_8bit
 R6
 R7
 DEx4 work 15 comparator_8bit 0 22 CYDPX[kgXbFHj]3[I`ZFn3
-!i122 59
+!i122 61
 l59
 L15 54
 VhIMHi7IzWCU4oW>Rb0PHo3
@@ -214,7 +215,7 @@ Ecomparator_8bit_tb
 Z25 w1669640823
 R6
 R7
-!i122 58
+!i122 62
 R1
 Z26 8../testbenches/comparator_8bit_tb.vhd
 Z27 F../testbenches/comparator_8bit_tb.vhd
@@ -224,9 +225,9 @@ Vm6mZFX<jEO_QTl?>NQ>iO2
 !s100 I9?T8iLBkUgZGUWDZ0Noe1
 R10
 32
-Z28 !s110 1669663408
+Z28 !s110 1669815285
 !i10b 1
-Z29 !s108 1669663408.000000
+Z29 !s108 1669815285.000000
 Z30 !s90 -reportprogress|300|../testbenches/comparator_8bit_tb.vhd|../testbenches/mdc_top_tb.vhd|
 Z31 !s107 ../testbenches/mdc_top_tb.vhd|../testbenches/comparator_8bit_tb.vhd|
 !i113 0
@@ -235,7 +236,7 @@ Aarch_comparator_8bit_tb
 R6
 R7
 DEx4 work 18 comparator_8bit_tb 0 22 m6mZFX<jEO_QTl?>NQ>iO2
-!i122 58
+!i122 62
 l26
 L7 54
 V9Ya9mA56coJn8[WCL3ADo2
@@ -253,7 +254,7 @@ Efull_adder_1bit
 Z32 w1669601401
 R6
 R7
-!i122 59
+!i122 61
 R1
 Z33 8../components/full_adder_1bit.vhd
 Z34 F../components/full_adder_1bit.vhd
@@ -274,7 +275,7 @@ Aarch_full_adder_1bit
 R6
 R7
 DEx4 work 15 full_adder_1bit 0 22 1@:[PHT3]zgh9LM5=oSkO3
-!i122 59
+!i122 61
 l16
 L15 5
 VannBEcZWgnac3B8dKOKi^0
@@ -292,7 +293,7 @@ Einverter_8bit
 Z35 w1669635480
 R6
 R7
-!i122 59
+!i122 61
 R1
 Z36 8../components/inverter_8bit.vhd
 Z37 F../components/inverter_8bit.vhd
@@ -313,7 +314,7 @@ Aarch_inverter_8bit
 R6
 R7
 DEx4 work 13 inverter_8bit 0 22 YT90A_QCXU;CLO]@bJ19j2
-!i122 59
+!i122 61
 l13
 L12 11
 VDXID2>Z_0:=]h]:QF1`Y]1
@@ -328,10 +329,10 @@ R14
 !i113 0
 R15
 Emdc_control
-Z38 w1669654238
+Z38 w1669814884
 R6
 R7
-!i122 57
+!i122 60
 R1
 Z39 8../mdc_control.vhd
 Z40 F../mdc_control.vhd
@@ -341,9 +342,9 @@ VFe_iJX:ZLzGG_l]h2dHC91
 !s100 <2zU[b8IHJ7z6QTde8RB;0
 R10
 32
-Z41 !s110 1669663405
+Z41 !s110 1669815277
 !i10b 1
-Z42 !s108 1669663405.000000
+Z42 !s108 1669815277.000000
 Z43 !s90 -reportprogress|300|../mdc_control.vhd|../mdc_datapath.vhd|../mdc_top.vhd|
 Z44 !s107 ../mdc_top.vhd|../mdc_datapath.vhd|../mdc_control.vhd|
 !i113 0
@@ -352,11 +353,11 @@ Aarch_mdc_control
 R6
 R7
 DEx4 work 11 mdc_control 0 22 Fe_iJX:ZLzGG_l]h2dHC91
-!i122 57
+!i122 60
 l35
-L29 62
-VHo4Tb1j86f8g8dQH<a??z2
-!s100 LjD9a50H`C:[Ec9DIo6lO0
+L29 60
+VUVU<Mb0`jU=lJoL8d4@Fg2
+!s100 8<z[^<_Im@70TfkW3Zfbh1
 R10
 32
 R41
@@ -370,7 +371,7 @@ Emdc_datapath
 Z45 w1669642389
 R6
 R7
-!i122 57
+!i122 60
 R1
 Z46 8../mdc_datapath.vhd
 Z47 F../mdc_datapath.vhd
@@ -391,7 +392,7 @@ Aarch_mdc_datapath
 R6
 R7
 DEx4 work 12 mdc_datapath 0 22 jSji@bg8fV2Y>0X^?7;cJ1
-!i122 57
+!i122 60
 l83
 L30 65
 VPfgHSWd?;<T3oV:Ij<R5m1
@@ -406,10 +407,10 @@ R44
 !i113 0
 R15
 Emdc_top
-Z48 w1669642319
+Z48 w1669815004
 R6
 R7
-!i122 57
+!i122 60
 R1
 Z49 8../mdc_top.vhd
 Z50 F../mdc_top.vhd
@@ -430,11 +431,11 @@ Aarch_mdc_top
 R6
 R7
 DEx4 work 7 mdc_top 0 22 PIKK7Y@_o;L93=E<[VQ=?3
-!i122 57
-l89
-L17 114
-V4?PPD6Z;11b9K1m;o0T>I2
-!s100 `7K;JkB5FE:ezY=zVaZVb1
+!i122 60
+l86
+L17 111
+V::Y6[kSm1az_76P<ALM9G3
+!s100 7_`DA4ic6S@[1V1ifnLf=3
 R10
 32
 R41
@@ -445,10 +446,10 @@ R44
 !i113 0
 R15
 Emdc_top_tb
-Z51 w1669663372
+Z51 w1669665006
 R6
 R7
-!i122 58
+!i122 62
 R1
 Z52 8../testbenches/mdc_top_tb.vhd
 Z53 F../testbenches/mdc_top_tb.vhd
@@ -469,11 +470,11 @@ Aarch_mdc_top_tb
 R6
 R7
 DEx4 work 10 mdc_top_tb 0 22 Y9?eRL8PR`SJkQOoXNTRA0
-!i122 58
+!i122 62
 l29
-L7 74
-VR=]i1TF;BagAfe>:[WjNi1
-!s100 ZMQzLj9_lOKeA2Pm@0kok2
+L7 63
+VS4Yb^T1GK7f<IzbUgecDS1
+!s100 Vn2[c5N[FR0^RjTXEBf?U0
 R10
 32
 R28
@@ -487,7 +488,7 @@ Emux_2x8bit
 Z54 w1669607887
 R6
 R7
-!i122 59
+!i122 61
 R1
 Z55 8../components/mux_2x8bit.vhd
 Z56 F../components/mux_2x8bit.vhd
@@ -508,7 +509,7 @@ Aarch_mux_2x8bit
 R6
 R7
 DEx4 work 10 mux_2x8bit 0 22 ePm8LWYDT56OV3b`f<RFL2
-!i122 59
+!i122 61
 l15
 L14 11
 VSn38POgX0;li``bbzMBb?2
@@ -526,7 +527,7 @@ Eregister_8bit
 Z57 w1669642362
 R6
 R7
-!i122 59
+!i122 61
 R1
 Z58 8../components/register_8bit.vhd
 Z59 F../components/register_8bit.vhd
@@ -547,7 +548,7 @@ Aarch_register_8bit
 R6
 R7
 DEx4 work 13 register_8bit 0 22 4U6`^8mm30Ij4RgI9CPL?3
-!i122 59
+!i122 61
 l16
 L15 13
 VgJ>@L:oz:c^Ph=6?FzniI2
@@ -565,7 +566,7 @@ Esubtractor_8bit
 Z60 w1669600877
 R6
 R7
-!i122 59
+!i122 61
 R1
 Z61 8../components/subtractor_8bit.vhd
 Z62 F../components/subtractor_8bit.vhd
@@ -586,7 +587,7 @@ Aarch_subtractor_8bit
 R6
 R7
 DEx4 work 15 subtractor_8bit 0 22 ;R]JZ>g_ielb^1<`e[H:`2
-!i122 59
+!i122 61
 l37
 L14 27
 VLLGgoAD__Dm?9XbU>hIP23
