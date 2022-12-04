@@ -1,5 +1,5 @@
 Fitter report for mdc
-Wed Nov 30 10:43:44 2022
+Wed Nov 30 20:41:55 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Wed Nov 30 10:43:44 2022       ;
+; Fitter Status                   ; Successful - Wed Nov 30 20:41:55 2022       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; mdc                                         ;
 ; Top-level Entity Name           ; mdc_top                                     ;
@@ -160,7 +160,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.1%      ;
+;     Processor 4            ;   0.2%      ;
 ;     Processors 5-6         ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -212,7 +212,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Gustavo/Desktop/TrabalhoT1M3/output_files/mdc.pin.
+The pin-out file can be found in E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/output_files/mdc.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -1367,7 +1367,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:08
@@ -1380,23 +1380,23 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.40 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
-Info (144001): Generated suppressed messages file C:/Users/Gustavo/Desktop/TrabalhoT1M3/output_files/mdc.fit.smsg
+Info (144001): Generated suppressed messages file E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/output_files/mdc.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 6896 megabytes
-    Info: Processing ended: Wed Nov 30 10:43:44 2022
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:01:43
+    Info: Processing ended: Wed Nov 30 20:41:55 2022
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:01:45
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Gustavo/Desktop/TrabalhoT1M3/output_files/mdc.fit.smsg.
+The suppressed messages can be found in E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/output_files/mdc.fit.smsg.
 
 

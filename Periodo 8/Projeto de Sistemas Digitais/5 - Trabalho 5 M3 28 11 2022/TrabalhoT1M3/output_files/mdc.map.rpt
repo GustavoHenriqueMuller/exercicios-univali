@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mdc
-Wed Nov 30 10:43:07 2022
+Wed Nov 30 20:41:16 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 30 10:43:07 2022       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 30 20:41:16 2022       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; mdc                                         ;
 ; Top-level Entity Name           ; mdc_top                                     ;
@@ -173,23 +173,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; mdc_top.vhd                      ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd                    ;         ;
-; mdc_control.vhd                  ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_control.vhd                ;         ;
-; mdc_datapath.vhd                 ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd               ;         ;
-; components/register_8bit.vhd     ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/register_8bit.vhd   ;         ;
-; components/subtractor_8bit.vhd   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd ;         ;
-; components/adder_8bit.vhd        ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/adder_8bit.vhd      ;         ;
-; components/comparator_1bit.vhd   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_1bit.vhd ;         ;
-; components/full_adder_1bit.vhd   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/full_adder_1bit.vhd ;         ;
-; components/comparator_8bit.vhd   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_8bit.vhd ;         ;
-; components/mux_2x8bit.vhd        ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/mux_2x8bit.vhd      ;         ;
-; components/inverter_8bit.vhd     ; yes             ; User VHDL File  ; C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/inverter_8bit.vhd   ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                          ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; mdc_top.vhd                      ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_top.vhd                    ;         ;
+; mdc_control.vhd                  ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_control.vhd                ;         ;
+; mdc_datapath.vhd                 ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_datapath.vhd               ;         ;
+; components/register_8bit.vhd     ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/register_8bit.vhd   ;         ;
+; components/subtractor_8bit.vhd   ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/subtractor_8bit.vhd ;         ;
+; components/adder_8bit.vhd        ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/adder_8bit.vhd      ;         ;
+; components/comparator_1bit.vhd   ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/comparator_1bit.vhd ;         ;
+; components/full_adder_1bit.vhd   ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/full_adder_1bit.vhd ;         ;
+; components/comparator_8bit.vhd   ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/comparator_8bit.vhd ;         ;
+; components/mux_2x8bit.vhd        ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/mux_2x8bit.vhd      ;         ;
+; components/inverter_8bit.vhd     ; yes             ; User VHDL File  ; E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/inverter_8bit.vhd   ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -377,60 +377,60 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Wed Nov 30 10:42:59 2022
+    Info: Processing started: Wed Nov 30 20:41:08 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mdc -c mdc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mdc_top.vhd
-    Info (12022): Found design unit 1: mdc_top-arch_mdc_top File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd Line: 17
-    Info (12023): Found entity 1: mdc_top File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd Line: 4
+    Info (12022): Found design unit 1: mdc_top-arch_mdc_top File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_top.vhd Line: 17
+    Info (12023): Found entity 1: mdc_top File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_top.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mdc_control.vhd
-    Info (12022): Found design unit 1: mdc_control-arch_mdc_control File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_control.vhd Line: 29
-    Info (12023): Found entity 1: mdc_control File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_control.vhd Line: 4
+    Info (12022): Found design unit 1: mdc_control-arch_mdc_control File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_control.vhd Line: 29
+    Info (12023): Found entity 1: mdc_control File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_control.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mdc_datapath.vhd
-    Info (12022): Found design unit 1: mdc_datapath-arch_mdc_datapath File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 30
-    Info (12023): Found entity 1: mdc_datapath File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 4
+    Info (12022): Found design unit 1: mdc_datapath-arch_mdc_datapath File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_datapath.vhd Line: 30
+    Info (12023): Found entity 1: mdc_datapath File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_datapath.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file components/register_8bit.vhd
-    Info (12022): Found design unit 1: register_8bit-arch_register_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/register_8bit.vhd Line: 15
-    Info (12023): Found entity 1: register_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/register_8bit.vhd Line: 4
+    Info (12022): Found design unit 1: register_8bit-arch_register_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/register_8bit.vhd Line: 15
+    Info (12023): Found entity 1: register_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/register_8bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file components/subtractor_8bit.vhd
-    Info (12022): Found design unit 1: subtractor_8bit-arch_subtractor_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 14
-    Info (12023): Found entity 1: subtractor_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 4
+    Info (12022): Found design unit 1: subtractor_8bit-arch_subtractor_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 14
+    Info (12023): Found entity 1: subtractor_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file components/adder_8bit.vhd
-    Info (12022): Found design unit 1: adder_8bit-arch_adder_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/adder_8bit.vhd Line: 15
-    Info (12023): Found entity 1: adder_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/adder_8bit.vhd Line: 4
+    Info (12022): Found design unit 1: adder_8bit-arch_adder_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/adder_8bit.vhd Line: 15
+    Info (12023): Found entity 1: adder_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/adder_8bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file components/comparator_1bit.vhd
-    Info (12022): Found design unit 1: comparator_1bit-arch_comparator_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_1bit.vhd Line: 19
-    Info (12023): Found entity 1: comparator_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_1bit.vhd Line: 4
+    Info (12022): Found design unit 1: comparator_1bit-arch_comparator_1bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/comparator_1bit.vhd Line: 19
+    Info (12023): Found entity 1: comparator_1bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/comparator_1bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file components/full_adder_1bit.vhd
-    Info (12022): Found design unit 1: full_adder_1bit-arch_full_adder_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/full_adder_1bit.vhd Line: 15
-    Info (12023): Found entity 1: full_adder_1bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/full_adder_1bit.vhd Line: 4
+    Info (12022): Found design unit 1: full_adder_1bit-arch_full_adder_1bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/full_adder_1bit.vhd Line: 15
+    Info (12023): Found entity 1: full_adder_1bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/full_adder_1bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file components/comparator_8bit.vhd
-    Info (12022): Found design unit 1: comparator_8bit-arch_comparator_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_8bit.vhd Line: 15
-    Info (12023): Found entity 1: comparator_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_8bit.vhd Line: 4
+    Info (12022): Found design unit 1: comparator_8bit-arch_comparator_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/comparator_8bit.vhd Line: 15
+    Info (12023): Found entity 1: comparator_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/comparator_8bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file components/mux_2x8bit.vhd
-    Info (12022): Found design unit 1: mux_2x8bit-arch_mux_2x8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/mux_2x8bit.vhd Line: 14
-    Info (12023): Found entity 1: mux_2x8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/mux_2x8bit.vhd Line: 4
+    Info (12022): Found design unit 1: mux_2x8bit-arch_mux_2x8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/mux_2x8bit.vhd Line: 14
+    Info (12023): Found entity 1: mux_2x8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/mux_2x8bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/mdc_top_tb.vhd
-    Info (12022): Found design unit 1: mdc_top_tb-arch_mdc_top_tb File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/testbenches/mdc_top_tb.vhd Line: 7
-    Info (12023): Found entity 1: mdc_top_tb File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/testbenches/mdc_top_tb.vhd Line: 4
+    Info (12022): Found design unit 1: mdc_top_tb-arch_mdc_top_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/testbenches/mdc_top_tb.vhd Line: 7
+    Info (12023): Found entity 1: mdc_top_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/testbenches/mdc_top_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file components/inverter_8bit.vhd
-    Info (12022): Found design unit 1: inverter_8bit-arch_inverter_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/inverter_8bit.vhd Line: 12
-    Info (12023): Found entity 1: inverter_8bit File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/inverter_8bit.vhd Line: 4
+    Info (12022): Found design unit 1: inverter_8bit-arch_inverter_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/inverter_8bit.vhd Line: 12
+    Info (12023): Found entity 1: inverter_8bit File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/inverter_8bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file testbenches/comparator_8bit_tb.vhd
-    Info (12022): Found design unit 1: comparator_8bit_tb-arch_comparator_8bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/testbenches/comparator_8bit_tb.vhd Line: 7
-    Info (12023): Found entity 1: comparator_8bit_tb File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/testbenches/comparator_8bit_tb.vhd Line: 4
+    Info (12022): Found design unit 1: comparator_8bit_tb-arch_comparator_8bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/testbenches/comparator_8bit_tb.vhd Line: 7
+    Info (12023): Found entity 1: comparator_8bit_tb File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/testbenches/comparator_8bit_tb.vhd Line: 4
 Info (12127): Elaborating entity "mdc_top" for the top level hierarchy
-Info (12128): Elaborating entity "mdc_control" for hierarchy "mdc_control:u_MDC_CONTROL" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd Line: 87
-Info (12128): Elaborating entity "mdc_datapath" for hierarchy "mdc_datapath:u_MDC_DATAPATH" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_top.vhd Line: 107
-Info (12128): Elaborating entity "subtractor_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 84
-Info (12128): Elaborating entity "inverter_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|inverter_8bit:u_INVERTER" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 38
-Info (12128): Elaborating entity "adder_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 39
-Info (12128): Elaborating entity "full_adder_1bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/adder_8bit.vhd Line: 37
-Info (12128): Elaborating entity "comparator_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 86
-Info (12128): Elaborating entity "comparator_1bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_0" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/components/comparator_8bit.vhd Line: 60
-Info (12128): Elaborating entity "mux_2x8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|mux_2x8bit:u_MUX_X" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 88
-Info (12128): Elaborating entity "register_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|register_8bit:u_REGISTER_X" File: C:/Users/Gustavo/Desktop/TrabalhoT1M3/mdc_datapath.vhd Line: 91
+Info (12128): Elaborating entity "mdc_control" for hierarchy "mdc_control:u_MDC_CONTROL" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_top.vhd Line: 87
+Info (12128): Elaborating entity "mdc_datapath" for hierarchy "mdc_datapath:u_MDC_DATAPATH" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_top.vhd Line: 107
+Info (12128): Elaborating entity "subtractor_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_datapath.vhd Line: 84
+Info (12128): Elaborating entity "inverter_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|inverter_8bit:u_INVERTER" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 38
+Info (12128): Elaborating entity "adder_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/subtractor_8bit.vhd Line: 39
+Info (12128): Elaborating entity "full_adder_1bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|subtractor_8bit:u_SUBTRACTOR_0|adder_8bit:u_ADDER|full_adder_1bit:u_FULL_ADDER_0" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/adder_8bit.vhd Line: 37
+Info (12128): Elaborating entity "comparator_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_datapath.vhd Line: 86
+Info (12128): Elaborating entity "comparator_1bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|comparator_8bit:u_COMPARATOR|comparator_1bit:u_COMPARATOR_0" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/components/comparator_8bit.vhd Line: 60
+Info (12128): Elaborating entity "mux_2x8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|mux_2x8bit:u_MUX_X" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_datapath.vhd Line: 88
+Info (12128): Elaborating entity "register_8bit" for hierarchy "mdc_datapath:u_MDC_DATAPATH|register_8bit:u_REGISTER_X" File: E:/Arquivos/Faculdade/Periodo 8/Projeto de Sistemas Digitais/5 - Trabalho 5 M3 28 11 2022/TrabalhoT1M3/mdc_datapath.vhd Line: 91
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -439,8 +439,8 @@ Info (21057): Implemented 81 device resources after synthesis - the final resour
     Info (21059): Implemented 9 output pins
     Info (21061): Implemented 54 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4898 megabytes
-    Info: Processing ended: Wed Nov 30 10:43:07 2022
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Wed Nov 30 20:41:16 2022
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:18
 
