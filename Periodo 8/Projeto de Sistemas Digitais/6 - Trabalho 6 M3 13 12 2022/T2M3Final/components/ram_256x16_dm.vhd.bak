@@ -1,0 +1,54 @@
+library ieee;
+use ieee.std_logic_1164.all;
+USE ieee.numeric_std.ALL; 
+
+entity ram_256x16_dm is
+	generic 
+	(
+		WORD_WIDTH : natural := 16;
+		ADDRESS_WIDTH : natural := 8
+	);
+
+	port 
+	(
+		i_CLK: in std_logic;
+		i_ADDRESS: in std_logic_vector (ADDRESS_WIDTH - 1 downto 0);
+		i_W_DATA: in std_logic_vector ((WORD_WIDTH - 1) downto 0);
+		i_W: in std_logic := '1';
+		i_READ: in std_logic;
+		
+		o_R: out std_logic_vector ((WORD_WIDTH - 1) downto 0)
+	);
+end entity;
+
+architecture arch_ram_256x16_dm of ram_256x16_dm is
+
+	-- Build a 2-D array type for the RAM
+	subtype word_t is std_logic_vector((WORD_WIDTH - 1) downto 0);
+	type memory_t is array(2 ** ADDRESS_WIDTH - 1 downto 0) of word_t;
+
+	-- Declare the RAM signal.	
+	signal ram: memory_t;
+
+	-- Register to hold the address 
+	signal address_reg: std_logic_vector (ADDRESS_WIDTH - 1 downto 0);
+
+begin
+
+	process(i_CLK)
+	begin
+		if (rising_edge(i_CLK)) then
+			if (i_W = '1') then
+				ram(to_integer(unsigned(i_ADDRESS))) <= i_W_DATA;
+			end if;
+
+			-- Register the address for reading
+			if (i_READ = '1') then
+				address_reg <= i_ADDRESS;
+			end if;
+		end if;
+	end process;
+
+	o_R <= ram(to_integer(unsigned(address_reg)));
+
+end arch_ram_256x16_dm;

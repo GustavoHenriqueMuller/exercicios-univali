@@ -1,0 +1,10 @@
+
+State Machine - |gp_processor|gp_processor_control:u_CONTROL|gp_processor_controller:u_CONTROLLER|r_STATE
+Name r_STATE.s6 r_STATE.s5 r_STATE.s4 r_STATE.s3 r_STATE.s2 r_STATE.s1 r_STATE.s0 
+r_STATE.s0 0 0 0 0 0 0 0 
+r_STATE.s1 0 0 0 0 0 1 1 
+r_STATE.s2 0 0 0 0 1 0 1 
+r_STATE.s3 0 0 0 1 0 0 1 
+r_STATE.s4 0 0 1 0 0 0 1 
+r_STATE.s5 0 1 0 0 0 0 1 
+r_STATE.s6 1 0 0 0 0 0 1 

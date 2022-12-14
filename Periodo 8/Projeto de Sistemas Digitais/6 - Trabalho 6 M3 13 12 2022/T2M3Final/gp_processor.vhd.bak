@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity gp_processor is
+end gp_processor;
+
+architecture arch_gp_processor of gp_processor is
+begin
+
+end arch_gp_processor;

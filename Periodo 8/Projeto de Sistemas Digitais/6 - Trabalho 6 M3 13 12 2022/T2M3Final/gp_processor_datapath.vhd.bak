@@ -1,0 +1,42 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity gp_processor_datapath is
+	port
+	(
+		-- Inputs
+		i_CLK: in std_logic;
+		
+		i_DM_ADDRESS: in std_logic_vector (7 downto 0);
+		i_DM_READ: in std_logic;
+		i_DM_WRITE: in std_logic;
+		
+		i_RF_SEL: in std_logic_vector (1 downto 0);
+		i_RF_W: in std_logic;
+		i_RF_W_ADDRESS: in std_logic_vector (3 downto 0);
+		
+		i_RF_R1_ADDRESS: in std_logic_vector (3 downto 0);
+		i_RF_R1_READ: in std_logic;
+		
+		i_RF_R2_ADDRESS: in std_logic_vector (3 downto 0);
+		i_RF_R2_READ: in std_logic;
+		
+		i_ALU_SEL: in std_logic;
+	);
+end gp_processor_datapath;
+
+architecture arch_gp_processor_datapath of gp_processor_datapath is
+
+component mux_3x16bit is
+	port
+	(
+		i_A: in std_logic_vector (15 downto 0);
+		i_B: in std_logic_vector (15 downto 0);
+		i_C: in std_logic_vector (15 downto 0);
+		i_SEL: in std_logic;
+		o_R: out std_logic_vector (15 downto 0)
+	);
+end component;
+
+begin
+end arch_gp_processor_datapath;
