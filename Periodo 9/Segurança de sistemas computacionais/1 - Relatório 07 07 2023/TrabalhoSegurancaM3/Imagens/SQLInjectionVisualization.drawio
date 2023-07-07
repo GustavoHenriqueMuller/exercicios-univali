@@ -1,0 +1,13 @@
+<mxfile host="app.diagrams.net" modified="2023-07-03T17:37:07.967Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="NaJM8gkJ5Uk_pLmesceZ" version="21.5.2" type="device">
+  <diagram name="Página-1" id="ihaYQmuQG8wWltjhssJu">
+    <mxGraphModel dx="989" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p7F8AKlUFXnLwxoZc04A-1" value="&lt;b&gt;Valor digitado&lt;/b&gt;:&amp;nbsp;&lt;font face=&quot;Lucida Console&quot;&gt;&#39; UNION SELECT * FROM users WHERE &#39;%&#39; = &#39;&lt;/font&gt;&lt;br&gt;&lt;b&gt;Consulta SQL&lt;/b&gt;: &lt;font face=&quot;Lucida Console&quot;&gt;&quot;SELECT * FROM movies WHERE title LIKE &#39;%&quot; . sqli($title) . &quot;%&#39;&quot;&lt;/font&gt;&lt;br&gt;&lt;b&gt;Consulta SQL resultante&lt;/b&gt;: &lt;font face=&quot;Lucida Console&quot;&gt;&quot;SELECT * FROM movies WHERE title LIKE &#39;%&#39; UNION SELECT * FROM users WHERE &#39;%&#39; = &#39;%&#39;&quot;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="213" width="780" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

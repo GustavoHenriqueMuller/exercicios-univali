@@ -1,0 +1,16 @@
+Realizar pentest no ambiente bWAPP fornecido via BeeBOX.
+Endereço da VM: https://download.vulnhub.com/bwapp/bee-box_v1.6.7z
+Exemplo de formato de relatório: https://www.offsec.com/pwk-online/PWK-Example-Report-v1.pdf
+
+Objetivo: você deve exercitar até 20 testes de intrusão na máquina virtual e reportar em um relatório os passos necessários, ilustrações e explicação do que está acontecendo em cada um dos testes.
+
+O modelo da Offensive Security não fornece uma avaliação de criticidade. Você deve fornecer uma tabela ou elemento parecido sumarizando as até 20 falhas com respectiva definição de gravidade frente ao OWASP TOP 10 Project.
+
+No caso de dúvidas, por gentileza questionar via whatsapp no grupo da sala em : https://chat.whatsapp.com/Kt3uPphefNr9Q69v30hEx8
+
+Uma demonstração preliminar foi exibina na aula de 09/06/2023 e está gravada no onedrive em https://univali-my.sharepoint.com/:p:/g/personal/fb_univali_br/EW-6bo3EIetJkEHPsIPNrWABKNR4cEF3YIa5EV1Hh5z10Q?e=kT66Jy
+
+O trabalho será avaliado em relação a clareza, qualidade, cobertura e objetividade.
+
+
+Alternativa concedida em 16 de junho: você pode escolher qualquer alvo das centenas de alvos disponíveis em https://www.vulnhub.com/ e montar seu relatório em cima dele.
