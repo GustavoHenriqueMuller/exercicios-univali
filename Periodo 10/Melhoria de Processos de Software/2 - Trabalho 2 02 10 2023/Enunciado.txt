@@ -1,0 +1,13 @@
+Entrega de apresentação sobre os temas de CMMI e MPS.BR, conforme debatido em sala de aula.
+Mínimo de 10 slides por apresentação, que deverá ocorrer na aula do dia 02/10/2023.
+
+Grupo Assunto
+1 CMMI - 1 e 2
+2 CMMI - 3 e 4
+3 CMMI - 5
+4 MPS.BR - A
+5 MPS.BR - B e C
+6 MPS.BR - D e E
+7 MPS.BR - F e G
+
+O grupo que não entregar no prazo ficará com nota zerada nesta avaliação.
